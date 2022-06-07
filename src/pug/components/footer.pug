@@ -1,6 +1,167 @@
 footer.footer
-	.footer__copyright
-		span(data-actual-year)
+	.container
+		.row
+			.col-md-10.col-sm.d-none.d-sm-block
+				.footer__nav
+					.footer__nav-item
+						.footer__nav-heading.h3
+							| О компании
+						nav.footer__nav-list
+							a.footer__nav-list--item(href="#")
+								| Компания
+							a.footer__nav-list--item(href="#")
+								| Карьера
+							a.footer__nav-list--item(href="#")
+								| Пресса
+					.footer__nav-item
+						.footer__nav-heading.h3
+							| О бренде
+						nav.footer__nav-list
+							a.footer__nav-list--item(href="#")
+								| Линии одежды
+							a.footer__nav-list--item(href="#")
+								| Бренд и история
+							a.footer__nav-list--item(href="#")
+								| Устойчивое развитие
+							a.footer__nav-list--item(href="#")
+								| Качество материалов
+							a.footer__nav-list--item(href="#")
+								| Мастерство и дизайн
+							a.footer__nav-list--item(href="#")
+								| Подборки
+					.footer__nav-item
+						.footer__nav-heading.h3
+							| Помощь
+						nav.footer__nav-list
+							a.footer__nav-list--item(href="#")
+								| Контакты
+							a.footer__nav-list--item(href="#")
+								| Оплата
+							a.footer__nav-list--item(href="#")
+								| Доставка
+							a.footer__nav-list--item(href="#")
+								| Возврат
+							a.footer__nav-list--item(href="#")
+								| Бутики
+							a.footer__nav-list--item(href="#")
+								| Подписаться на рассылку
+					.footer__nav-item
+						.footer__nav-heading.h3
+							| Правовая информация
+						nav.footer__nav-list
+							a.footer__nav-list--item(href="#")
+								| Политика конфиденциальности
+							a.footer__nav-list--item(href="#")
+								| Политика обработки персональных данных
+							a.footer__nav-list--item(href="#")
+								| Оферта
+							a.footer__nav-list--item(href="#")
+								| Программа лояльности
+							a.footer__nav-list--item(href="#")
+								| Политика использования файлов cookie
+			.col-auto.ms-auto
+				button.footer-to-top
+					+svg("arrow_up")
+			.col-12.d-sm-none
+				.accordion
+					.accordion-item
+						button.accordion-control
+							| О компании
+							.accordion-control--icon
+								+svg("chevron_down")
+						.accordion-panel
+							nav.footer__nav-list
+								a.footer__nav-list--item(href="#")
+									| Компания
+								a.footer__nav-list--item(href="#")
+									| Карьера
+								a.footer__nav-list--item(href="#")
+									| Пресса
+					.accordion-item
+						button.accordion-control
+							| О бренде
+							.accordion-control--icon
+								+svg("chevron_down")
+						.accordion-panel
+							nav.footer__nav-list
+								a.footer__nav-list--item(href="#")
+									| Линии одежды
+								a.footer__nav-list--item(href="#")
+									| Бренд и история
+								a.footer__nav-list--item(href="#")
+									| Устойчивое развитие
+								a.footer__nav-list--item(href="#")
+									| Качество материалов
+								a.footer__nav-list--item(href="#")
+									| Мастерство и дизайн
+								a.footer__nav-list--item(href="#")
+									| Подборки
+					.accordion-item
+						button.accordion-control
+							| Помощь
+							.accordion-control--icon
+								+svg("chevron_down")
+						.accordion-panel
+							nav.footer__nav-list
+								a.footer__nav-list--item(href="#")
+									| Контакты
+								a.footer__nav-list--item(href="#")
+									| Оплата
+								a.footer__nav-list--item(href="#")
+									| Доставка
+								a.footer__nav-list--item(href="#")
+									| Возврат
+								a.footer__nav-list--item(href="#")
+									| Бутики
+								a.footer__nav-list--item(href="#")
+									| Подписаться на рассылку
+					.accordion-item
+						button.accordion-control
+							| Правовая информация
+							.accordion-control--icon
+								+svg("chevron_down")
+						.accordion-panel
+							nav.footer__nav-list
+								a.footer__nav-list--item(href="#")
+									| Политика конфиденциальности
+								a.footer__nav-list--item(href="#")
+									| Политика обработки персональных данных
+								a.footer__nav-list--item(href="#")
+									| Оферта
+								a.footer__nav-list--item(href="#")
+									| Программа лояльности
+								a.footer__nav-list--item(href="#")
+									| Политика использования файлов cookie
 
-	.footer__developer
-		| &copy;&nbsp;Девять линий
+		.footer-bottom
+			.row.row-cols-sm-auto.justify-content-md-between.align-items-md-center
+				.footer-copy
+					| © HANRO 2022 Все права защищены
+				.footer__payment
+					.footer__payment-label
+						| Принимаем к оплате
+					.footer__payment-img
+						+lazyPicture({
+							src: `${baseDir}images/pay-mir.svg`,
+							alt: 'Карта МИР',
+						})
+					.footer__payment-img
+						+lazyPicture({
+							src: `${baseDir}images/pay-visa.svg`,
+							alt: 'Карта VISA',
+						})
+					.footer__payment-img
+						+lazyPicture({
+							src: `${baseDir}images/pay-mastercard.svg`,
+							alt: 'Карта Mastercard',
+						})
+					.footer__payment-img
+						+lazyPicture({
+							src: `${baseDir}images/pay-american-express.svg`,
+							alt: 'Карта American Express',
+						})
+					.footer__payment-img
+						+lazyPicture({
+							src: `${baseDir}images/pay-union-pay.svg`,
+							alt: 'Карта Union Pay',
+						})

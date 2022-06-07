@@ -138,12 +138,22 @@ iframe {
 	max-height: 50vh;
 }
 
-.site {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh; // fallback
-	// stylelint-disable-next-line
-	min-height: var(--vh);
+h1,
+.h1 {
+
+}
+h2,
+.h2 {
+
+}
+h3,
+.h3 {
+	font-size: 15px;
+	line-height: 1.3333;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-weight: 350;
+	color: $color-graphite;
 }
 
 /* stylelint-disable */

@@ -311,6 +311,41 @@ header.header
 					button.header__burger-item--back(data-dropdown="main")
 						.header__burger-item--back--icon
 							+svg("arrow_left")
+						| Для нее
+				.header__burger-item
+					a(href="#")
+						| Все товары
+				.header__burger-item
+					a(href="#")
+						| Новинки
+				.header__burger-item
+					a(href="#")
+						| Базовая коллекция
+				.header__burger-item
+					a(href="#")
+						| Дневная коллекция
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forExample")
+						+svg("chevron_right")
+				.header__burger-item
+					a(href="#")
+						| Одежда для отдыха
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forExample")
+						+svg("chevron_right")
+				.header__burger-item
+					a(href="#")
+						| Подборки
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forExample")
+						+svg("chevron_right")
+				.header__burger-item
+					a(href="#")
+						| Скидки
+	.header__burger-child(data-dropdown="forHim")
+		.container
+			nav.header__burger-nav
+				.header__burger-item.header__burger-item--back--wrapper
+					button.header__burger-item--back(data-dropdown="main")
+						.header__burger-item--back--icon
+							+svg("arrow_left")
 						| Для него
 				.header__burger-item
 					a(href="#")
@@ -324,29 +359,29 @@ header.header
 				.header__burger-item
 					a(href="#")
 						| Дневная коллекция
-					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHerExample")
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forExample")
 						+svg("chevron_right")
 				.header__burger-item
 					a(href="#")
 						| Одежда для отдыха
-					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHerExample")
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forExample")
 						+svg("chevron_right")
 				.header__burger-item
 					a(href="#")
 						| Подборки
-					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHerExample")
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forExample")
 						+svg("chevron_right")
 				.header__burger-item
 					a(href="#")
 						| Скидки
-	.header__burger-child(data-dropdown="forHerExample")
+	.header__burger-child(data-dropdown="forExample")
 		.container
 			nav.header__burger-nav
 				.header__burger-item.header__burger-item--back--wrapper
 					button.header__burger-item--back(data-dropdown="")
 						.header__burger-item--back--icon
 							+svg("arrow_left")
-						| Дневная коллекция
+						| Назад
 				.header__burger-item
 					a(href="#")
 						| Все товары
@@ -356,4 +391,5 @@ header.header
 				.header__burger-item
 					a(href="#")
 						| Скидки
+
 

@@ -15,6 +15,7 @@ function slider() {
 }
 
 
+
 function init() {
 	slider()
 
