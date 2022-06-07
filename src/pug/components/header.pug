@@ -1,0 +1,355 @@
+header.header
+	.header__slider.swiper
+		.swiper-wrapper
+			.swiper-slide.header__slider-item
+				| Доставка по всей России
+			.swiper-slide.header__slider-item
+				| Lorem ipsum dolor sit amet, consectetur
+			.swiper-slide.header__slider-item
+				| Adipisicing elit. Aliquid dicta eum expedita fuga incidunt labore
+	.container
+		.row.align-items-center
+			.col
+				nav.header__nav.d-none.d-lg-flex
+					each object, key in data.header.menu
+						if object.id
+							a.js-dropdown--button(
+								href=object.url
+								data-dropdown=object.id
+							)
+								!= object.name
+						else
+							a(
+								href=object.url
+							)
+								!= object.name
+
+				button.header__burger-btn.d-lg-none
+					span
+					span
+					span
+			.col-auto
+				a.header-brand(href="/")
+					img(src="images/logo.svg" alt="")
+			.col
+				.header__actions
+					button.header__actions-item
+						.header__actions-item--icon.header__actions-item--search
+							+svg("search")
+					a(href="#").header__actions-item.d-none.d-md-block
+						.header__actions-item--icon.header__actions-item--lk
+							+svg("lk")
+					a(href="#").header__actions-item.d-none.d-md-block
+						.header__actions-item--icon.header__actions-item--favorite
+							+svg("favorite")
+					button.header__actions-item
+						.header__actions-item--icon.header__actions-item--cart
+							+svg("cart")
+						.header__actions-item--badge
+							| 4
+
+	.header__dropdown.js-dropdown--container(data-dropdown="forHim").d-none.d-lg-block
+		.container
+			.row
+				.col-md-3
+					nav.header__dropdown-nav
+						a.header__dropdown-nav--item(href="#")
+							|Новинки
+						a.header__dropdown-nav--item(href="#")
+							|Базовая коллекция
+						.header__dropdown-nav--separate
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHim1")
+							|Повседневная одежда
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHim2")
+							|Ночная одежда
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHim3")
+							|Одежда для отдыха
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHim4")
+							|Подборки
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHim5")
+							|Sale
+							span
+				.col-md-3.header__dropdown-nav--child--wrapper
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHim1")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Hanro Iconic
+							a.header__dropdown-nav--item(href="#")
+								| Теплая одежда
+							a.header__dropdown-nav--item(href="#")
+								| Touch of Hanro
+							a.header__dropdown-nav--item(href="#")
+								| Black Elegance
+							a.header__dropdown-nav--item(href="#")
+								| Коллекция S/S 2021
+							a.header__dropdown-nav--item(href="#")
+								| Невизимое нижнее белье
+							a.header__dropdown-nav--item(href="#")
+								| Хлопок
+							a.header__dropdown-nav--item(href="#")
+								| Свадебная коллекция
+							a.header__dropdown-nav--item(href="#")
+								| Кружево
+							a.header__dropdown-nav--item(href="#")
+								| Гид по Бюстлалтерам
+							a.header__dropdown-nav--item(href="#")
+								| Гид по подаркам
+							a.header__dropdown-nav--item(href="#")
+								| Аксессуары
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHim2")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Hanro Iconic
+							a.header__dropdown-nav--item(href="#")
+								| Теплая одежда
+							a.header__dropdown-nav--item(href="#")
+								| Touch of Hanro
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHim3")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Hanro Iconic
+							a.header__dropdown-nav--item(href="#")
+								| Теплая одежда
+							a.header__dropdown-nav--item(href="#")
+								| Touch of Hanro
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHim4")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Black Elegance
+							a.header__dropdown-nav--item(href="#")
+								| Коллекция S/S 2021
+							a.header__dropdown-nav--item(href="#")
+								| Невизимое нижнее белье
+							a.header__dropdown-nav--item(href="#")
+								| Хлопок
+							a.header__dropdown-nav--item(href="#")
+								| Свадебная коллекция
+							a.header__dropdown-nav--item(href="#")
+								| Кружево
+							a.header__dropdown-nav--item(href="#")
+								| Гид по Бюстлалтерам
+							a.header__dropdown-nav--item(href="#")
+								| Гид по подаркам
+							a.header__dropdown-nav--item(href="#")
+								| Аксессуары
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHim5")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Black Elegance
+							a.header__dropdown-nav--item(href="#")
+								| Коллекция S/S 2021
+							a.header__dropdown-nav--item(href="#")
+								| Невизимое нижнее белье
+							a.header__dropdown-nav--item(href="#")
+								| Хлопок
+							a.header__dropdown-nav--item(href="#")
+								| Свадебная коллекция
+							a.header__dropdown-nav--item(href="#")
+								| Кружево
+							a.header__dropdown-nav--item(href="#")
+								| Гид по Бюстлалтерам
+							a.header__dropdown-nav--item(href="#")
+								| Гид по подаркам
+							a.header__dropdown-nav--item(href="#")
+								| Аксессуары
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+	.header__dropdown.js-dropdown--container(data-dropdown="forHer").d-none.d-lg-block
+		.container
+			.row
+				.col-md-3
+					nav.header__dropdown-nav
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHer1")
+							|Повседневная одежда
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHer2")
+							|Ночная одежда
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHer3")
+							|Одежда для отдыха
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHer4")
+							|Подборки
+							span
+						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHer5")
+							|Sale
+							span
+				.col-md-3.header__dropdown-nav--child--wrapper
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHer1")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Hanro Iconic
+							a.header__dropdown-nav--item(href="#")
+								| Теплая одежда
+							a.header__dropdown-nav--item(href="#")
+								| Touch of Hanro
+							a.header__dropdown-nav--item(href="#")
+								| Black Elegance
+							a.header__dropdown-nav--item(href="#")
+								| Коллекция S/S 2021
+							a.header__dropdown-nav--item(href="#")
+								| Невизимое нижнее белье
+							a.header__dropdown-nav--item(href="#")
+								| Хлопок
+							a.header__dropdown-nav--item(href="#")
+								| Свадебная коллекция
+							a.header__dropdown-nav--item(href="#")
+								| Кружево
+							a.header__dropdown-nav--item(href="#")
+								| Гид по Бюстлалтерам
+							a.header__dropdown-nav--item(href="#")
+								| Гид по подаркам
+							a.header__dropdown-nav--item(href="#")
+								| Аксессуары
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHer2")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Hanro Iconic
+							a.header__dropdown-nav--item(href="#")
+								| Теплая одежда
+							a.header__dropdown-nav--item(href="#")
+								| Touch of Hanro
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHer3")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Hanro Iconic
+							a.header__dropdown-nav--item(href="#")
+								| Теплая одежда
+							a.header__dropdown-nav--item(href="#")
+								| Touch of Hanro
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHer4")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Black Elegance
+							a.header__dropdown-nav--item(href="#")
+								| Коллекция S/S 2021
+							a.header__dropdown-nav--item(href="#")
+								| Невизимое нижнее белье
+							a.header__dropdown-nav--item(href="#")
+								| Хлопок
+							a.header__dropdown-nav--item(href="#")
+								| Свадебная коллекция
+							a.header__dropdown-nav--item(href="#")
+								| Кружево
+							a.header__dropdown-nav--item(href="#")
+								| Гид по Бюстлалтерам
+							a.header__dropdown-nav--item(href="#")
+								| Гид по подаркам
+							a.header__dropdown-nav--item(href="#")
+								| Аксессуары
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+					nav.header__dropdown-nav--child.js-dropdown--container(data-dropdown="forHer5")
+						.header__dropdown-nav
+							a.header__dropdown-nav--item(href="#")
+								| Black Elegance
+							a.header__dropdown-nav--item(href="#")
+								| Коллекция S/S 2021
+							a.header__dropdown-nav--item(href="#")
+								| Невизимое нижнее белье
+							a.header__dropdown-nav--item(href="#")
+								| Хлопок
+							a.header__dropdown-nav--item(href="#")
+								| Свадебная коллекция
+							a.header__dropdown-nav--item(href="#")
+								| Кружево
+							a.header__dropdown-nav--item(href="#")
+								| Гид по Бюстлалтерам
+							a.header__dropdown-nav--item(href="#")
+								| Гид по подаркам
+							a.header__dropdown-nav--item(href="#")
+								| Аксессуары
+							a.header__dropdown-nav--item(href="#")
+								| Премиальная коллекция
+
+.header__burger.d-lg-none
+	.container
+		nav.header__burger-nav
+			.header__burger-item
+				a(href="#")
+					| Для нее
+				button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHer")
+					+svg("chevron_right")
+			.header__burger-item
+				a(href="#")
+					| Для него
+				button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHim")
+					+svg("chevron_right")
+			.header__burger-item
+				a(href="#")
+					| Мир Hanro
+			.header__burger-item
+				a(href="#")
+					| Наимен-е дин раздела
+
+	.header__burger-child(data-dropdown="forHer")
+		.container
+			nav.header__burger-nav
+				.header__burger-item.header__burger-item--back--wrapper
+					button.header__burger-item--back(data-dropdown="main")
+						.header__burger-item--back--icon
+							+svg("arrow_left")
+						| Для него
+				.header__burger-item
+					a(href="#")
+						| Все товары
+				.header__burger-item
+					a(href="#")
+						| Новинки
+				.header__burger-item
+					a(href="#")
+						| Базовая коллекция
+				.header__burger-item
+					a(href="#")
+						| Дневная коллекция
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHerExample")
+						+svg("chevron_right")
+				.header__burger-item
+					a(href="#")
+						| Одежда для отдыха
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHerExample")
+						+svg("chevron_right")
+				.header__burger-item
+					a(href="#")
+						| Подборки
+					button.header__burger-item--icon.header__burger-item--parent(data-dropdown="forHerExample")
+						+svg("chevron_right")
+				.header__burger-item
+					a(href="#")
+						| Скидки
+	.header__burger-child(data-dropdown="forHerExample")
+		.container
+			nav.header__burger-nav
+				.header__burger-item.header__burger-item--back--wrapper
+					button.header__burger-item--back(data-dropdown="")
+						.header__burger-item--back--icon
+							+svg("arrow_left")
+						| Дневная коллекция
+				.header__burger-item
+					a(href="#")
+						| Все товары
+				.header__burger-item
+					a(href="#")
+						| Новинки
+				.header__burger-item
+					a(href="#")
+						| Скидки
+

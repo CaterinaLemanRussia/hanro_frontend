@@ -1,0 +1,33 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+$color-black: #000;
+$color-graphite: #696969;
+$color-silver: #F5F5F5;
+$color-hover-silver: #E6E6E6;
+$color-black-hover: #333;
+
+// FONTS
+// stylelint-disable-next-line
+$font-primary: "Futura", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+// EASING TRANSITIONS
+$duration-normal: 0.4s;
+$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-out: ease-out;
+$easing-in: ease-in;
+
+// Bootstrap Grid
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 960px,
+	lg: 1200px,
+);
+$container-max-widths: (
+	sm: 577px,
+	md: 864px,
+	lg: 1152px,
+);
+$grid-gutter-width: 24px !default;

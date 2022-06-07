@@ -1,0 +1,49 @@
+-
+	const data = {
+		header: {
+			links: {
+				logo: '/',
+			},
+			menu: [
+				{
+					url: '#',
+					id: 'forHer',
+					name: 'Для нее'
+				},
+				{
+					url: '#',
+					id: 'forHim',
+					name: 'Для него'
+				},
+				{
+					url: '#',
+					id: '',
+					name: 'Мир Hanro'
+				},
+				{
+					url: '#',
+					id: '',
+					name: 'Наимен-е дин раздела'
+				},
+			]
+		},
+
+		share: {
+			caption: 'Поделиться:',
+			list: ['fb', 'tw', 'vk', 'ok'],
+		},
+
+		home: {
+			title: 'гид&nbsp;по <br><span class="for-desktop">бережному</span><span class="for-devices">общению</span>',
+			read: 'Читать',
+		},
+
+		modal: {
+			close: 'Закрыть',
+		},
+	};
+
+script.
+	window.data = {
+		home: !{JSON.stringify(data.home)},
+	};
