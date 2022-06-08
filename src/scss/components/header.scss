@@ -93,11 +93,13 @@
 		top: 100%;
 		padding-top: 24px;
 		opacity: 0;
+		background: #fff;
 		visibility: hidden;
-		transition: $duration-normal opacity $easing-back-in;
+		transition: $duration-normal opacity $easing-back-in, $duration-normal visibility $easing-back-in;
 
 		&-nav {
-			height: 100%;
+			min-height: 100%;
+			background: #fff;
 
 			&::before {
 				content: "";
@@ -193,7 +195,7 @@
 		&.is-active {
 			opacity: 1;
 			visibility: visible;
-			transition: $duration-normal opacity $easing-back-out;
+			transition: $duration-normal opacity $easing-back-out, $duration-normal visibility $easing-back-out;
 		}
 	}
 

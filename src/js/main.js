@@ -7,6 +7,7 @@ import {actualYear} from './modules/actualYear';
 import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
+import accordion from "./components/accordion";
 
 ieFix();
 vhFix();
@@ -15,3 +16,5 @@ scrollToAnchor.init();
 
 header.init();
 lazyLoading.init();
+
+accordion.init();
