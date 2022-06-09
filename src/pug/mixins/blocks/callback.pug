@@ -1,0 +1,30 @@
+mixin block_callback(item)
+	.block_callback.pt-100.pb-100&attributes(attributes)
+		.container
+			.row.align-items-md-center
+				.col-md-6
+					+lazyPicture({
+						src: item.img,
+						alt: `${item.title} - изображение`,
+					}).block_callback-img
+				.col-md-5.ms-md-auto
+					.block_callback-content
+						.block_callback-title.h1.mb-24
+							| !{item.title}
+						.block_callback-text.mb-50
+							| !{item.text}
+						form.form.block_callback__form
+							.block_callback__form-input
+								label.form__group.form__group__up.is-errored
+									.form__group-label.form__group__up-label
+										| Ваш email
+									input.form__group-input.form__group__up-input(type="text" required)
+									.form__group-error
+										| Описание ошибки
+							.form-btn.block_callback__form-btn
+								button.btn.btn-secondary.btn-small
+									span
+										| Подписаться
+
+
+

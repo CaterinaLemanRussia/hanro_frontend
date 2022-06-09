@@ -19,16 +19,17 @@ mixin lazyImage(data)
 			img(src=data.src alt=data.alt)
 
 //- @demo +lazyPicture({
-			src: 'photo.jpg',
-			alt: '',
-			appear: false,
-		}, [
-				{
-					srcset: `${baseDir}images/path.type 1x, ${baseDir}images/path@2x.type 2x`,
-					media: '(min-width: 320px)',
-				}
-			]
-		).class(attrs)
+//			src: 'photo.jpg',
+//			alt: '',
+//			appear: false,
+//		}, [
+//				{
+//					srcset: `${baseDir}images/path.type 1x, ${baseDir}images/path@2x.type 2x`,
+//					media: '(min-width: 320px)',
+//				}
+//			]
+//		).class(attrs)
+
 mixin lazyPicture(data, source)
 	picture.lozad.js-lazy(
 		data-iesrc=data.src

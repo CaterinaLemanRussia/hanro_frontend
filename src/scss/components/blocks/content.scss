@@ -1,0 +1,23 @@
+.block_content {
+	text-align: center;
+
+	&-image {
+		display: inline-block;
+
+		picture {
+			display: block;
+		}
+	}
+
+	&__links {
+		text-align: center;
+
+		&-item {
+			margin-bottom: 8px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.block_button-inside {
+	&__item {
+		position: relative;
+		display: block;
+
+		&-wrapper{
+			@include media-breakpoint-only(xs) {
+				margin-bottom: 16px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&-btn {
+			position: absolute;
+			left: 50%;
+			bottom: 27%;
+			padding: 16px 32px 12px;
+			font-size: 16px;
+			line-height: 1.25;
+			letter-spacing: 0.5px;
+			white-space: nowrap;
+			text-transform: uppercase;
+			color: #fff;
+			background: rgba(0, 0, 0, 0.6);
+			transform: translateX(-50%);
+		}
+
+		&-img {
+			display: block;
+		}
+	}
+}

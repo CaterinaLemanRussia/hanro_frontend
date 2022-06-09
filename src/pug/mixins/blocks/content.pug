@@ -1,0 +1,34 @@
+mixin block_content(item)
+	.block_content&attributes(attributes)
+		.container
+			.row.justify-content-center
+				.col-md-8
+					if item.image
+						if item.image.href
+							a.block_content-image.mb-24
+								+lazyPicture({
+									src: item.image.url,
+									alt: `${item.title} - изображение`,
+								})
+						else
+							.block_content-image.mb-24
+								+lazyPicture({
+									src: item.image.url,
+									alt: `${item.title} - изображение`,
+								})
+					if item.description
+						.block_content-description.h3.mb-8
+							| !{item.description}
+					if item.title
+						.block_content-title.h1.mb-24
+							| !{item.title}
+					if item.text
+						.block_content-text.mb-24
+							| !{item.text}
+					if item.links
+						.block_content__links
+							each link in item.links
+								.block_content__links-item
+									a(href=link.href).btn.btn-secondary.btn-small
+										span
+											| !{link.title}

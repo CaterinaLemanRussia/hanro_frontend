@@ -1,0 +1,13 @@
+mixin block_button-inside(...items)
+	div.block_button-inside&attributes(attributes)
+		.container
+			.row
+				each item in items
+					.col-sm.block_button-inside__item-wrapper
+						a(href=item.button.href).block_button-inside__item
+							+lazyPicture({
+								src: item.img,
+								alt: `${item.button.name} - изображение`,
+							}).block_button-inside__item-img
+							.block_button-inside__item-btn
+								| !{item.button.name}
