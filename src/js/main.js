@@ -8,6 +8,7 @@ import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import accordion from "./components/accordion";
+import oneTimePasswd from "./components/oneTimePasswd";
 
 ieFix();
 vhFix();
@@ -18,3 +19,4 @@ header.init();
 lazyLoading.init();
 
 accordion.init();
+oneTimePasswd.init();

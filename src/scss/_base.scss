@@ -133,6 +133,22 @@ iframe {
 	background: none;
 	border: none;
 
+	&-primary {
+		height: 48px;
+		border: 1px solid $color-black;
+		background: #fff;
+		font-family: 'Futura';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
+
+		&:hover {
+			background: $color-black-hover;
+			color: #fff;
+		}
+	}
 
 	&-secondary {
 		background-color: transparent;
@@ -235,6 +251,11 @@ h3,
 	&__group {
 		position: relative;
 		display: block;
+		margin-bottom: 24px;
+
+		&.is-disabled {
+			opacity: 0.4;
+		}
 
 		&-label {
 			font-weight: 300;
@@ -242,10 +263,6 @@ h3,
 			line-height: 1.14;
 			letter-spacing: 0.1px;
 			color: $color-black;
-
-			&[disabled="disabled"] {
-				opacity: .4;
-			}
 		}
 
 		&-input {
@@ -265,9 +282,6 @@ h3,
 				box-shadow: 0 0 6px rgba(110, 165, 199, 0.5);
 			}
 
-			&:disabled {
-				opacity: .4;
-			}
 		}
 
 		&-error {
@@ -287,6 +301,18 @@ h3,
 		&__up {
 			&-label {
 				margin-bottom: 6px;
+			}
+		}
+
+		&__left {
+			display: flex;
+			&-label {
+				display: inline-flex;
+			    align-items: flex-end;
+			    justify-content: center;
+			    flex-direction: column;
+			    text-align: right;
+			    padding-right: 10px;
 			}
 		}
 

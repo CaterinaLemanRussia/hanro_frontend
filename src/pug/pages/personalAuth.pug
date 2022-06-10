@@ -1,0 +1,71 @@
+main.personal.mt-100
+
+	section.auth
+		.container
+			.row
+				.col-12
+					h1 Войти или создать профиль
+				.col-12
+					form.form.mt-100
+						block_callback__form-input
+								label.form__group.form__group__up
+									.form__group-label.form__group__up-label
+										| Ваш номер телефона
+									input.form__group-input.form__group__up-input(type="text" required placeholder="+7 ___ ___ __ __")
+									.form__group-error
+										| Описание ошибки
+						button.btn-primary(type="submit") Получить код
+	hr
+	section.code
+		.container
+			.row
+				.col-12
+					form.form.mt-100
+						label.form__group.form__group__up.is-disabled
+							.form__group-label.form__group__up-label
+								| Ваш номер телефона
+							input.form__group-input.form__group__up-input(type="text" disabled value="+7 968 876 67 98")
+							.form__group-error
+								| Описание ошибки
+						.grey-line
+						h4 Введите код подтверждения, полученный по SMS
+						label.form__group.sms-code
+							input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1")
+							input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1")
+							input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1")
+							input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1")
+							.form__group-error
+								| Введен неверный код
+						.timer.mb-24
+							| Повторная отправка доступна через 00:51
+						.form-btn
+								button.btn.btn-secondary.btn-small.resend-code
+									span
+										| Запросить повторно
+	hr
+	section.captcha
+		.container
+			.row
+				.col-12
+					form.form.mt-100
+						label.form__group.mb-24.is-errored
+							.g-recaptcha.brochure__form__captcha(data-sitekey="6Ld_LV0gAAAAAMBkcE7yjT_eyVdoLhxVW4kjq7k7")
+							.form__group-error
+								| Введен неверный код
+						.form-btn
+							
+							-// https://www.bronco.co.uk/our-ideas/how-to-add-google-recaptcha-to-a-form-phphtml/
+							button.btn.btn-primary.btn-small.pass-captcha
+								span
+									| Продолжить
+	hr
+	section.modals
+		.container
+			.row
+				.col-12
+					button#myBtn Open Modal<!-- Trigger/Open The Modal -->
+					#myModal.modal
+						.modal-content
+							span.close &times;
+							p Some text in the Modal..
+script(src="https://www.google.com/recaptcha/api.js")
