@@ -6,6 +6,10 @@
 	&__item {
 		margin-bottom: 24px;
 
+		@include media-breakpoint-only(xs) {
+			margin-bottom: 40px;
+		}
+
 		&-img {
 			display: block;
 

@@ -1,0 +1,77 @@
+mixin block_content-under(title, mobileSlider, ...items)
+	div.block_content-under&attributes(attributes)
+		.container
+			if title
+				.block_content-under--title.h1.mb-24
+					| !{title}
+			if !mobileSlider
+				.row
+					each item in items
+						.col-sm.block_content-under--item
+							if item.type === 'image'
+								a(href=item.href).block_content-under--media
+									+lazyPicture({
+										src: item.img,
+										alt: '',
+									})
+							if item.heading
+								.block_content-under--heading.mt-8
+									if item.headingType === 'h1'
+										.h1
+											| !{item.heading}
+									else if item.headingType === 'h2'
+										.h2
+											| !{item.heading}
+									else if item.headingType === 'h3'
+										.h3
+											| !{item.heading}
+									else if item.headingType === 'h4'
+										.h4
+											| !{item.heading}
+									else
+										| !{item.heading}
+							if item.text
+								.block_content-under--text.mt-16
+									| !{item.text}
+							if item.link_title
+								a.block_content-under--link.link.mt-16
+									| !{item.link_title}
+			else
+				.block_content-under__slider--wrapper
+					.swiper.block_content-under__slider
+						.swiper-wrapper
+							each item in items
+								.swiper-slide.block_content-under__slider-item
+									.block_content-under--item
+										if item.type === 'image'
+											a(href=item.href).block_content-under--media
+												+lazyPicture({
+													src: item.img,
+													alt: '',
+												})
+										if item.heading
+											.block_content-under--heading.mt-8
+												if item.headingType === 'h1'
+													.h1
+														| !{item.heading}
+												else if item.headingType === 'h2'
+													.h2
+														| !{item.heading}
+												else if item.headingType === 'h3'
+													.h3
+														| !{item.heading}
+												else if item.headingType === 'h4'
+													.h4
+														| !{item.heading}
+												else
+													| !{item.heading}
+										if item.text
+											.block_content-under--text.mt-16
+												| !{item.text}
+										if item.link_title
+											a.block_content-under--link.link.mt-16
+												| !{item.link_title}
+						button.block_content-under__slider-arrow.block_content-under__slider-arrow--left.slider__arrow.slider__arrow-left
+							+svg('chevron_left')
+						button.block_content-under__slider-arrow.block_content-under__slider-arrow--right.slider__arrow.slider__arrow-right
+							+svg('chevron_right')

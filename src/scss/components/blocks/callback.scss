@@ -1,15 +1,45 @@
 .block_callback {
+	&-img {
+		display: block;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 24px;
+		}
+	}
+
 	&__form {
-		display: flex;
-		align-items: end;
+		&-row {
+			display: flex;
+			align-items: end;
+
+			@include media-breakpoint-only(xs) {
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+			}
+		}
 
 		&-input {
 			flex-grow: 1;
+
+			@include media-breakpoint-only(xs) {
+				flex: 1 1 100%;
+				margin-bottom: 16px;
+			}
 		}
 
 		&-btn {
 			flex-grow: 0;
 			margin-left: 16px;
+		}
+
+		&-agree {
+			&--item {
+				margin-bottom: 4px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }
