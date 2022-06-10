@@ -1,5 +1,4 @@
 import helpers from '../helpers';
-
 import Swiper, { Autoplay } from 'swiper';
 Swiper.use([Autoplay]);
 

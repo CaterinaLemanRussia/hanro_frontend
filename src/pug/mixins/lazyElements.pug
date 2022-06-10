@@ -1,9 +1,3 @@
-//- @demo +lazyImage({
-		src: `${baseDir}images/path.type`,
-		srcset: `${baseDir}images/path@2x.type 2x`,
-		alt: '',
-		appear: false,
-	}).class(attrs)
 mixin lazyImage(data)
 	img.image.js-lazy(
 		draggable="false"
@@ -17,18 +11,6 @@ mixin lazyImage(data)
 	if data.appear
 		noscript
 			img(src=data.src alt=data.alt)
-
-//- @demo +lazyPicture({
-//			src: 'photo.jpg',
-//			alt: '',
-//			appear: false,
-//		}, [
-//				{
-//					srcset: `${baseDir}images/path.type 1x, ${baseDir}images/path@2x.type 2x`,
-//					media: '(min-width: 320px)',
-//				}
-//			]
-//		).class(attrs)
 
 mixin lazyPicture(data, source)
 	picture.lozad.js-lazy(

@@ -16,7 +16,9 @@ main.home.mt-100
 		},
 	).mb-100
 
-	+block_heading-under(
+	+block_content-under(
+		'',
+		false,
 		{
 			type: 'image',
 			href: "#",
@@ -47,7 +49,9 @@ main.home.mt-100
 		}
 	).mb-100
 
-	+block_heading-under(
+	+block_content-under(
+		'',
+		false,
 		{
 			type: 'image',
 			href: "#",
@@ -81,7 +85,9 @@ main.home.mt-100
 		}
 	).mb-50
 
-	+block_heading-under(
+	+block_content-under(
+		'',
+		false,
 		{
 			type: 'image',
 			href: "#",
@@ -105,7 +111,9 @@ main.home.mt-100
 		},
 	).mb-100
 
-	+block_heading-under(
+	+block_content-under(
+		'',
+		false,
 		{
 			type: 'image',
 			href: "#",
@@ -116,7 +124,7 @@ main.home.mt-100
 	).mb-100
 
 	+block_content-aside(
-		'Лучште базовые коллекции',
+		'Лучшие базовые коллекции',
 		{
 			img: `${baseDir}images/blocks/contentAside_2_1.jpeg`,
 			description: 'Подарок',
@@ -159,4 +167,60 @@ main.home.mt-100
 			title: 'Погрузиться в мир Hanro',
 			text: 'Подпишитесь на рассылку и первыми получайте новости о Hanro, информацию о модных трендах, новых коллекциях и специальных предложениях.',
 		}
-	).mb-100(style="background: rgba(174, 194, 206, 0.2)")
+	).mb-100.pt-100.pb-100(style="background: rgba(174, 194, 206, 0.2)")
+
+	+block_content-under(
+		'Текст заголовка',
+		false,
+		{
+			type: 'image',
+			href: "#",
+			img: `${baseDir}images/blocks/headingUnder_3_1.jpeg`,
+			link_title: "Гиперссылка на подборку"
+		},
+		{
+			type: 'image',
+			href: "#",
+			img: `${baseDir}images/blocks/headingUnder_3_2.jpeg`,
+			link_title: "откройте Коллекцию Grand Central"
+		},
+		{
+			type: 'image',
+			href: "#",
+			img: `${baseDir}images/blocks/headingUnder_3_3.jpeg`,
+			link_title: "Коллекция Design Classics для него"
+		},
+	).mb-100
+
+	+block_content-under(
+		'С заботой о завтрашнем дне',
+		true,
+		{
+			type: 'image',
+			href: "#",
+			text: 'Мы сами вяжем и красим большую часть тканей',
+			img: `${baseDir}images/blocks/headingUnder_5_1.jpeg`,
+			link_title: "Узнайте больше"
+		},
+		{
+			type: 'image',
+			href: "#",
+			text: 'Мы используем только лучший хлопок высочайшего качества.',
+			img: `${baseDir}images/blocks/headingUnder_5_2.jpeg`,
+			link_title: "Узнайте больше"
+		},
+		{
+			type: 'image',
+			href: "#",
+			text: '80% тканей производится на территории Австрии.',
+			img: `${baseDir}images/blocks/headingUnder_5_3.jpeg`,
+			link_title: "Узнайте больше"
+		},
+		{
+			type: 'image',
+			href: "#",
+			text: 'Вся продукция сертифицирована по стандарту 100 BY OEKO-TEX®',
+			img: `${baseDir}images/blocks/headingUnder_5_4.jpeg`,
+			link_title: "Узнайте больше"
+		},
+	).mb-100
