@@ -9,6 +9,10 @@ import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import accordion from "./components/accordion";
 
+import "./components/to-top";
+
+import "./components/blocks/content-under";
+
 ieFix();
 vhFix();
 actualYear();

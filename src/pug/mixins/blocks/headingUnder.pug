@@ -1,35 +1,77 @@
-mixin block_heading-under(...items)
+mixin block_heading-under(title, mobileSlider, ...items)
 	div.block_heading-under&attributes(attributes)
 		.container
-			.row
-				each item in items
-					.col-sm.block_heading-under--item
-						if item.type === 'image'
-							a(href=item.href).block_heading-under--media
-								+lazyPicture({
-									src: item.img,
-									alt: '',
-								})
-						if item.heading
-							.block_heading-under--heading.mt-8
-								if item.headingType === 'h1'
-									.h1
+			if title
+				.block_heading-under--title.h1.mb-24
+					| !{title}
+			if !mobileSlider
+				.row
+					each item in items
+						.col-sm.block_heading-under--item
+							if item.type === 'image'
+								a(href=item.href).block_heading-under--media
+									+lazyPicture({
+										src: item.img,
+										alt: '',
+									})
+							if item.heading
+								.block_heading-under--heading.mt-8
+									if item.headingType === 'h1'
+										.h1
+											| !{item.heading}
+									else if item.headingType === 'h2'
+										.h2
+											| !{item.heading}
+									else if item.headingType === 'h3'
+										.h3
+											| !{item.heading}
+									else if item.headingType === 'h4'
+										.h4
+											| !{item.heading}
+									else
 										| !{item.heading}
-								else if item.headingType === 'h2'
-									.h2
-										| !{item.heading}
-								else if item.headingType === 'h3'
-									.h3
-										| !{item.heading}
-								else if item.headingType === 'h4'
-									.h4
-										| !{item.heading}
-								else
-									| !{item.heading}
-						if item.text
-							.block_heading-under--text.mt-16
-								| !{item.text}
-						if item.link_title
-							a.block_heading-under--link.link.mt-16
-								| !{item.link_title}
-
+							if item.text
+								.block_heading-under--text.mt-16
+									| !{item.text}
+							if item.link_title
+								a.block_heading-under--link.link.mt-16
+									| !{item.link_title}
+			else
+				.block_heading-under__slider--wrapper
+					.swiper.block_heading-under__slider
+						.swiper-wrapper
+							each item in items
+								.swiper-slide.block_heading-under__slider-item
+									.block_heading-under--item
+										if item.type === 'image'
+											a(href=item.href).block_heading-under--media
+												+lazyPicture({
+													src: item.img,
+													alt: '',
+												})
+										if item.heading
+											.block_heading-under--heading.mt-8
+												if item.headingType === 'h1'
+													.h1
+														| !{item.heading}
+												else if item.headingType === 'h2'
+													.h2
+														| !{item.heading}
+												else if item.headingType === 'h3'
+													.h3
+														| !{item.heading}
+												else if item.headingType === 'h4'
+													.h4
+														| !{item.heading}
+												else
+													| !{item.heading}
+										if item.text
+											.block_heading-under--text.mt-16
+												| !{item.text}
+										if item.link_title
+											a.block_heading-under--link.link.mt-16
+												| !{item.link_title}
+						button.block_heading-under__slider-arrow.block_heading-under__slider-arrow--left.slider__arrow.slider__arrow-left
+							+svg('chevron_left')
+						button.block_heading-under__slider-arrow.block_heading-under__slider-arrow--right.slider__arrow.slider__arrow-right
+							+svg('chevron_right')

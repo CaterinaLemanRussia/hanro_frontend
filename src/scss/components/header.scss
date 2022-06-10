@@ -224,6 +224,7 @@
 		overflow-y: scroll;
 		padding-top: 50px;
 		background: #fff;
+		z-index: 100;
 
 		&-btn {
 			z-index: 10;
@@ -279,7 +280,7 @@
 				line-height: 1.0714;
 				letter-spacing: 0.25px;
 				text-transform: uppercase;
-
+				flex: 1 1;
 				@include media-breakpoint-between(sm,lg) {
 					font-size: 16px;
 				}
@@ -312,7 +313,6 @@
 				text-transform: uppercase;
 				color: $color-black;
 				background: none;
-
 				&--wrapper {
 					background: $color-silver;
 				}

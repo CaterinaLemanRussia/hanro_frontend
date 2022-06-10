@@ -13,8 +13,12 @@
 .mb-50 {
 	margin-bottom: 50px;
 
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-between(sm, lg) {
 		margin-bottom: 48px;
+	}
+
+	@include media-breakpoint-only(xs) {
+		margin-bottom: 24px;
 	}
 }
 
@@ -53,46 +57,12 @@
 .mt-50 {
 	margin-top: 50px;
 
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-between(sm,lg) {
 		margin-top: 48px;
 	}
-}
-
-.mt-24 {
-	margin-top: 24px;
 
 	@include media-breakpoint-only(xs) {
-		margin-top: 16px;
-	}
-}
-
-.mt-16 {
-	margin-top: 16px;
-
-	@include media-breakpoint-only(xs) {
-		margin-top: 8px;
-	}
-}
-
-.mt-8 {
-	margin-top: 8px;
-}.mt-100 {
-	 margin-top: 100px;
-
-	 @include media-breakpoint-between(sm,lg) {
-		 margin-top: 80px;
-	 }
-
-	 @include media-breakpoint-only(xs) {
-		 margin-top: 60px;
-	 }
- }
-
-.mt-50 {
-	margin-top: 50px;
-
-	@include media-breakpoint-down(lg) {
-		margin-top: 48px;
+		margin-top: 24px;
 	}
 }
 
@@ -131,8 +101,12 @@
 .pb-50 {
 	padding-bottom: 50px;
 
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-between(sm,lg) {
 		padding-bottom: 48px;
+	}
+
+	@include media-breakpoint-only(xs) {
+		padding-bottom: 24px;
 	}
 }
 
@@ -171,8 +145,12 @@
 .pt-50 {
 	padding-top: 50px;
 
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-between(sm,lg) {
 		padding-top: 48px;
+	}
+
+	@include media-breakpoint-only(xs) {
+		padding-top: 24px;
 	}
 }
 
