@@ -1,0 +1,26 @@
+.block_heading-under {
+	text-align: center;
+
+	&--item {
+		margin-bottom: 24px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&--media {
+		display: block;
+
+		picture {
+			display: block;
+		}
+	}
+
+	&--text {
+		line-height: 1;
+	}
+
+	&--link {
+
+	}
+}

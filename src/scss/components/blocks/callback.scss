@@ -1,0 +1,15 @@
+.block_callback {
+	&__form {
+		display: flex;
+		align-items: end;
+
+		&-input {
+			flex-grow: 1;
+		}
+
+		&-btn {
+			flex-grow: 0;
+			margin-left: 16px;
+		}
+	}
+}

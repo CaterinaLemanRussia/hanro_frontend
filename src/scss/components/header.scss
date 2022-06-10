@@ -96,6 +96,8 @@
 		background: #fff;
 		visibility: hidden;
 		transition: $duration-normal opacity $easing-back-in, $duration-normal visibility $easing-back-in;
+		z-index: 10;
+		min-height: 60vh;
 
 		&-nav {
 			min-height: 100%;

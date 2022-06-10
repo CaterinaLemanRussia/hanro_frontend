@@ -1,11 +1,162 @@
-main.home
+main.home.mt-100
+	+block_button-inside(
+		{
+			button: {
+				name: 'Для нее',
+				href: '#',
+			},
+			img: `${baseDir}images/blocks/buttonInside1.jpeg`
+		},
+		{
+			button: {
+				name: 'Для него',
+				href: '#',
+			},
+			img: `${baseDir}images/blocks/buttonInside2.jpeg`
+		},
+	).mb-100
 
+	+block_heading-under(
+		{
+			type: 'image',
+			href: "#",
+			heading: "[Наименование динамического раздела]",
+			img: `${baseDir}images/blocks/labelUnder.jpeg`,
+			headingType: 'h2'
+		}
+	).mb-100
 
-//+lazyPicture({
-//	src: `${baseDir}images/mem-2.jpg`,
-//	alt: 'Мемчик 2',
-//}, [
-//	{
-//		srcset: `${baseDir}images/mem-2.jpg`,
-//	}
-//]).home__picture.home__picture--2#bye
+	+block_content-aside(
+		'',
+		{
+			img: `${baseDir}images/blocks/contentAside.jpeg`,
+			description: 'Подарок',
+			title: 'Идеальный подарок',
+			text: 'В нашем путеводителе по подаркам есть что-то для каждого из вашего списка. Откройте для себя нашу подборку волшебных идей подарков, которые порадуют ваших близких.',
+			content_side: 'right',
+			links: [
+				{
+					href: "#",
+					title: 'Подарки для нее'
+				},
+				{
+					href: "#",
+					title: 'Подарки для него'
+				}
+			]
+		}
+	).mb-100
+
+	+block_heading-under(
+		{
+			type: 'image',
+			href: "#",
+			heading: "Теплая одежда для нее",
+			img: `${baseDir}images/blocks/labelUnder_2_1.jpeg`,
+			headingType: 'h3'
+		},
+		{
+			type: 'image',
+			href: "#",
+			heading: "Теплая одежда для него",
+			img: `${baseDir}images/blocks/labelUnder_2_2.jpeg`,
+			headingType: 'h3'
+		},
+	).mb-100
+
+	+block_content(
+		{
+			image: {
+				href: '#',
+				url: `${baseDir}images/blocks/contentImg.jpeg`,
+			},
+			title: 'История поколений',
+			text: 'Наши обещания из прошлого по-прежнему являются движущей силой бренда сегодня. Мы демонстрируем это каждый день с нашей преданностью каждой детали и нашим стремлением создать устойчивое нижнее белье премиум-класса из натуральных материалов в вневременном дизайне. Вот как мы создаем иконы нижнего белья с культовым статусом.',
+			links: [
+				{
+					href: "#",
+					title: 'Откройте для себя коллекцию'
+				}
+			]
+		}
+	).mb-50
+
+	+block_heading-under(
+		{
+			type: 'image',
+			href: "#",
+			img: `${baseDir}images/blocks/headingUnder_3_1.jpeg`,
+			text: 'Гораздо больше, чем просто камзол: высококачественная классика. Икона стиля с 1985 года.',
+			link_title: "откройте Коллекцию “Наименование коллекции”"
+		},
+		{
+			type: 'image',
+			href: "#",
+			img: `${baseDir}images/blocks/headingUnder_3_2.jpeg`,
+			text: 'Гораздо больше, чем просто рубашка бойфренда: уверенная в себе, универсальная, легендарная модная вещь.',
+			link_title: "откройте Коллекцию Grand Central"
+		},
+		{
+			type: 'image',
+			href: "#",
+			img: `${baseDir}images/blocks/headingUnder_3_3.jpeg`,
+			text: 'Меньше значит больше: Роскошное преуменьшение благодаря высококачественным натуральным материалам и вневременному дизайну.',
+			link_title: "Коллекция Design Classics для него"
+		},
+	).mb-100
+
+	+block_heading-under(
+		{
+			type: 'image',
+			href: "#",
+			heading: "[Наименование динамического раздела]",
+			img: `${baseDir}images/blocks/headingUnder_4.jpeg`,
+			headingType: 'h2'
+		}
+	).mb-100
+
+	+block_content-aside(
+		'Лучште базовые коллекции',
+		{
+			img: `${baseDir}images/blocks/contentAside_2_1.jpeg`,
+			description: 'Подарок',
+			title: 'Идеальный подарок',
+			content_side: 'right',
+			text: 'Свободный текстовый блок, который может иметь разный размер текста. Наши бестселлеры для женщин - например, бюстгальтер Spacer из коллекции «Хлопковое кРУЖЕВО». Женственный, инновационный и натуральный.',
+			links: [
+				{
+					href: "#",
+					title: 'Подарки для нее'
+				},
+				{
+					href: "#",
+					title: 'Подарки для него'
+				}
+			]
+		},
+		{
+			img: `${baseDir}images/blocks/contentAside_2_2.jpeg`,
+			description: 'Подарок',
+			title: 'Идеальный подарок',
+			content_side: 'left',
+			text: 'Свободный текстовый блок, который может иметь разный размер текста. Наши бестселлеры для женщин - например, бюстгальтер Spacer из коллекции «Хлопковое кРУЖЕВО». Женственный, инновационный и натуральный.',
+			links: [
+				{
+					href: "#",
+					title: 'Подарки для нее'
+				},
+				{
+					href: "#",
+					title: 'Подарки для него'
+				}
+			]
+		},
+	).mb-100
+
+	+block_callback(
+		{
+			img: `${baseDir}images/blocks/callback.jpeg`,
+			title: 'Погрузиться в мир Hanro',
+			text: 'Подпишитесь на рассылку и первыми получайте новости о Hanro, информацию о модных трендах, новых коллекциях и специальных предложениях.',
+		}
+	).mb-100(style="background: rgba(174, 194, 206, 0.2)")

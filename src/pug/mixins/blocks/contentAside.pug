@@ -1,0 +1,69 @@
+mixin block_content-aside(title, ...items)
+	div.block_content-aside&attributes(attributes)
+		.container
+			if title
+				.block_content-aside--title.h1.mb-24
+					| !{title}
+			each item in items
+				.block_content-aside__item
+					.row.align-items-sm-center
+						if item.content_side === 'right'
+							.col-md-6.d-none.d-md-block
+								+lazyPicture({
+									src: item.img,
+									alt: `${item.title} - изображение`,
+								}).block_content-aside__item-img
+							.col-md-6
+								.block_content
+									if item.description
+										.block_content-description.h3.mb-8
+											| !{item.description}
+									if item.title
+										.block_content-title.h1.mb-24
+											| !{item.title}
+									.d-md-none.mb-24
+										+lazyPicture({
+											src: item.img,
+											alt: `${item.title} - изображение`,
+										}).block_content-aside__item-img
+
+									if item.text
+										.block_content-text.mb-24
+											| !{item.text}
+									if item.links
+										.block_content__links
+											each link in item.links
+												.block_content__links-item
+													a(href=link.href).btn.btn-secondary.btn-small
+														span
+															| !{link.title}
+						else if item.content_side === 'left'
+							.col-md-6
+								.block_content
+									if item.description
+										.block_content-description.h3.mb-8
+											| !{item.description}
+									if item.title
+										.block_content-title.h1.mb-24
+											| !{item.title}
+									.d-md-none.mb-24
+										+lazyPicture({
+											src: item.img,
+											alt: `${item.title} - изображение`,
+										}).block_content-aside__item-img
+
+									if item.text
+										.block_content-text.mb-24
+											| !{item.text}
+									if item.links
+										.block_content__links
+											each link in item.links
+												.block_content__links-item
+													a(href=link.href).btn.btn-secondary.btn-small
+														span
+															| !{link.title}
+							.col-md-6.d-none.d-md-block
+								+lazyPicture({
+									src: item.img,
+									alt: `${item.title} - изображение`,
+								}).block_content-aside__item-img
