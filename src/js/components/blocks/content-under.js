@@ -2,12 +2,12 @@ import Swiper, {Navigation} from 'swiper';
 
 Swiper.use([Navigation])
 
-const blockHeadingUnderSlider = new Swiper(".block_heading-under__slider", {
+const blockContentUnderSlider = new Swiper(".block_content-under__slider", {
 	spaceBetween: 24,
 	disableOnInteraction: false,
 	navigation: {
-		nextEl: '.block_heading-under__slider-arrow--right',
-		prevEl: '.block_heading-under__slider-arrow--left',
+		nextEl: '.block_content-under__slider-arrow--right',
+		prevEl: '.block_content-under__slider-arrow--left',
 	},
 	breakpoints: {
 		0: {

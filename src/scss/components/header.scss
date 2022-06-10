@@ -97,7 +97,7 @@
 		visibility: hidden;
 		transition: $duration-normal opacity $easing-back-in, $duration-normal visibility $easing-back-in;
 		z-index: 10;
-		min-height: 60vh;
+		min-height: 65vh;
 
 		&-nav {
 			min-height: 100%;
@@ -180,11 +180,12 @@
 				opacity: 0;
 				visibility: hidden;
 				transition: $duration-normal opacity $easing-back-in;
-
+				z-index: 10;
 				&.is-active {
 					opacity: 1;
 					visibility: visible;
 					transition: $duration-normal opacity $easing-back-out;
+					z-index: 15;
 				}
 
 				&--wrapper {
@@ -195,6 +196,7 @@
 		}
 
 		&.is-active {
+			z-index: 15;
 			opacity: 1;
 			visibility: visible;
 			transition: $duration-normal opacity $easing-back-out, $duration-normal visibility $easing-back-out;

@@ -11,7 +11,7 @@ html {
 	box-sizing: border-box;
 	font-family: $font-primary;
 	scroll-behavior: smooth;
-
+	overflow: inherit;
 	&.has-cursor,
 	&.has-cursor * {
 		// stylelint-disable-next-line

@@ -1,21 +1,21 @@
-mixin block_heading-under(title, mobileSlider, ...items)
-	div.block_heading-under&attributes(attributes)
+mixin block_content-under(title, mobileSlider, ...items)
+	div.block_content-under&attributes(attributes)
 		.container
 			if title
-				.block_heading-under--title.h1.mb-24
+				.block_content-under--title.h1.mb-24
 					| !{title}
 			if !mobileSlider
 				.row
 					each item in items
-						.col-sm.block_heading-under--item
+						.col-sm.block_content-under--item
 							if item.type === 'image'
-								a(href=item.href).block_heading-under--media
+								a(href=item.href).block_content-under--media
 									+lazyPicture({
 										src: item.img,
 										alt: '',
 									})
 							if item.heading
-								.block_heading-under--heading.mt-8
+								.block_content-under--heading.mt-8
 									if item.headingType === 'h1'
 										.h1
 											| !{item.heading}
@@ -31,26 +31,26 @@ mixin block_heading-under(title, mobileSlider, ...items)
 									else
 										| !{item.heading}
 							if item.text
-								.block_heading-under--text.mt-16
+								.block_content-under--text.mt-16
 									| !{item.text}
 							if item.link_title
-								a.block_heading-under--link.link.mt-16
+								a.block_content-under--link.link.mt-16
 									| !{item.link_title}
 			else
-				.block_heading-under__slider--wrapper
-					.swiper.block_heading-under__slider
+				.block_content-under__slider--wrapper
+					.swiper.block_content-under__slider
 						.swiper-wrapper
 							each item in items
-								.swiper-slide.block_heading-under__slider-item
-									.block_heading-under--item
+								.swiper-slide.block_content-under__slider-item
+									.block_content-under--item
 										if item.type === 'image'
-											a(href=item.href).block_heading-under--media
+											a(href=item.href).block_content-under--media
 												+lazyPicture({
 													src: item.img,
 													alt: '',
 												})
 										if item.heading
-											.block_heading-under--heading.mt-8
+											.block_content-under--heading.mt-8
 												if item.headingType === 'h1'
 													.h1
 														| !{item.heading}
@@ -66,12 +66,12 @@ mixin block_heading-under(title, mobileSlider, ...items)
 												else
 													| !{item.heading}
 										if item.text
-											.block_heading-under--text.mt-16
+											.block_content-under--text.mt-16
 												| !{item.text}
 										if item.link_title
-											a.block_heading-under--link.link.mt-16
+											a.block_content-under--link.link.mt-16
 												| !{item.link_title}
-						button.block_heading-under__slider-arrow.block_heading-under__slider-arrow--left.slider__arrow.slider__arrow-left
+						button.block_content-under__slider-arrow.block_content-under__slider-arrow--left.slider__arrow.slider__arrow-left
 							+svg('chevron_left')
-						button.block_heading-under__slider-arrow.block_heading-under__slider-arrow--right.slider__arrow.slider__arrow-right
+						button.block_content-under__slider-arrow.block_content-under__slider-arrow--right.slider__arrow.slider__arrow-right
 							+svg('chevron_right')

@@ -1,5 +1,6 @@
 .block_callback {
 	&-img {
+		display: block;
 		@include media-breakpoint-down(md) {
 			margin-bottom: 24px;
 		}
