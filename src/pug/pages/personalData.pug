@@ -1,0 +1,103 @@
+main.personal.mt-100.mb-100
+	.container.data
+		.row
+			.col-12.col-md-3
+				include ../components/personalAside
+			.col-12.col-md-8.offset-md-1
+				h1 Личные данные
+				form.form.personal-data
+					label.form__group.form__group__left
+						.form__group-label.form__group__left-label.with-sup
+							| Имя<sup>*</sup>
+						input.form__group-input.form__group__up-input(type="text" required placeholder="Имя" value="Екатерина")
+						.form__group-error
+							| Описание ошибки
+					label.form__group.form__group__left
+						.form__group-label.form__group__left-label
+							| Фамилия
+						input.form__group-input.form__group__up-input(type="text" required placeholder="Фамилия")
+						.form__group-error
+							| Описание ошибки
+					//- label.form__group.form__group__left
+					//- 	.form__group-label.form__group__left-label
+					//- 		| Фамилия
+					//- 	input.form__group-input.form__group__up-input(type="text" required placeholder="+7 ___ ___ __ __")
+					//- 	.form__group-error
+					//- 		| Описание ошибки
+					//- label.form__group
+					.radio-group
+						input(type="radio" id="test1" name="radio-group")
+						label(for="test1") Женский
+						input(type="radio" id="test2" name="radio-group")
+						label(for="test2") Мужской
+					//- 	input(type="radio" name="gender" value="male")
+					//- 	input(type="radio" name="gender" value="female")
+					label.form__group.form__group__left.with-desc
+						.form__group-label.form__group__left-label
+							| Дата <br> рождения
+						input.form__group-input.form__group__up-input(type="date")
+						.input-description
+							| Получайте дополнительные привилегии в свой день рождения
+						.form__group-error
+							| Описание ошибки
+					label.form__group.form__group__left.with-desc
+						.form__group-label.form__group__left-label
+							| Email
+						input.form__group-input.form__group__up-input(type="email" required)
+						.input-description
+							| На указанный email будут направляться чеки о совершении покупок
+						.form__group-error
+							| Описание ошибки
+					label.form__group.form__group__left
+						.form__group-label.form__group__left-label.with-sup
+							| Телефон
+						input.form__group-input.form__group__up-input(type="text" required placeholder="+7 ___ ___ __ __")
+						.form__group-error
+							| Описание ошибки
+					label.checkbox
+							input(type="checkbox" required).checkbox-input
+							.checkbox-box
+								+svg('check')
+							.checkbox-text
+									| Согласен на
+									|
+									a(href="#")
+										| обработку персональных данных
+					button.btn-primary(type="submit") Сохранить
+
+				.grey-line.mb-50
+
+				.deliveries
+					h3 Адреса доставки
+					p.save-delivery-desc Сохраняйте адреса доставки, чтобы не вводить их при повторных заказах.
+					.addresses
+						.item
+							.text
+								| 234123, Москва, Профсоюзная, 38, Комментарии: под.6, домофон 165Вызов, эт.15, кв.165.
+							a.edit
+								+svg('edit')
+								span Изменить
+							a.delete
+								+svg('delete_active')
+								span Удалить
+						.item.removed
+							.text
+								| Адрес удален
+							a.undo
+								| Отменить
+						.item
+							.text
+								| 125009, г. Москва, ул. Большая Никитская ул., 15 ст 1
+							a.edit
+								+svg('edit')
+								span Изменить
+							a.delete
+								+svg('delete_active')
+								span Удалить
+							
+
+					button.btn-primary(type="submit") Добавить новый адрес
+				.grey-line
+				.delete-account
+					a.btn-secondary.btn-small.ttu(href="#") 
+						span Удалить аккаунт

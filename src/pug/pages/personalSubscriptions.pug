@@ -1,0 +1,21 @@
+main.personal.mt-100.mb-100
+	.container.subscriptions
+		.row
+			.col-12.col-md-3
+				include ../components/personalAside
+			.col-12.col-md-8.offset-md-1
+				h1 Управление подписками
+				form.form.for-email
+					label.checkbox
+							input(type="checkbox" required).checkbox-input
+							.checkbox-box
+								+svg('check')
+							.checkbox-text
+									| Согласен на получение email-рассылки
+				form.form.for-sms
+					label.checkbox
+							input(type="checkbox" required).checkbox-input
+							.checkbox-box
+								+svg('check')
+							.checkbox-text
+									| Согласен на получение SMS

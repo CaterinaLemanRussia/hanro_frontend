@@ -133,6 +133,26 @@ iframe {
 	background: none;
 	border: none;
 
+	&-primary {
+		height: 48px;
+		border: 1px solid $color-black;
+		background: #fff;
+		font-family: 'FuturaLightC';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 5px;
+		letter-spacing: 0.4px;
+
+		&:hover {
+			background: $color-black-hover;
+			color: #fff;
+		}
+	}
 	&-secondary {
 		background-color: transparent;
 		transition: $duration-normal background-color $easing-back-out;
@@ -226,6 +246,11 @@ h3,
 	&__group {
 		position: relative;
 		display: block;
+		margin-bottom: 24px;
+
+		&.is-disabled {
+			opacity: 0.4;
+		}
 
 		&-label {
 			font-weight: 300;
@@ -233,17 +258,13 @@ h3,
 			line-height: 1.14;
 			letter-spacing: 0.1px;
 			color: $color-black;
-
-			&[disabled="disabled"] {
-				opacity: .4;
-			}
 		}
 
 		&-input {
 			width: 100%;
 			background: transparent;
 			border: 1px solid $color-black;
-			padding: 13.5px 13px 11px;
+			padding: 13px 13px 8px;
 			font-size: 16px;
 			line-height: 1;
 			letter-spacing: 0.1px;
@@ -256,9 +277,6 @@ h3,
 				box-shadow: 0 0 6px rgba(110, 165, 199, 0.5);
 			}
 
-			&:disabled {
-				opacity: .4;
-			}
 		}
 
 		&-error {
@@ -278,6 +296,18 @@ h3,
 		&__up {
 			&-label {
 				margin-bottom: 6px;
+			}
+		}
+
+		&__left {
+			display: flex;
+			&-label {
+				display: inline-flex;
+			    align-items: flex-end;
+			    justify-content: center;
+			    flex-direction: column;
+			    text-align: right;
+			    padding-right: 10px;
 			}
 		}
 

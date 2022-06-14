@@ -1,3 +1,33 @@
 // stylelint-disable no-empty-source
-@include font-face("../fonts/Futura/FuturaLightC", "Futura", 300, normal);
-@include font-face("../fonts/Futura/FuturaBookC", "Futura", 350, normal);
+//@include font-face("../fonts/Futura/FuturaLightC", "Futura", 300, normal);
+// @include font-face("../fonts/Futura/FuturaBookC", "Futura", 350, normal);
+
+@font-face {
+	font-family: 'FuturaLightC';
+	src: url('../fonts/FuturaLightC/futuralightc.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/FuturaLightC/futuralightc.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/FuturaLightC/futuralightc.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/FuturaLightC/futuralightc.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/FuturaLightC/futuralightc.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/FuturaLightC/futuralightc.svg#futuralightc') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'FuturaBookC';
+	src: url('../fonts/FuturaBookC/futurabookc.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/FuturaBookC/futurabookc.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/FuturaBookC/futurabookc.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/FuturaBookC/futurabookc.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/FuturaBookC/futurabookc.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/FuturaBookC/futurabookc.svg#futurabookc') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/Futura/futuramediumc.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/Futura/futuramediumc.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/Futura/futuramediumc.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/Futura/futuramediumc.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/Futura/futuramediumc.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/Futura/futuramediumc.svg#futuramediumc') format('svg'); /* Chrome < 4, Legacy iOS */
+}
