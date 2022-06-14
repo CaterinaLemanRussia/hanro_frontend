@@ -137,12 +137,16 @@ iframe {
 		height: 48px;
 		border: 1px solid $color-black;
 		background: #fff;
-		font-family: 'Futura';
+		font-family: 'FuturaLightC';
 		font-style: normal;
-		font-weight: 300;
+		font-weight: 400;
 		font-size: 16px;
 		line-height: 20px;
 		text-transform: uppercase;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 5px;
+		letter-spacing: 0.4px;
 
 		&:hover {
 			background: $color-black-hover;
@@ -260,7 +264,7 @@ h3,
 			width: 100%;
 			background: transparent;
 			border: 1px solid $color-black;
-			padding: 13.5px 13px 11px;
+			padding: 13px 13px 8px;
 			font-size: 16px;
 			line-height: 1;
 			letter-spacing: 0.1px;

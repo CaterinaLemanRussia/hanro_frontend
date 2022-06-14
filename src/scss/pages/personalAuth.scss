@@ -5,7 +5,13 @@
 .ttu {
 	text-transform: uppercase;
 }
-
+.with-sup {
+	flex-direction: row;
+	align-items: center;
+	sup {
+		top: 0;
+	}
+}
 section.auth, section.code, section.captcha {
 	
 	label.sms-code {
@@ -33,21 +39,20 @@ section.auth, section.code, section.captcha {
 	h1 {
 		margin-top: 0;
 		margin-bottom: 0;
-		font-family: 'Futura';
+		font-family: 'FuturaBookC';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 26px;
 
 		text-align: center;
-		letter-spacing: 1.5px;
 		text-transform: uppercase;
 
 		color: #333333;
 	}
 	h4 {
 
-		font-family: 'Futura';
+		font-family: 'FuturaLightC';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 15px;
@@ -66,5 +71,441 @@ section.auth, section.code, section.captcha {
 		margin-right: auto;
 		margin-bottom: 100px;
 		
+	}
+}
+.personal h1 {
+	margin-top: 0;
+    line-height: 12px;
+    font-family: 'FuturaBookC';
+    margin-bottom: 37px;
+}
+.personal-data {
+	font-family: FuturaLightC;
+	margin-bottom: 48px;
+
+	.form__group__left .form__group__left-label {
+		width: 19.3%;
+	    justify-content: end;
+	    padding-right: 17px;
+	    align-items: center;
+	    flex-direction: row;
+	}
+	.form__group-error {
+    	margin-left: 12% ;
+    }
+    .with-desc {
+    	input {
+    		width: 43%;
+    	}
+    	.input-description {
+    		width: 38%;
+    		padding-left: 30px;
+			padding-left: 27px;
+		    font-size: 16px;
+		    line-height: 16px;
+		    color: $color-graphite;
+		    display: inline-flex;
+		    align-items: center;
+    	}
+    }
+    .form__group-input {
+		height: 44px;
+		width: 80.6%;
+	}
+	label.checkbox {
+		margin: 24px;
+		margin-left: 0;
+	}
+}
+
+.deliveries {
+	h3 {
+		margin-bottom: 8px;
+    	font-size: 17px;
+    	line-height: 17px;
+	}
+	.save-delivery-desc {
+		font-size: 14.2px;
+    	margin-bottom: 27px;
+	}
+	.btn-primary {
+		margin-bottom: 50px;
+	}
+	.addresses {
+		font-family: FuturaLightC;
+
+		margin-bottom: 17px;
+
+		.item {
+			display: flex;
+			border-top: 1px solid #F5F5F5;
+    		border-bottom: 1px solid #F5F5F5;
+    		padding-top: 24px;
+    		padding-bottom: 24px;
+    		justify-content: space-between;
+			.text {
+				    max-width: 75%;
+				    width: 75%;
+				    font-size: 17px;
+				    letter-spacing: -0.4px;
+				    line-height: 17px;
+			}
+			&.removed {
+				padding-top: 22px;
+    			padding-bottom: 19px;
+    			color: #696969;
+    			justify-content: space-between;
+			}
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+			.edit, .delete {
+				display: flex;
+				align-items: center;
+				span {
+					margin-left: 4px;
+				}
+			}
+		}
+	}
+}
+
+.delete-account {
+	text-align: right;
+    padding-top: 41px;
+    .btn-small {
+    	font-size: 12px;
+    }
+}
+
+
+.mb-test {
+	margin-bottom: 74px;
+}
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 33px;
+    margin-right: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: #000;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.radio-group {
+	margin-left: 19%;
+    margin-bottom: 26px;
+    label {
+    	margin-right: 14px;
+    }
+}
+
+.personal {
+	.personal-aside {
+		ul {
+			margin-top: -3px;
+			margin-bottom: 30px;
+			li {
+    			margin-bottom: 26px;
+    		&.active {
+			    border-top: 1px solid #000;
+			    border-bottom: 1px solid #000;
+			    padding-top: 8px;
+			    max-width: 256px;
+			    margin-left: 3px;
+			    padding-bottom: 10px;
+			    margin-bottom: 15px;
+			    margin-top: -5px;
+			    a {
+			    	color: #000;
+			    	margin-left: 0;
+			    }
+    		}
+    			a {
+    				font-size: 16px;
+    				text-transform: uppercase;
+    				margin-left: 3px;
+    				color: #696969;
+    			}
+			}
+		}
+
+		a.logout {
+			font-style: normal;
+		    font-weight: 400;
+		    font-size: 11px;
+		    line-height: 14px;
+		    margin-left: -2px;
+		    text-transform: uppercase;
+		    text-decoration: underline;
+		}
+	}
+}
+
+.personal .orders {
+
+	font-family: FuturaLightC;
+
+	.status {
+		display: inline-block;
+		padding: 4px 8px 2px 8px;
+	    border-radius: 8px;
+	    color: #fff;
+	    font-weight: 500;
+	    font-size: 14px;
+	    height: 24px;
+
+	    &.pending {
+	    	background: #4C5C68;
+	    }
+	    &.cancelled {
+	    	background: #C5C3C6;
+	    }
+	    &.completed {
+	    	background: #ABBAB0;
+	    }
+
+	}
+
+	.orders-list {
+		margin-top: 56px;
+		.item {
+			display: flex;
+			padding: 24px;
+			border: 1px solid #E6E6E6;
+			margin-bottom: 24px;
+			justify-content: space-between;
+			align-items: center;
+			.order-id {
+				font-family: FuturaBookC;
+				margin-bottom: 3px;
+    			display: block;
+			}
+			.delivery {
+				line-height: 19px;
+			}
+			
+		}
+		.empty p {
+			color: #696969;
+		}
+	}
+}
+.personal  {
+	.order-detail {
+		margin-top: -10px; 
+		h1 {
+			margin-bottom: 30px;
+		}
+		.back {
+			margin-bottom: 28px;
+	    	display: inline-block;
+		}
+		.info {
+			margin-top: 21px;
+			margin-bottom: 20px;
+			& > div {
+				margin-bottom: 10px;
+			}
+		}
+		.actions {
+			display: flex;
+			margin-bottom: 50px;
+			.btn-primary {
+				display: inline-block;
+    			padding: 16px 16px 16px;
+			}
+			.btn-secondary {
+			    padding: 13px 11px;
+			    text-transform: uppercase;
+			    margin-left: 24px;
+			    padding: 15px 16px 8px;
+			}
+		}
+		.summary {
+			margin-top: 47px;
+			margin-bottom: 48px;
+
+			.summary-row {
+				display: flex;
+	    		justify-content: flex-start;
+	    		margin-bottom: 10px;
+	    		.prop {
+	    			width: 164px;
+	    		}
+			}
+		}
+		.bonuses {
+			padding: 47px 0;
+		}
+		.order-contents {
+			margin-top: 48px;
+			h3 {
+				margin-top: 0;
+				font-family: 'FuturaLightC';
+				font-size: 20px;
+			}
+			.item {
+				display: flex;
+				margin-bottom: 24px;
+				align-items: center;
+
+				.image-block {
+					position: relative;
+
+					.sticker {
+						position: absolute;
+						bottom: 0;
+    					padding: 0px 7px;
+    					color: #fff;
+    					font-family: 'FuturaBookC';
+    					&.new {
+    						background: #ABBAB0;
+    					}
+    					&.sale {
+    						background: #E7C8BC;
+    					}
+					}
+				}
+
+				.content-block {
+					margin-left: 50px;
+    				max-width: 380px;
+    				width: 380px;
+    				.title {
+    					line-height: 18px;
+    					margin-bottom: 20px;
+    				}
+    				.price {
+    					margin-top: 20px;
+    					display: inline-flex;
+    				}
+    				.old-price {
+    					margin-top: 20px;
+    					display: inline-flex;
+    					color: #696969;
+    					text-decoration: line-through;
+    					margin-left: 4px;
+    				}
+				}
+				.price-block {
+					width: 192px;
+				    display: flex;
+				    justify-content: space-between;
+				    align-items: center;
+				    padding-left: 40px;
+				    padding-right: 16px;
+				    .total-price {
+				    	font-family: 'FuturaBookC';
+    					font-size: 15px;
+				    }
+				}
+
+			}
+		}
+	}
+}
+
+.personal {
+	.loyalty {
+		font-family: 'FuturaLightC';
+		h1 {
+			margin-bottom: 56px;
+		}
+		.empty {
+			margin-bottom: 50px;
+			p {
+				margin-bottom: 8px;
+			}
+		}
+		.item {
+			margin-bottom: 50px;
+			display: flex;
+			.info {
+				margin-left: 50px;
+				h3 {
+					margin-top: 0;
+					font-size: 20px;
+					color: #000;
+					margin-bottom: 8px;
+				}
+				p {
+					margin-bottom: 2px;
+				}
+				p.total {
+					margin-bottom: 13px;
+				}
+				p.the-next-level-play {
+					margin-top: 16px;
+    				line-height: 16px;
+				}
+			}
+		}
+		.loyalty-about {
+			color: #696969;
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.personal {
+	font-family: 'FuturaLightC';
+	.subscriptions {
+		h1 {
+			margin-bottom: 56px;
+		}
+		.form {
+			display: block;
+    		margin-bottom: 24px;
+		}
+		.checkbox-text {
+			font-size: 16px;
+		}
 	}
 }

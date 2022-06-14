@@ -474,7 +474,7 @@ gulp.task('build', gulp.series(
 	'robots',
 	gulp.parallel(
 		'images',
-		'sprites:png',
+		// 'sprites:png',
 		'sprites:svg',
 		'scss',
 		'js',

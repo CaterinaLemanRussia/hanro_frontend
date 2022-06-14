@@ -1,0 +1,42 @@
+main.personal.mt-100.mb-100
+	.container.orders
+		.row
+			.col-12.col-md-3
+				include ../components/personalAside
+			.col-12.col-md-8.offset-md-1
+				h1 Мои заказы
+				.orders-list
+					.empty
+						p Вы еще не совершали покупки
+				hr
+				.orders-list
+					.item
+						.info
+							a.order-id(href="/personal-order.html")
+								| № GM51641
+							.price 
+								| 89 560 р
+							.delivery
+								| Доставка: <адрес>, <дата>, <время>, 14 ноября, 10:00 - 18:00
+						.status.pending
+							| В обработке
+					.item
+						.info
+							a.order-id(href="/personal-order.html")
+								| № GM51641
+							.price 
+								| 89 560 р
+							.delivery
+								| Самовывоз: Москва, Фрунзенская наб., д.7 + название ПВЗ <br> Дата доставки в салон: ХХХ. Срок хранения заказа: 3 дня.
+						.status.cancelled
+							| Отменен
+					.item
+						.info
+							a.order-id(href="/personal-order.html")
+								| № GM51641
+							.price 
+								| 89 560 р
+							.delivery
+								| VIP-шопер: <адрес>
+						.status.completed
+							| Выполнен

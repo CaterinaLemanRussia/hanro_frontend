@@ -1,0 +1,107 @@
+main.personal.mt-100.mb-100
+	.container.orders
+		.row
+			.col-12.col-md-3
+				include ../components/personalAside
+			.col-12.col-md-8.offset-md-1
+				.order-detail
+					a(href="/personal-orders.html").back Все заказы
+					h1 Заказ № GM51641
+					.status.pending
+						| В обработке
+					.info
+						div 
+							| Вид доставки: Доставка
+						div 
+							| Адрес: г Москва, пр-кт Мира, д 100, под 6, домофон 165, эт 15, кв 165
+						div 
+							| Комментарии: ребенок спит, в звонок не звонить
+						div
+							| Дата и время доставки: ХХХ
+						div
+							| Оплата: При получении (картой или наличными)
+						div
+							| Получатель: Анастасия Христорождественская, 8 978 876 66 87, ohmymail@mail.ru
+					.actions
+						a.btn-primary(href="#") Изменить
+						a.btn-secondary(href="#") Отменить
+					.grey-line
+					.summary
+						.summary-row
+							.prop Товаров на сумму
+							.value 134 567 руб.
+						.summary-row
+							.prop Скидка
+							.value -765 руб.
+						.summary-row
+							.prop Бонусы
+							.value -347 руб.
+						.summary-row
+							.prop Доставка
+							.value 400 руб.
+						.summary-row.total
+							.prop Итого
+							.value 134 400 руб.
+					.grey-line
+					.bonuses
+						| Начисленно бонусов: 12 876
+					.grey-line
+					.order-contents
+						h3 Состав заказа
+						.item
+							.image-block
+								a(href="#")
+								img(src="https://picsum.photos/124/180?random=3")
+								.sticker.new
+									| new
+
+							.content-block
+								.title Жакет из смесевой ткани с контрастной строчкой на правом кармане
+								.color Цвет: светло-пурпурный
+								.size Размер: 36 - 37
+								.price
+									| 48 100 руб.
+							.price-block
+								.amount
+									| 2 шт
+								.total-price
+									| 48 100 РУБ.
+						.item
+							.image-block
+								a(href="#")
+								img(src="https://picsum.photos/124/180?random=2")
+								.sticker.new
+									| new
+
+							.content-block
+								.title Ночная сорочка в полоску
+								.color Цвет: светло-пурпурный
+								.size Размер: 36 - 37
+								.price
+									| 48 100 руб.
+							.price-block
+								.amount
+									| 1 шт
+								.total-price
+									| 48 100 РУБ.
+						.item
+							.image-block
+								a(href="#")
+								img(src="https://picsum.photos/124/180?random=1")
+								.sticker.sale
+									| sale
+
+							.content-block
+								.title Жакет из смесевой ткани с контрастной строчкой на правом кармане
+								.color Цвет: светло-пурпурный
+								.size Размер: 36 - 37
+								.price
+									| 48 100 руб.
+								.old-price
+									| 12 250 руб.
+							.price-block
+								.amount
+									| 1 шт
+								.total-price
+									| 48 100 РУБ.
+
