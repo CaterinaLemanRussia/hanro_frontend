@@ -5,7 +5,10 @@ main.personal.mt-100.mb-100
 				include ../components/personalAside
 			.col-12.col-md-8.offset-md-1
 				.order-detail
-					a(href="/personal-orders.html").back Все заказы
+
+					a(href="/personal-orders.html").back 
+						+svg('less')
+						| Все заказы
 					h1 Заказ № GM51641
 					.status.pending
 						| В обработке
