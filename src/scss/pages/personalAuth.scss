@@ -1,7 +1,7 @@
 .grey-line {
-		height: 2px;
-    	background: $color-hover-silver;
-	}
+	height: 2px;
+	background: $color-hover-silver;
+}
 .ttu {
 	text-transform: uppercase;
 }
@@ -14,11 +14,13 @@
 }
 section.auth, section.code, section.captcha {
 	
+
+
 	label.sms-code {
 		display: flex;
-    	justify-content: space-between;
+		justify-content: space-between;
 
-    	input.short {
+		input.short {
 			width: 20%;
 			text-align: center;
 		}
@@ -33,7 +35,7 @@ section.auth, section.code, section.captcha {
 	}
 	.pass-captcha {
 		margin: 0 auto;
-    	display: block;
+		display: block;
 	}
 	
 	h1 {
@@ -75,9 +77,9 @@ section.auth, section.code, section.captcha {
 }
 .personal h1 {
 	margin-top: 0;
-    line-height: 12px;
-    font-family: 'FuturaBookC';
-    margin-bottom: 37px;
+	line-height: 12px;
+	font-family: 'FuturaBookC';
+	margin-bottom: 37px;
 }
 .personal-data {
 	font-family: FuturaLightC;
@@ -85,30 +87,30 @@ section.auth, section.code, section.captcha {
 
 	.form__group__left .form__group__left-label {
 		width: 19.3%;
-	    justify-content: end;
-	    padding-right: 17px;
-	    align-items: center;
-	    flex-direction: row;
+		justify-content: end;
+		padding-right: 17px;
+		align-items: center;
+		flex-direction: row;
 	}
 	.form__group-error {
-    	margin-left: 12% ;
-    }
-    .with-desc {
-    	input {
-    		width: 43%;
-    	}
-    	.input-description {
-    		width: 38%;
-    		padding-left: 30px;
+		margin-left: 12% ;
+	}
+	.with-desc {
+		input {
+			width: 43%;
+		}
+		.input-description {
+			width: 38%;
+			padding-left: 30px;
 			padding-left: 27px;
-		    font-size: 16px;
-		    line-height: 16px;
-		    color: $color-graphite;
-		    display: inline-flex;
-		    align-items: center;
-    	}
-    }
-    .form__group-input {
+			font-size: 16px;
+			line-height: 16px;
+			color: $color-graphite;
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+	.form__group-input {
 		height: 44px;
 		width: 80.6%;
 	}
@@ -121,12 +123,12 @@ section.auth, section.code, section.captcha {
 .deliveries {
 	h3 {
 		margin-bottom: 8px;
-    	font-size: 17px;
-    	line-height: 17px;
+		font-size: 17px;
+		line-height: 17px;
 	}
 	.save-delivery-desc {
 		font-size: 14.2px;
-    	margin-bottom: 27px;
+		margin-bottom: 27px;
 	}
 	.btn-primary {
 		margin-bottom: 50px;
@@ -139,22 +141,22 @@ section.auth, section.code, section.captcha {
 		.item {
 			display: flex;
 			border-top: 1px solid #F5F5F5;
-    		border-bottom: 1px solid #F5F5F5;
-    		padding-top: 24px;
-    		padding-bottom: 24px;
-    		justify-content: space-between;
+			border-bottom: 1px solid #F5F5F5;
+			padding-top: 24px;
+			padding-bottom: 24px;
+			justify-content: space-between;
 			.text {
-				    max-width: 75%;
-				    width: 75%;
-				    font-size: 17px;
-				    letter-spacing: -0.4px;
-				    line-height: 17px;
+				max-width: 75%;
+				width: 75%;
+				font-size: 17px;
+				letter-spacing: -0.4px;
+				line-height: 17px;
 			}
 			&.removed {
 				padding-top: 22px;
-    			padding-bottom: 19px;
-    			color: #696969;
-    			justify-content: space-between;
+				padding-bottom: 19px;
+				color: #696969;
+				justify-content: space-between;
 			}
 			svg {
 				width: 16px;
@@ -173,10 +175,10 @@ section.auth, section.code, section.captcha {
 
 .delete-account {
 	text-align: right;
-    padding-top: 41px;
-    .btn-small {
-    	font-size: 12px;
-    }
+	padding-top: 41px;
+	.btn-small {
+		font-size: 12px;
+	}
 }
 
 
@@ -187,101 +189,103 @@ section.auth, section.code, section.captcha {
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
+	position: absolute;
+	left: -9999px;
 }
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label
 {
-    position: relative;
-    padding-left: 33px;
-    margin-right: 20px;
-    cursor: pointer;
-    line-height: 20px;
-    display: inline-block;
-    color: #666;
+	position: relative;
+	padding-left: 33px;
+	margin-right: 20px;
+	cursor: pointer;
+	line-height: 20px;
+	display: inline-block;
+	color: #666;
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    border: 1px solid #000;
-    border-radius: 100%;
-    background: #fff;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #000;
+	border-radius: 100%;
+	background: #fff;
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
-    content: '';
-    width: 16px;
-    height: 16px;
-    background: #000;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+	content: '';
+	width: 16px;
+	height: 16px;
+	background: #000;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 [type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
 }
 [type="radio"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
 .radio-group {
 	margin-left: 19%;
-    margin-bottom: 26px;
-    label {
-    	margin-right: 14px;
-    }
+	margin-bottom: 26px;
+	label {
+		margin-right: 14px;
+	}
 }
 
 .personal {
 	.personal-aside {
+
+
 		ul {
 			margin-top: -3px;
 			margin-bottom: 30px;
 			li {
-    			margin-bottom: 26px;
-    		&.active {
-			    border-top: 1px solid #000;
-			    border-bottom: 1px solid #000;
-			    padding-top: 8px;
-			    max-width: 256px;
-			    margin-left: 3px;
-			    padding-bottom: 10px;
-			    margin-bottom: 15px;
-			    margin-top: -5px;
-			    a {
-			    	color: #000;
-			    	margin-left: 0;
-			    }
-    		}
-    			a {
-    				font-size: 16px;
-    				text-transform: uppercase;
-    				margin-left: 3px;
-    				color: #696969;
-    			}
+				margin-bottom: 26px;
+				&.active {
+					border-top: 1px solid #000;
+					border-bottom: 1px solid #000;
+					padding-top: 8px;
+					max-width: 256px;
+					margin-left: 3px;
+					padding-bottom: 10px;
+					margin-bottom: 15px;
+					margin-top: -5px;
+					a {
+						color: #000;
+						margin-left: 0;
+					}
+				}
+				a {
+					font-size: 16px;
+					text-transform: uppercase;
+					margin-left: 3px;
+					color: #696969;
+				}
 			}
 		}
 
 		a.logout {
 			font-style: normal;
-		    font-weight: 400;
-		    font-size: 11px;
-		    line-height: 14px;
-		    margin-left: -2px;
-		    text-transform: uppercase;
-		    text-decoration: underline;
+			font-weight: 400;
+			font-size: 11px;
+			line-height: 14px;
+			margin-left: -2px;
+			text-transform: uppercase;
+			text-decoration: underline;
 		}
 	}
 }
@@ -291,23 +295,24 @@ section.auth, section.code, section.captcha {
 	font-family: FuturaLightC;
 
 	.status {
+		font-family: 'Futura';
 		display: inline-block;
 		padding: 4px 8px 2px 8px;
-	    border-radius: 8px;
-	    color: #fff;
-	    font-weight: 500;
-	    font-size: 14px;
-	    height: 24px;
+		border-radius: 8px;
+		color: #fff;
+		font-weight: 500;
+		font-size: 14px;
+		height: 24px;
 
-	    &.pending {
-	    	background: #4C5C68;
-	    }
-	    &.cancelled {
-	    	background: #C5C3C6;
-	    }
-	    &.completed {
-	    	background: #ABBAB0;
-	    }
+		&.pending {
+			background: #4C5C68;
+		}
+		&.cancelled {
+			background: #C5C3C6;
+		}
+		&.completed {
+			background: #ABBAB0;
+		}
 
 	}
 
@@ -323,7 +328,7 @@ section.auth, section.code, section.captcha {
 			.order-id {
 				font-family: FuturaBookC;
 				margin-bottom: 3px;
-    			display: block;
+				display: block;
 			}
 			.delivery {
 				line-height: 19px;
@@ -333,17 +338,58 @@ section.auth, section.code, section.captcha {
 		.empty p {
 			color: #696969;
 		}
+
 	}
+
+	@include media-breakpoint-only(xs) {
+		h1 {
+			margin-bottom: 30px;
+		}	
+		.orders-list {
+			margin-top: 26px;
+			.item {
+				align-items: flex-start;
+				padding: 7px;
+				margin-bottom: 9px;
+				position: relative;
+				.status {
+					height: auto;
+					&.pending {
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						width: 92px;
+					}
+				}
+			}
+		}	
+	}
+
 }
 .personal  {
 	.order-detail {
+
 		margin-top: -10px; 
 		h1 {
 			margin-bottom: 30px;
 		}
 		.back {
 			margin-bottom: 28px;
-	    	display: inline-block;
+			display: inline-block;
+			position: relative;
+			margin-left: 0;
+			padding-left: 20px;
+			svg {
+				position: absolute;
+				left: 0;
+				top: 4px;
+				width: 16px;
+				height: 12px;
+				fill: #fff;
+				@include media-breakpoint-only(xs) {
+					top: 1px !important;
+				}
+			}
 		}
 		.info {
 			margin-top: 21px;
@@ -357,13 +403,13 @@ section.auth, section.code, section.captcha {
 			margin-bottom: 50px;
 			.btn-primary {
 				display: inline-block;
-    			padding: 16px 16px 16px;
+				padding: 16px 16px 16px;
 			}
 			.btn-secondary {
-			    padding: 13px 11px;
-			    text-transform: uppercase;
-			    margin-left: 24px;
-			    padding: 15px 16px 8px;
+				padding: 13px 11px;
+				text-transform: uppercase;
+				margin-left: 24px;
+				padding: 15px 16px 8px;
 			}
 		}
 		.summary {
@@ -372,11 +418,11 @@ section.auth, section.code, section.captcha {
 
 			.summary-row {
 				display: flex;
-	    		justify-content: flex-start;
-	    		margin-bottom: 10px;
-	    		.prop {
-	    			width: 164px;
-	    		}
+				justify-content: flex-start;
+				margin-bottom: 10px;
+				.prop {
+					width: 164px;
+				}
 			}
 		}
 		.bonuses {
@@ -400,58 +446,126 @@ section.auth, section.code, section.captcha {
 					.sticker {
 						position: absolute;
 						bottom: 0;
-    					padding: 0px 7px;
-    					color: #fff;
-    					font-family: 'FuturaBookC';
-    					&.new {
-    						background: #ABBAB0;
-    					}
-    					&.sale {
-    						background: #E7C8BC;
-    					}
+						padding: 0px 7px;
+						color: #fff;
+						font-family: 'FuturaBookC';
+						&.new {
+							background: #ABBAB0;
+						}
+						&.sale {
+							background: #E7C8BC;
+						}
 					}
 				}
 
 				.content-block {
 					margin-left: 50px;
-    				max-width: 380px;
-    				width: 380px;
-    				.title {
-    					line-height: 18px;
-    					margin-bottom: 20px;
-    				}
-    				.price {
-    					margin-top: 20px;
-    					display: inline-flex;
-    				}
-    				.old-price {
-    					margin-top: 20px;
-    					display: inline-flex;
-    					color: #696969;
-    					text-decoration: line-through;
-    					margin-left: 4px;
-    				}
+					max-width: 380px;
+					width: 380px;
+					.title {
+						line-height: 18px;
+						margin-bottom: 20px;
+					}
+					.price {
+						margin-top: 20px;
+						display: inline-flex;
+					}
+					.old-price {
+						margin-top: 20px;
+						display: inline-flex;
+						color: #696969;
+						text-decoration: line-through;
+						margin-left: 4px;
+					}
 				}
 				.price-block {
 					width: 192px;
-				    display: flex;
-				    justify-content: space-between;
-				    align-items: center;
-				    padding-left: 40px;
-				    padding-right: 16px;
-				    .total-price {
-				    	font-family: 'FuturaBookC';
-    					font-size: 15px;
-				    }
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding-left: 40px;
+					padding-right: 16px;
+					.total-price {
+						font-family: 'FuturaBookC';
+						font-size: 15px;
+					}
 				}
 
 			}
+		}
+		@include media-breakpoint-only(sm) {
+			.total-price {
+				margin-left: 30px;
+			}
+		}
+		@include media-breakpoint-only(xs) {
+			.back {
+				text-transform: uppercase;
+				font-size: 12px;
+				margin-left: 20px;
+				margin-top: 10px;
+				margin-bottom: 18px;
+			}
+			h1 {
+				font-size: 24px;
+				margin-bottom: 23px;
+			}
+			.info {
+				margin-top: 15px;
+				margin-bottom: 20px;
+				& > div {
+					margin-bottom: 10px;
+					line-height: 15px;
+				}
+			}	
+			.summary {
+				margin-top: 41px;
+				margin-bottom: 45px;
+			}		
+			.order-contents {
+				margin-top: 42px;
+				.item {
+					margin-bottom: 20px;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					.image-block {
+						max-width: 96px;	
+					}
+					.content-block {
+						max-width: 170px;
+						margin-left: 10px;
+						.title {
+							font-size: 15px;
+							margin-bottom: 8px;
+						}
+						.price {
+							margin-top: 10px;
+						}
+					}
+					.price-block {
+						width: 100%;
+						padding-left: 0;
+						padding-right: 0;
+						justify-content: flex-end;
+						align-items: baseline;
+						.total-price {
+							margin-top: 18px;
+							font-size: 16px;
+							margin-left: 40px;
+						}
+					}
+				}
+			}
+
 		}
 	}
 }
 
 .personal {
 	.loyalty {
+		a.back {
+			display: none;
+		}
 		font-family: 'FuturaLightC';
 		h1 {
 			margin-bottom: 56px;
@@ -481,7 +595,7 @@ section.auth, section.code, section.captcha {
 				}
 				p.the-next-level-play {
 					margin-top: 16px;
-    				line-height: 16px;
+					line-height: 16px;
 				}
 			}
 		}
@@ -491,10 +605,57 @@ section.auth, section.code, section.captcha {
 				text-decoration: underline;
 			}
 		}
+		@include media-breakpoint-down(md) {
+			h1 {
+				max-width: 200px;
+				margin-left: 39px;
+				font-family: 'FuturaLightC';
+				line-height: 19px;
+				margin-bottom: 28px;
+			}
+			.empty {
+				margin-bottom: 24px;
+			}
+			.loyalty-list {
+				.item {
+					flex-direction: column;
+					margin-bottom: 23px;
+					img {
+						max-width: 264px;
+					}
+					.info {
+						margin-left: 0;
+						margin-top: 23px;
+						h3 {
+							font-family: 'FuturaLightC';
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-only(sm) {
+			.loyalty-list {
+				.item {
+					align-items: center;
+					flex-direction: row;
+					.info {
+						padding-left: 20px;
+						margin-top: 0;
+					}
+				}
+			}
+
+			.back {
+				display: none;
+			}
+		}
 	}
 }
 
 .personal {
+	.form__group {
+		margin-bottom: 24px;
+	}
 	font-family: 'FuturaLightC';
 	.subscriptions {
 		h1 {
@@ -502,10 +663,149 @@ section.auth, section.code, section.captcha {
 		}
 		.form {
 			display: block;
-    		margin-bottom: 24px;
+			margin-bottom: 24px;
 		}
 		.checkbox-text {
 			font-size: 16px;
+		}
+	}
+}
+
+// xs и sm (мобилка)
+@include media-breakpoint-down(md) {
+
+	.personal {
+
+		.personal-aside {
+			display: none;
+		}
+		margin-bottom: 22px;
+		h1 {
+			margin-top: 4px;
+			margin-bottom: 26px;
+		}
+		.personal-data {
+
+			margin-bottom: 24px;
+
+			.form__group {
+				flex-direction: column;
+				margin-bottom: 12px;
+			}
+			.form__group-label {
+				width: 100%;
+				margin-bottom: 10px;
+				justify-content: flex-start;
+				br {
+					display: none;
+				}
+			}
+			.form__group__left input {
+				width: 100%;
+			}
+			.radio-group {
+				margin-left: 0;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			.input-description {
+				width: 100%;
+				margin-left: 0;
+				padding-left: 0;
+				font-size: 12px;
+				font-family: 'FuturaLightC';
+				margin-top: 6px;
+				line-height: 13px;
+			}
+			.checkbox {
+				margin-top: 16px;
+				margin-bottom: 16px;
+			}
+			
+		}
+		.deliveries {
+			h3 {
+				font-family: 'FuturaLightC';
+				font-size: 20px;
+				margin-top: 27px;
+			}
+			.btn-primary {
+				margin-bottom: 24px;
+			}
+			.edit, .delete {
+				span {
+					display: none;
+				}
+			}
+			.delete {
+				margin-right: 10px;
+			}
+		}
+		.save-delivery-desc {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+		.delete-account {
+			text-align: left;
+			padding-top: 4px;
+			font-size: 30px;
+			.btn-small {
+				font-size: 14px;
+			}
+		}
+		& .loyalty a.back {
+			display: block;
+			position: absolute;
+			svg {
+				position: relative;
+				top: 14px;
+				left: 2px;
+				width: 20px;
+				height: 15px;
+			}
+		}
+	}
+}
+
+// планшеты
+@include media-breakpoint-only(md) {
+	.personal {
+		h1 {
+			margin-top: 0;
+			line-height: 25px;
+			font-family: 'FuturaBookC';
+			margin-bottom: 25px;
+		}
+		.radio-group {
+			margin-left: 26%;
+			margin-bottom: 26px;
+		}
+		.with-desc input {
+			width: 46%;
+		}
+		.personal-data .with-desc .input-description {
+			width: 34%;
+			padding-left: 11px;
+			font-size: 12px;
+			line-height: 11px;
+		}
+		.personal-aside {
+			margin-top: 9px;
+		}
+		.deliveries {
+			.delete {
+				margin-left: 10px;
+			}
+		}
+		.deliveries h3 {
+			margin-bottom: 8px;
+			font-size: 20px;
+			line-height: 20px;
+			font-family: 'FuturaLightC';
+		}
+		.deliveries .save-delivery-desc {
+			font-size: 16px;
+			margin-bottom: 22px;
 		}
 	}
 }
