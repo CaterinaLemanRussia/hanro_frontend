@@ -1,6 +1,9 @@
-mixin block_content-under(title, mobileSlider, ...items)
+mixin block_content-under(title, suptitle, mobileSlider, ...items)
 	div.block_content-under&attributes(attributes)
 		.container
+			if suptitle
+				.block_content-under--suptitle.h3.mb-8
+					| !{suptitle}
 			if title
 				.block_content-under--title.h1.mb-24
 					| !{title}

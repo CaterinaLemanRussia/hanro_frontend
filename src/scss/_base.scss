@@ -25,7 +25,6 @@ html {
 }
 
 body {
-	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.38;
 	letter-spacing: 0.1px;
@@ -126,7 +125,7 @@ iframe {
 .btn {
 	display: inline-block;
 	font-size: 16px;
-	font-weight: 300;
+	font-family: $font-primary;
 	line-height: 1.25;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
@@ -208,7 +207,7 @@ iframe {
 
 h1,
 .h1 {
-	font-weight: 350;
+	font-family: $font-second;
 	font-size: 24px;
 	line-height: 1.08;
 	letter-spacing: 1.5px;
@@ -216,7 +215,7 @@ h1,
 	color: $color-black-hover;
 
 	@include media-breakpoint-only(xs) {
-		font-weight: 300;
+		font-family: $font-primary;
 		font-size: 20px;
 		line-height: 1.1;
 	}
@@ -224,7 +223,6 @@ h1,
 
 h2,
 .h2 {
-	font-weight: 300;
 	font-size: 20px;
 	line-height: 1.1;
 	letter-spacing: 1.5px;
@@ -234,8 +232,8 @@ h2,
 
 h3,
 .h3 {
+	font-family: $font-second;
 	font-size: 15px;
-	font-weight: 350;
 	line-height: 1.3333;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
@@ -246,14 +244,12 @@ h3,
 	&__group {
 		position: relative;
 		display: block;
-		margin-bottom: 24px;
 
 		&.is-disabled {
 			opacity: 0.4;
 		}
 
 		&-label {
-			font-weight: 300;
 			font-size: 14px;
 			line-height: 1.14;
 			letter-spacing: 0.1px;
@@ -268,7 +264,6 @@ h3,
 			font-size: 16px;
 			line-height: 1;
 			letter-spacing: 0.1px;
-			font-weight: 300;
 			outline: none;
 			transition: border-color $duration-normal, box-shadow $duration-normal;
 
