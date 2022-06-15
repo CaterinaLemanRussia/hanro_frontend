@@ -65,6 +65,9 @@
 			}
 
 			&--favorite {
+				&--icon {
+					fill: none;
+				}
 			}
 
 			&--cart {
@@ -359,6 +362,31 @@
 
 		@include media-breakpoint-between(sm,lg) {
 			top: 106px;
+		}
+
+		&__action {
+			margin-top: 50px;
+			display: flex;
+			flex-direction: column;
+			&-btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 16px;
+				width: 100%;
+			}
+
+			&-icon {
+				flex: 0 0 24px;
+				width: 24px;
+				height: 24px;
+				margin-right: 10px;
+				line-height: 0;
+				margin-top: -3px;
+				svg {
+					fill: none;
+				}
+			}
 		}
 	}
 }

@@ -13,6 +13,7 @@ import oneTimePasswd from "./components/oneTimePasswd";
 import "./components/to-top";
 
 import "./components/blocks/content-under";
+import "./components/blocks/slider-products";
 
 ieFix();
 vhFix();

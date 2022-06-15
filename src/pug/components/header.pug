@@ -45,7 +45,7 @@ header.header
 							+svg("lk")
 					a(href="#").header__actions-item.d-none.d-md-block
 						.header__actions-item--icon.header__actions-item--favorite
-							+svg("favorite")
+							+svg("favorite").header__actions-item--favorite--icon
 					button.header__actions-item
 						.header__actions-item--icon.header__actions-item--cart
 							+svg("cart")
@@ -175,6 +175,13 @@ header.header
 			.row
 				.col-md-3
 					nav.header__dropdown-nav
+						a.header__dropdown-nav--item(href="#")
+							| Новинки
+						a.header__dropdown-nav--item(href="#")
+							| Базовая коллекция
+						a.header__dropdown-nav--item(href="#")
+							| Отличительные черты
+						.header__dropdown-nav--separate
 						a.header__dropdown-nav--item.header__dropdown-nav--parent.js-dropdown--button(href="#" data-dropdown="forHer1")
 							|Повседневная одежда
 							span
@@ -283,6 +290,20 @@ header.header
 								| Аксессуары
 							a.header__dropdown-nav--item(href="#")
 								| Премиальная коллекция
+	.header__dropdown.js-dropdown--container(data-dropdown="mir-hanro").d-none.d-lg-block
+		.container
+			.row
+				.col-md-3
+					nav.header__dropdown-nav
+						a.header__dropdown-nav--item(href="#")
+							| О нас
+						a.header__dropdown-nav--item(href="#")
+							| Карьера
+						a.header__dropdown-nav--item(href="#")
+							| Подборки
+						a.header__dropdown-nav--item(href="#")
+							| Пресса
+
 
 .header__burger.d-lg-none
 	.container
@@ -303,6 +324,13 @@ header.header
 			.header__burger-item
 				a(href="#")
 					| Наимен-е дин раздела
+			.header__burger__action
+				button.btn.btn-primary.btn-big.header__burger__action-btn.header__burger-item--parent(data-dropdown="forHim")
+					| Личный кабинет
+				a.btn.btn-primary.btn-big.header__burger__action-btn(href="#")
+					.header__burger__action-icon
+						+svg("favorite")
+					| Избранное
 
 	.header__burger-child(data-dropdown="forHer")
 		.container
