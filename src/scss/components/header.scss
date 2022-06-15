@@ -94,13 +94,13 @@
 		left: 0;
 		right: 0;
 		top: 100%;
+		z-index: 10;
 		padding-top: 24px;
-		opacity: 0;
+		min-height: 65vh;
 		background: #fff;
+		opacity: 0;
 		visibility: hidden;
 		transition: $duration-normal opacity $easing-back-in, $duration-normal visibility $easing-back-in;
-		z-index: 10;
-		min-height: 65vh;
 
 		&-nav {
 			min-height: 100%;
@@ -169,11 +169,11 @@
 				right: 0;
 				top: 0;
 				bottom: 0;
+				z-index: 10;
 				padding: 0 $grid-gutter-width / 2;
 				opacity: 0;
 				visibility: hidden;
 				transition: $duration-normal opacity $easing-back-in;
-				z-index: 10;
 
 				&::before {
 					content: "";
@@ -186,10 +186,10 @@
 				}
 
 				&.is-active {
+					z-index: 15;
 					opacity: 1;
 					visibility: visible;
 					transition: $duration-normal opacity $easing-back-out;
-					z-index: 15;
 				}
 
 				&--wrapper {
@@ -225,12 +225,12 @@
 		right: 0;
 		top: 80px;
 		bottom: 0;
+		z-index: 100;
 		display: none;
 		overflow-x: hidden;
 		overflow-y: scroll;
 		padding-top: 50px;
 		background: #fff;
-		z-index: 100;
 
 		&-btn {
 			z-index: 10;
@@ -282,11 +282,12 @@
 			padding: 12px 0;
 
 			a {
+				flex: 1 1;
 				font-size: 14px;
 				line-height: 1.0714;
 				letter-spacing: 0.25px;
 				text-transform: uppercase;
-				flex: 1 1;
+
 				@include media-breakpoint-between(sm,lg) {
 					font-size: 16px;
 				}
@@ -319,6 +320,7 @@
 				text-transform: uppercase;
 				color: $color-black;
 				background: none;
+
 				&--wrapper {
 					background: $color-silver;
 				}
@@ -360,14 +362,11 @@
 			}
 		}
 
-		@include media-breakpoint-between(sm,lg) {
-			top: 106px;
-		}
-
 		&__action {
-			margin-top: 50px;
 			display: flex;
 			flex-direction: column;
+			margin-top: 50px;
+
 			&-btn {
 				display: flex;
 				align-items: center;
@@ -378,15 +377,20 @@
 
 			&-icon {
 				flex: 0 0 24px;
+				margin-top: -3px;
+				margin-right: 10px;
 				width: 24px;
 				height: 24px;
-				margin-right: 10px;
 				line-height: 0;
-				margin-top: -3px;
+
 				svg {
 					fill: none;
 				}
 			}
+		}
+
+		@include media-breakpoint-between(sm,lg) {
+			top: 106px;
 		}
 	}
 }

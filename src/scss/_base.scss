@@ -217,7 +217,7 @@ h1,
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	color: $color-black-hover;
-
+	font-weight: 400;
 	@include media-breakpoint-only(xs) {
 		font-family: $font-primary;
 		font-size: 20px;
@@ -232,6 +232,7 @@ h2,
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	color: $color-black;
+	font-weight: 400;
 }
 
 h3,
@@ -242,6 +243,7 @@ h3,
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	color: $color-graphite;
+	font-weight: 400;
 }
 
 .form {
@@ -421,6 +423,12 @@ h3,
 			}
 		}
 	}
+}
+
+.text-wrap {
+	padding: 24px;
+	background: rgba(197, 195, 198, 0.2);
+	color: $color-black
 }
 
 /* stylelint-disable */

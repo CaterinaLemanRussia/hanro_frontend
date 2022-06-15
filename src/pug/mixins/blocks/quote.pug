@@ -1,0 +1,7 @@
+mixin block_quote(text)
+	.container&attributes(attributes)
+		.block_quote.text-center
+			.block_quote-icon
+				+svg('qoute')
+			.block_quote-text
+				| !{text}
