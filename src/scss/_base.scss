@@ -131,7 +131,8 @@ iframe {
 	text-transform: uppercase;
 	background: none;
 	border: none;
-
+	white-space: nowrap;
+	max-width: 100%;
 	&-primary {
 		height: 48px;
 		border: 1px solid $color-black;
@@ -182,6 +183,9 @@ iframe {
 
 	&-small {
 		padding: 13.5px 12px 10.5px;
+		@include media-breakpoint-only(xs) {
+			font-size: 13px;
+		}
 	}
 
 	&-big {
@@ -373,6 +377,49 @@ h3,
 		border: none;
 		padding: 0;
 		color: $color-graphite;
+		transition: opacity $duration-normal;
+		&.swiper-button-disabled {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	&__arrow-long {
+		width: 48px;
+		height: 48px;
+		background-color: rgba(255, 255, 255, 0.8);
+		border: none;
+		border-radius: 100%;
+		padding: 12px;
+		color: $color-graphite;
+		box-shadow: 0 6px 12px -6px rgba(24, 39, 75, 0.12), 0 8px 24px -4px rgba(24, 39, 75, 0.08);
+		transition: opacity $duration-normal;
+		&.swiper-button-disabled {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	&-dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&.swiper-pagination-lock {
+			display: none;
+		}
+		.swiper-pagination-bullet {
+			flex: 0 0 7px;
+			width: 7px;
+			height: 7px;
+			background-color: #C5C3C6;
+			border-radius: 100%;
+			margin: 0 10px;
+			cursor: pointer;
+
+			&.swiper-pagination-bullet-active {
+				background-color: $color-black;
+			}
+		}
 	}
 }
 

@@ -372,11 +372,11 @@ $.fancybox.defaults = {
 	}
 };
 
-if ($('#popup-mail').length > 0) {
-	$.fancybox.open({
-		src: '#popup-mail',
-		scrolling: 'hidden',
-	})
-}
+// if ($('#popup-mail').length > 0) {
+// 	$.fancybox.open({
+// 		src: '#popup-mail',
+// 		scrolling: 'hidden',
+// 	})
+// }
 
 

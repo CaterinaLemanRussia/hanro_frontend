@@ -1,0 +1,41 @@
+.block_slider-products {
+	&--suptitle {
+		text-align: center;
+	}
+
+	&--title {
+		text-align: center;
+	}
+
+	&__slider {
+		@include media-breakpoint-up(sm) {
+			margin: -24px;
+			padding: 24px;
+		}
+
+
+		&-arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 5;
+			margin-top: -68px;
+
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+
+			&--left {
+				left: 0;
+			}
+
+			&--right {
+				right: 0;
+			}
+		}
+	}
+	&--link {
+		position: relative;
+		text-align: center;
+		z-index: 10;
+	}
+}

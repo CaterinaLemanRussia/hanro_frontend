@@ -1,0 +1,77 @@
+.card {
+	position: relative;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0.1px;
+	text-align: center;
+
+	&-image {
+		display: block;
+
+		&--wrapper {
+			display: block;
+			position: relative;
+		}
+
+		&--tag {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			padding: 5px 8px 7px;
+			background: $color-man-sage-main;
+			color: #FFF;
+			font-family: $font-medium;
+		}
+	}
+
+	&__favorite {
+		position: absolute;
+		right: 8px;
+		top: 8px;
+		border: none;
+		width: 36px;
+		height: 36px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 100%;
+		color: $color-black;
+		padding: 7px 6px 5px;
+		box-sizing: border-box;
+		&--icon {
+			fill: none;
+			transition: $duration-normal fill;
+		}
+
+		&.is-active &--icon {
+			fill: currentColor;
+		}
+	}
+
+	&-brand {
+		text-transform: uppercase;
+		color: $color-black;
+	}
+
+	&-title {
+		display: block;
+		text-transform: uppercase;
+		color: $color-graphite;
+	}
+
+	&__price {
+		display: flex;
+		justify-content: center;
+
+		&-actual,
+		&-sale {
+			padding: 0 6px;
+		}
+
+		&-sale {
+			text-decoration-line: line-through;
+			text-decoration-thickness: from-font;
+			@include media-breakpoint-only(xs) {
+				display: none;
+			}
+		}
+	}
+}

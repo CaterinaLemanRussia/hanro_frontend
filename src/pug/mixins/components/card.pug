@@ -1,0 +1,29 @@
+mixin card(object)
+	div.card&attributes(attributes)
+		a.card-image--wrapper.mb-16(href='#')
+			+lazyPicture({
+				src: object.img,
+				alt: '',
+			}).card-image
+			if object.tag
+				.card-image--tag
+					| !{object.tag}
+		if object.favorite
+			button.card__favorite.is-active
+				+svg('favorite').card__favorite--icon
+		else
+			button.card__favorite
+				+svg('favorite').card__favorite--icon
+		if object.brand
+			.card-brand.mb-8
+				| !{object.brand}
+		if object.title
+			a.card-title.mb-8(href='#')
+				| !{object.title}
+		if object.in_stock
+			.card__price
+				.card__price-actual
+					| !{object.price.actual} руб.
+				if object.price.sale
+					.card__price-sale
+						| !{object.price.sale} руб.
