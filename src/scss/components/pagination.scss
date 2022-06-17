@@ -1,0 +1,48 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 98px 0;
+	color: $color-graphite;
+
+	&-arrow {
+		flex: 0 0 24px;
+		width: 24px;
+		height: 24px;
+
+		&--left {
+			margin-right: 24px;
+		}
+
+		&--right {
+			margin-left: 24px;
+		}
+	}
+
+	&-list {
+		display: flex;
+		align-items: center;
+
+		&--item {
+			margin-right: 24px;
+			font-size: 16px;
+			line-height: 1;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&--current {
+			color: $color-black;
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		padding: 60px 0 0;
+	}
+
+	@include media-breakpoint-only(xs) {
+		padding: 40px 0 30px;
+	}
+}

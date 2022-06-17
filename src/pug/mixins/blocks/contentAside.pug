@@ -19,17 +19,28 @@ mixin block_content-aside(title, ...items)
 										.block_content-description.h3.mb-8
 											| !{item.description}
 									if item.title
-										.block_content-title.h1.mb-24
-											| !{item.title}
-									.d-md-none.mb-24
+										if item.titleType === 'h2'
+											.block_content-title.h2(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+												| !{item.title}
+										else if item.titleType === 'big-text'
+											.block_content-title.big-text(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+												| !{item.title}
+										else
+											.block_content-title.h1(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+												| !{item.title}
+									.d-md-none(class=`${item.spacing ? item.spacing : 'mb-24'}`)
 										+lazyPicture({
 											src: item.img,
 											alt: `${item.title} - изображение`,
 										}).block_content-aside__item-img
 
 									if item.text
-										.block_content-text.mb-24
+										.block_content-text(class=`${item.spacing ? item.spacing : 'mb-24'}`)
 											| !{item.text}
+
+									if item.linkBeforeSep
+										div.block_content__separated(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+
 									if item.links
 										.block_content__links
 											each link in item.links
@@ -44,17 +55,28 @@ mixin block_content-aside(title, ...items)
 										.block_content-description.h3.mb-8
 											| !{item.description}
 									if item.title
-										.block_content-title.h1.mb-24
-											| !{item.title}
-									.d-md-none.mb-24
+										if item.titleType === 'h2'
+											.block_content-title.h2(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+												| !{item.title}
+										else if item.titleType === 'big-text'
+											.block_content-title.big-text(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+												| !{item.title}
+										else
+											.block_content-title.h1(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+												| !{item.title}
+									.d-md-none(class=`${item.spacing ? item.spacing : 'mb-24'}`)
 										+lazyPicture({
 											src: item.img,
 											alt: `${item.title} - изображение`,
 										}).block_content-aside__item-img
 
 									if item.text
-										.block_content-text.mb-24
+										.block_content-text(class=`${item.spacing ? item.spacing : 'mb-24'}`)
 											| !{item.text}
+
+									if item.linkBeforeSep
+										div.block_content__separated(class=`${item.spacing ? item.spacing : 'mb-24'}`)
+
 									if item.links
 										.block_content__links
 											each link in item.links

@@ -9,8 +9,8 @@
 		display: block;
 
 		&--wrapper {
-			display: block;
 			position: relative;
+			display: block;
 		}
 
 		&--tag {
@@ -18,9 +18,16 @@
 			left: 0;
 			bottom: 0;
 			padding: 5px 8px 7px;
-			background: $color-man-sage-main;
-			color: #FFF;
 			font-family: $font-medium;
+			color: #fff;
+
+			&--new {
+				background: $color-man-sage-main;
+			}
+
+			&--sale {
+				background: $color-woman-coral-dark;
+			}
 		}
 	}
 
@@ -29,20 +36,21 @@
 		right: 8px;
 		top: 8px;
 		border: none;
+		border-radius: 100%;
+		padding: 7px 6px 5px;
 		width: 36px;
 		height: 36px;
-		background: rgba(255, 255, 255, 0.2);
-		border-radius: 100%;
-		color: $color-black;
-		padding: 7px 6px 5px;
 		box-sizing: border-box;
-		&--icon {
-			fill: none;
-			transition: $duration-normal fill;
-		}
+		color: $color-black;
+		background: rgba(255, 255, 255, 0.2);
 
 		&.is-active &--icon {
 			fill: currentColor;
+		}
+
+		&--icon {
+			fill: none;
+			transition: $duration-normal fill;
 		}
 	}
 
@@ -69,9 +77,56 @@
 		&-sale {
 			text-decoration-line: line-through;
 			text-decoration-thickness: from-font;
+
 			@include media-breakpoint-only(xs) {
 				display: none;
 			}
+		}
+	}
+
+	&__colors {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: -8px;
+		padding: 0 25px;
+
+		&-item {
+			display: block;
+			border: 1px solid $color-silver;
+			padding: 0;
+			width: 12px;
+			height: 12px;
+
+			&--wrapper {
+				margin: 0 5px 8px;
+				padding: 2px;
+			}
+		}
+
+		@include media-breakpoint-only(xs) {
+			padding: 0;
+		}
+	}
+
+	&__properties {
+		border-top: 1px solid $color-hover-silver;
+		font-size: 12px;
+		line-height: 1;
+		color: $color-graphite;
+
+		&-item {
+			display: flex;
+
+			&--value {
+				margin-left: 8px;
+			}
+		}
+	}
+
+	&-btn {
+		.btn {
+			width: 100%;
 		}
 	}
 }

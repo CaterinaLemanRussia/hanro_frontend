@@ -1,0 +1,458 @@
+main.catalog.mt-50
+	+breadcrumps(
+		{
+			title: 'Главная',
+			href: '#'
+		},
+		{
+			title: 'Для нее'
+		}
+	).mb-50
+	+block_content-aside(
+		'наименование страницы дневная одежда',
+		{
+			img: `${baseDir}images/pages/catalog/block1.jpeg`,
+			title: 'Динамический подзаголовок',
+			titleType: 'h2',
+			text:
+				'Свободный текстовый блок, который может иметь разный размер текста. Наши бестселлеры для женщин - например, бюстгальтер Spacer из коллекции «Хлопковое кружево». Женственный, инновационный и натуральный.'
+				+ '<img src="/images/blocks/contentImg.jpeg" class="mt-24"/>'
+			,
+			content_side: 'right',
+			links: [
+				{
+					href: "#",
+					title: 'Гиперссылка'
+				}
+			]
+		}
+	).mb-50
+	+block_content-aside(
+		'',
+		{
+			img: `${baseDir}images/pages/catalog/block1.jpeg`,
+			description: 'Текстовый блок, не кликабельный.',
+			title: 'МОЙ КОМФОРТ, <br/> МОЯ РОСКОШЬ',
+			titleType: 'big-text',
+			content_side: 'left',
+			linkBeforeSep: true,
+			spacing: 'mb-50',
+			links: [
+				{
+					href: "#",
+					title: 'атласный люкс'
+				}
+			]
+		}
+	).mb-50
+
+	.container.mb-50.text-center
+		.h3.mb-16
+			| Заголовок 3
+		p.mb-16
+			| Черный никогда не выходит из моды и означает сдержанную, повседневную элегантность. Эти нижнее белье и одежда для отдыха изготовлены из высококачественных и изысканных натуральных материалов, передающие чувство роскошной уверенности.
+		.row
+			.col-sm-6
+				+lazyPicture({
+					src: `${baseDir}images/pages/catalog/block2-1.jpeg`,
+					alt: ``,
+				}).d-block.mb-16
+				p
+					| Подписи - Текстовый блок, не кликабельный. Классика из лучшей смеси шерсти и шелка, которая гарантированно не поцарапается.
+			.col.d-sm-none.mb-50
+			.col-sm-6
+				+lazyPicture({
+					src: `${baseDir}images/pages/catalog/block2-2.jpeg`,
+					alt: ``,
+				}).d-block.mb-16
+				p
+					| Текстовый блок, не кликабельный. Функциональное нижнее белье MERINO WOOL & SILK идеально подходит для всех спортивных мероприятий, как в помещении, так и на открытом воздухе.
+
+	.container.mb-50
+		| <iframe class="video-frame mb-16" src="https://www.youtube.com/embed/elsifAAg89I" title="People Sitting on a Bench in the Park - Free HD Stock Footage (No Copyright)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		p
+			| Любимый поколениями за идеальную посадку и прекрасное, устойчивое качество. Качество, которое вы можете почувствовать на своей коже.
+	+block_button-inside(
+		{
+			button: {
+				name: 'Наименование кнопки',
+				href: '#',
+			},
+			buttonPosition: 'down',
+			img: `${baseDir}images/pages/catalog/block3.jpeg`
+		}
+	).mb-50
+
+	.container.mb-50.text-center
+		.row.justify-content-center
+			.col-md-8
+				| Текстовый блок - Любимый поколениями за идеальную посадку и прекрасное, устойчивое качество. Качество, которое вы можете почувствовать на своей коже.
+
+	.container.mb-50.text-center
+		| тут будет фильтр
+
+	section.catalog-loop
+		.container
+			.row.row-cols-lg-4.row-cols-md-3.row-cols-2
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						tag: 'new',
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item1.jpeg`,
+						colors: [
+							'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A', '#000000'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item2.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF', '#97258B'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						in_stock: false,
+						img: `${baseDir}images/pages/catalog/item3.jpeg`,
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item4.jpeg`,
+						colors: [
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: true,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item5.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						tag: 'new',
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item1.jpeg`,
+						colors: [
+							'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A', '#000000'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item2.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF', '#97258B'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						in_stock: false,
+						img: `${baseDir}images/pages/catalog/item3.jpeg`,
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item4.jpeg`,
+						colors: [
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: true,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item5.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						tag: 'new',
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item1.jpeg`,
+						colors: [
+							'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A', '#000000'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item2.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF', '#97258B'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						in_stock: false,
+						img: `${baseDir}images/pages/catalog/item3.jpeg`,
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item4.jpeg`,
+						colors: [
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: true,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item5.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						tag: 'new',
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item1.jpeg`,
+						colors: [
+							'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A', '#000000'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item2.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF', '#97258B'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						in_stock: false,
+						img: `${baseDir}images/pages/catalog/item3.jpeg`,
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item4.jpeg`,
+						colors: [
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: true,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item5.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						tag: 'new',
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item1.jpeg`,
+						colors: [
+							'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A', '#000000'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						img: `${baseDir}images/pages/catalog/item2.jpeg`,
+						colors: [
+							'#7C4470', '#F4BDBD', '#EBF4DF', '#97258B'
+						]
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						in_stock: false,
+						img: `${baseDir}images/pages/catalog/item3.jpeg`,
+					})
+				.mb-50
+					+card({
+						brand: 'LUCY',
+						title: 'Бра с мягкой чашечной',
+						href: '#',
+						favorite: false,
+						price: {
+							actual: '24 500'
+						},
+						in_stock: true,
+						tag: 'new',
+						img: `${baseDir}images/pages/catalog/item4.jpeg`,
+						colors: [
+							'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+							'#97258B', '#97F6FC', '#16009A'
+						]
+					})
+
+	include  ../components/pagination
+
