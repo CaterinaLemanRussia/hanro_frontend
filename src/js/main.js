@@ -14,6 +14,8 @@ import "./components/to-top";
 
 import "./components/select";
 
+import "./components/search";
+
 import "./components/blocks/content-under";
 import "./components/blocks/slider-products";
 

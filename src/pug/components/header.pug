@@ -51,6 +51,67 @@ header.header
 							+svg("cart")
 						.header__actions-item--badge
 							| 4
+	.header__search-wrapper.pb-100.pt-50
+		.container
+			.header__search
+				input.header__search-input.form__group-input
+				button.btn.btn-big.header__search-btn
+					| ПОИСК
+			.header__search__result.mt-50
+				.row
+					.col-md-3
+						nav.header__search__result__side
+							a.header__search__result__side-item
+								| Топ <b>Бра</b>
+							a.header__search__result__side-item
+								| Хлопковые <b>бра</b>
+							a.header__search__result__side-item
+								| <b>Бра</b> и трусы
+							a.header__search__result__side-item
+								| Бюстгалтер <b>бра</b>лет
+					.col-md-9
+						.row.row-cols-lg-3.row-cols-2
+							+card({
+								brand: 'LUCY',
+								title: 'Бра с мягкой чашечной',
+								href: '#',
+								favorite: false,
+								price: {
+									actual: '24 500'
+								},
+								tag: 'new',
+								in_stock: true,
+								img: `${baseDir}images/pages/catalog/item1.jpeg`,
+								colors: [
+									'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
+									'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+									'#97258B', '#97F6FC', '#16009A', '#000000'
+								]
+							})
+							.mb-50
+								+card({
+									brand: 'LUCY',
+									title: 'Бра с мягкой чашечной',
+									href: '#',
+									favorite: false,
+									price: {
+										actual: '24 500'
+									},
+									in_stock: true,
+									img: `${baseDir}images/pages/catalog/item2.jpeg`,
+									colors: [
+										'#7C4470', '#F4BDBD', '#EBF4DF', '#97258B'
+									]
+								})
+							.mb-50
+								+card({
+									brand: 'LUCY',
+									title: 'Бра с мягкой чашечной',
+									href: '#',
+									favorite: false,
+									in_stock: false,
+									img: `${baseDir}images/pages/catalog/item3.jpeg`,
+								})
 
 	.header__dropdown.js-dropdown--container(data-dropdown="forHim").d-none.d-lg-block
 		.container
