@@ -1,0 +1,7 @@
+mixin block_anchors(...items)
+	.block_anchors&attributes(attributes)
+		.container
+			.block_anchors__loop
+				each item in items
+					a.link(href=item.href).block_anchors__loop-item
+						| !{item.title}

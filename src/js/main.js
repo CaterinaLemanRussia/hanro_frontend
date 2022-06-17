@@ -12,6 +12,8 @@ import accordion from "./components/accordion";
 import oneTimePasswd from "./components/oneTimePasswd";
 import "./components/to-top";
 
+import "./components/select";
+
 import "./components/blocks/content-under";
 import "./components/blocks/slider-products";
 

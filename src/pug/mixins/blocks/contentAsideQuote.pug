@@ -45,21 +45,25 @@ mixin block_content-aside_quote(title, ...items)
 						else if item.content_side === 'left'
 							.col-md-6
 								.block_content
-									if item.description
-										.block_content-description.h3.mb-8
-											| !{item.description}
 									if item.title
-										.block_content-title.h1.mb-24
+										.block_content-title.h2.mb-16
 											| !{item.title}
 									.d-md-none.mb-24
 										+lazyPicture({
 											src: item.img,
 											alt: `${item.title} - изображение`,
 										}).block_content-aside__item-img
-
 									if item.text
-										.block_content-text.mb-24
+										.block_content-text.mb-50
 											| !{item.text}
+									if item.quote
+										.block_content-quote.mb-50
+											if item.quote.text
+												.block_content-quote--text.h3.mb-16
+													| !{item.quote.text}
+											if item.quote.author
+												.block_content-quote--author
+													| !{item.quote.author}
 									if item.links
 										.block_content__links
 											each link in item.links

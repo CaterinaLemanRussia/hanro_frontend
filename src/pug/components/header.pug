@@ -325,7 +325,7 @@ header.header
 				a(href="#")
 					| Наимен-е дин раздела
 			.header__burger__action
-				button.btn.btn-primary.btn-big.header__burger__action-btn.header__burger-item--parent(data-dropdown="forHim")
+				button.btn.btn-primary.btn-big.header__burger__action-btn.header__burger-item--parent(data-dropdown="lc")
 					| Личный кабинет
 				a.btn.btn-primary.btn-big.header__burger__action-btn(href="#")
 					.header__burger__action-icon
@@ -419,5 +419,31 @@ header.header
 				.header__burger-item
 					a(href="#")
 						| Скидки
+	.header__burger-child(data-dropdown="lc")
+		.container
+			nav.header__burger-nav
+				.header__burger-item.header__burger-item--back--wrapper
+					button.header__burger-item--back(data-dropdown="")
+						.header__burger-item--back--icon
+							+svg("arrow_left")
+						| Личный кабинет
+				.header__burger-item
+					a(href="#")
+						| Личные данные
+				.header__burger-item
+					a(href="#")
+						| Избранное
+				.header__burger-item
+					a(href="#")
+						| Мои заказы
+				.header__burger-item
+					a(href="#")
+						| Программа лояльности
+				.header__burger-item
+					a(href="#")
+						| Управление подписками
+				.header__burger-item
+					a.link(href="#")
+						| Выйти
 
 

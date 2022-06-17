@@ -9,5 +9,5 @@ mixin block_button-inside(...items)
 								src: item.img,
 								alt: `${item.button.name} - изображение`,
 							}).block_button-inside__item-img
-							.block_button-inside__item-btn
+							.btn.btn-photo.btn-big.block_button-inside__item-btn(class=`${item.buttonPosition ? 'block_button-inside__item-btn--' + item.buttonPosition : ''}`)
 								| !{item.button.name}

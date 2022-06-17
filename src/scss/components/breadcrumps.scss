@@ -1,0 +1,40 @@
+.breadcrumps {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid $color-silver;
+	padding-bottom: 8px;
+
+	&-item {
+		font-size: 12px;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	&-separate {
+		margin: 0 14px;
+		width: 6px;
+		height: 12px;
+	}
+
+	&__back {
+		&-btn {
+			display: inline-flex;
+			align-items: center;
+		}
+
+		&-icon {
+			margin-right: 4px;
+			flex: 0 0 16px;
+			width: 16px;
+			height: 16px;
+		}
+
+		&-text {
+			align-self: end;
+			font-size: 12px;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+	}
+}

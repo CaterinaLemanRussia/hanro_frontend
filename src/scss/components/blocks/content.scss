@@ -9,6 +9,19 @@
 		}
 	}
 
+	//&-text {
+	//	img {
+	//		margin-top: 24px;
+	//	}
+	//}
+
+	&__separated {
+		width: 72px;
+		height: 2px;
+		display: inline-block;
+		background: $color-hover-silver;
+	}
+
 	&__links {
 		text-align: center;
 
@@ -22,6 +35,11 @@
 	}
 
 	&-quote {
+
+		&--text {
+			color: $color-black;
+		}
+
 		&--author {
 			font-size: 12px;
 			line-height: 1;

@@ -1,0 +1,13 @@
+.container.mb-50
+	.pagination
+		a.pagination-arrow.pagination-arrow--left
+			+svg('arrow_left')
+		.pagination-list
+			span.pagination-list--item.pagination-list--current
+				| 1
+			a.pagination-list--item(href="#")
+				| 2
+			a.pagination-list--item(href="#")
+				| 3
+		a.pagination-arrow.pagination-arrow--right
+			+svg('arrow_right')

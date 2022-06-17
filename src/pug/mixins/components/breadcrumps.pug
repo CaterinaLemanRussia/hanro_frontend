@@ -1,0 +1,18 @@
+mixin breadcrumps(...items)
+	.container&attributes(attributes)
+		div.breadcrumps.d-none.d-sm-flex
+			each item in items
+				if item.href
+					a.breadcrumps-item(href=item.href)
+						| !{item.title}
+					.breadcrumps-separate
+						+svg('line_for_breadcrumbs')
+				else
+					span.breadcrumps-item
+						| !{item.title}
+		div.breadcrumps__back.d-sm-none
+			a.breadcrumps__back-btn(href="#")
+				.breadcrumps__back-icon
+					+svg('chevron_left')
+				.breadcrumps__back-text
+					| Назад

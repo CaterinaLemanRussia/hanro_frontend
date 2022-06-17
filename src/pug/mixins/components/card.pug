@@ -6,7 +6,7 @@ mixin card(object)
 				alt: '',
 			}).card-image
 			if object.tag
-				.card-image--tag
+				.card-image--tag(class=`card-image--tag--${object.tag}`)
 					| !{object.tag}
 		if object.favorite
 			button.card__favorite.is-active
@@ -27,3 +27,32 @@ mixin card(object)
 				if object.price.sale
 					.card__price-sale
 						| !{object.price.sale} руб.
+		else
+			.card__price-in_stock
+				| НЕТ В НАЛИЧИИ
+		if object.colors
+			.card__colors.mt-16
+				each color in object.colors
+					.card__colors-item--wrapper
+						button.card__colors-item(style=`background-color: ${color}`)
+		if object.selectProperty
+			.card__properties.mt-16.pt-16
+				each property in object.selectProperty
+					.card__properties-item.mb-8
+						.card__properties-item--name
+							| !{property.name}:
+						.card__properties-item--value
+							| !{property.value}
+		if object.sizes
+			.card-size.mt-8
+				select.select
+					option(disabled selected)
+						| Выберите размер
+					each size in object.sizes
+						option
+							| !{size}
+
+		if object.showBtn
+			.card-btn.mt-8
+				button.btn.btn-big.btn-primary
+					| в корзину
