@@ -1,0 +1,257 @@
+main.catalog.catalog-element.mt-50
+	+breadcrumps(
+		{
+			title: 'Главная',
+			href: '#'
+		},
+		{
+			title: 'Для нее',
+			href: '#'
+		},
+		{
+			title: 'БЮСТГАЛЕТРЫ'
+		},
+	).mb-50
+
+
+	.container
+		.row
+			.col-12.col-md-6
+				.row
+					.col-md-10.order-lg-2.order-md-2.order-sm-1.order-xs-1
+						.swiper-container.gallery-top
+							.swiper-wrapper
+								.swiper-slide
+									.swiper-slide-container
+										a(href="https://picsum.photos/800/600?random=1" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
+											img(src="https://picsum.photos/440/672?random=1")
+								.swiper-slide
+									.swiper-slide-container
+										a(href="https://picsum.photos/800/600?random=2" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
+											img(src="https://picsum.photos/440/672?random=2")
+								.swiper-slide
+									.swiper-slide-container
+										a(href="https://picsum.photos/800/600?random=3" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
+											img(src="https://picsum.photos/440/672?random=3")
+								.swiper-slide
+									.swiper-slide-container
+										a(href="https://picsum.photos/800/600?random=4" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
+											img(src="https://picsum.photos/440/672?random=4")
+								.swiper-slide
+									.swiper-slide-container
+										a(href="https://picsum.photos/800/600?random=5" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
+											img(src="https://picsum.photos/440/672?random=5")
+							.swiper-button-next
+							.swiper-button-prev
+
+					.col-md-2.order-lg-1.order-md-1.order-sm-2.order-xs-2
+						.swiper-container.gallery-thumbs
+							.swiper-wrapper
+								a(herf="#").swiper-slide
+									img(src="https://picsum.photos/96/96?random=1")
+								a(herf="#").swiper-slide
+									img(src="https://picsum.photos/96/96?random=2")
+								a(herf="#").swiper-slide
+									img(src="https://picsum.photos/96/96?random=3")
+								a(herf="#").swiper-slide
+									img(src="https://picsum.photos/96/96?random=4")
+								a(herf="#").swiper-slide
+									img(src="https://picsum.photos/96/96?random=5")
+			.col-12.col-md-6
+				.product-info
+					h4.collection Коллекция LUCY
+					h1 Бюстгалтер с косточками и декоративной тесьмой
+					.prices.mb-50
+						.price
+							| 23 567 руб.
+						.old-price
+							| 26 567 руб.
+					.vendor-code
+						| арт. 072952
+					.selected-color
+						| цвет: золотая ламинария
+				.colors-block
+					.color
+						a(href="#").active
+						+lazyPicture({
+								src: `${baseDir}images/colors/product-color-0.png`,
+								alt: 'color',
+							})
+					- for (var i = 1; i < 24; ++i) {
+						.color
+							a(href="#")
+							+lazyPicture({
+								src: `${baseDir}images/colors/product-color-`+ i +`.png`,
+								alt: 'color',
+							})
+					- }
+				.sizes-tutorial
+					a(href="#")
+						span
+							| Руководство по размеру
+				.size-n-amount-block
+					.card-size.mt-8
+						- var sizes = [ 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL' ]
+					select.select
+						option(disabled selected)
+							| Выберите размер
+						each size in sizes
+							option
+								| !{size}
+					div(data-entity="quantity-block").quantity-block
+						.product-amount
+							span(class="product-amount__minus no-select product-item-amount-field-btn-disabled", id="")
+								| —
+							input(class="product-amount__field", id="", type="number", value="1")
+							span(class="product-amount__plus no-select", id="")
+								| +
+				.limited
+					+svg('attention')
+					a
+						span 
+							| Ограничение на доставку данного товара
+				.incart-n-favourite-block
+					button.btn.btn-big.btn-primary.incart
+						|в корзину
+					button.btn.btn-big.btn-primary.favorite
+						+svg('heart')
+				.accordion
+					.accordion-item
+						button.accordion-control
+							| Описание
+							.accordion-control--icon
+								+svg("chevron_down")
+						.accordion-panel
+							p 
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos, architecto suscipit iure assumenda ipsam est et. Rerum unde aliquam perspiciatis consequatur, explicabo, quo molestiae ea accusamus nobis quia magnam
+					.accordion-item
+						button.accordion-control
+							| Информация и уход
+							.accordion-control--icon
+								+svg("chevron_down")
+						.accordion-panel
+							p 
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos, architecto suscipit iure assumenda ipsam est et. Rerum unde aliquam perspiciatis consequatur, explicabo, quo molestiae ea accusamus nobis quia magnam
+					.accordion-item
+						button.accordion-control
+							| доставка и возврат
+							.accordion-control--icon
+								+svg("chevron_down")
+						.accordion-panel
+							p 
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos, architecto suscipit iure assumenda ipsam est et. Rerum unde aliquam perspiciatis consequatur, explicabo, quo molestiae ea accusamus nobis quia magnam
+
+	+block_detail-slider(
+		'Товары из коллекции',
+		{
+			href: '#',
+			text: 'Смотреть всю утепленную коллекцию'
+		},
+		{
+			brand: 'NATURAL Elegance',
+			title: 'Пижама с длинным рукавом',
+			href: '#',
+			favorite: false,
+			price: {
+				actual: '10 500'
+			},
+			in_stock: true,
+			selectProperty: [
+						{
+							name: 'Цвет',
+							value: 'светло-пурпурный'
+						}
+					],
+			img: `${baseDir}images/blocks/sliderProducts2.jpeg`,
+			sizes: [
+						'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'
+					],
+			showBtn: true
+		},
+		{
+			brand: 'URBAN CASUALS',
+			title: 'РУБАШКА С КОРОТКИМ РУКАВОМ',
+			href: '#',
+			favorite: true,
+			price: {
+				actual: '24 500',
+				sale: '29 870'
+			},
+			in_stock: true,
+			selectProperty: [
+						{
+							name: 'Цвет',
+							value: 'светло-пурпурный'
+						}
+					],
+			tag: 'new',
+			img: `${baseDir}images/blocks/sliderProducts1.jpeg`,
+			sizes: [
+						'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'
+					],
+					showBtn: true
+		},
+		{
+			brand: 'TOUCH FEELING',
+			title: 'Майка',
+			href: '#',
+			favorite: false,
+			price: {
+				actual: '5 000'
+			},
+			selectProperty: [
+						{
+							name: 'Цвет',
+							value: 'светло-пурпурный'
+						}
+					],
+			in_stock: true,
+			img: `${baseDir}images/blocks/sliderProducts3.jpeg`,
+			sizes: [
+						'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'
+					],
+					showBtn: true
+		},
+		{
+			brand: 'YOGA',
+			title: 'топ с рукавом 3/4',
+			href: '#',
+			favorite: false,
+			price: {
+				actual: '7 500'
+			},
+			selectProperty: [
+						{
+							name: 'Цвет',
+							value: 'светло-пурпурный'
+						}
+					],
+			in_stock: true,
+			img: `${baseDir}images/blocks/sliderProducts4.jpeg`,
+			sizes: [
+						'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'
+					],
+					showBtn: true
+		},
+		{
+			brand: 'NATURAL Elegance',
+			title: 'Пижама с длинным рукавом',
+			href: '#',
+			favorite: false,
+			price: {
+				actual: '10 500'
+			},
+			selectProperty: [
+						{
+							name: 'Цвет',
+							value: 'светло-пурпурный'
+						}
+					],
+			in_stock: true,
+			img: `${baseDir}images/blocks/sliderProducts2.jpeg`,
+			sizes: [
+						'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'
+					],
+					showBtn: true
+		},
+	).mb-50.mt-50

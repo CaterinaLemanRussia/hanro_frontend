@@ -16,6 +16,7 @@ import "./components/select";
 
 import "./components/blocks/content-under";
 import "./components/blocks/slider-products";
+import "./components/blocks/slider-detail";
 
 ieFix();
 vhFix();

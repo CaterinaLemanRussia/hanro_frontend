@@ -1,13 +1,10 @@
-mixin block_slider-products(title, suptitle, link, ...items)
+mixin block_detail-slider(title, link, ...items)
 	div.block_slider-products&attributes(attributes)
 		.container
-			if suptitle
-				.block_slider-products--suptitle.h3.mb-8
-					| !{suptitle}
 			if title
 				.block_slider-products--title.h1.mb-24
 					| !{title}
-			.swiper.block_slider-products__slider.js-slider-common
+			.swiper.block_slider-products__slider.js-slider-detail
 				.swiper-wrapper
 					each item in items
 						.swiper-slide.block_slider-products__slider-item--wrapper
@@ -18,9 +15,3 @@ mixin block_slider-products(title, suptitle, link, ...items)
 					+svg('arrow_left')
 				button.block_slider-products__slider-arrow.block_slider-products__slider-arrow--right.slider__arrow-long.slider__arrow-right
 					+svg('arrow_right')
-
-				.block_slider-products__slider-dots.slider-dots.mt-24
-			.block_slider-products--link.mt-24
-				a(href=link.href).btn.btn-secondary.btn-small
-					span
-						| !{link.text}
