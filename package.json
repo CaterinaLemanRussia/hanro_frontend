@@ -24,6 +24,7 @@
 		"cssnano": "5.0.7",
 		"del": "6.0.0",
 		"emitty": "1.4.0",
+		"framework7": "7.0.5",
 		"gulp": "4.0.2",
 		"gulp-append-prepend": "1.0.9",
 		"gulp-debug": "3.2.0",

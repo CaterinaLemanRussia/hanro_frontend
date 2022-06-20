@@ -380,3 +380,10 @@ $.fancybox.defaults = {
 // }
 
 
+$('.cookie-accept').click(function () {
+	$('.cookie').fadeOut(400)
+})
+$('.cookie-more').click(function () {
+	$(this).addClass('d-none')
+	$('.cookie-more--show').addClass('d-inline')
+})
