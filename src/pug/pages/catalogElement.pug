@@ -19,44 +19,52 @@ main.catalog.catalog-element.mt-50
 			.col-12.col-md-6
 				.row
 					.col-md-10.order-lg-2.order-md-2.order-sm-1.order-xs-1
-						.swiper-container.gallery-top
+						.swiper.gallery-top
 							.swiper-wrapper
 								.swiper-slide
 									.swiper-slide-container
-										a(href="https://picsum.photos/800/600?random=1" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
-											img(src="https://picsum.photos/440/672?random=1")
+										a(href="/images/pages/catalogElement/photo1.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo1-thumb.jpeg")
+											img(src="/images/pages/catalogElement/photo1.jpeg")
 								.swiper-slide
 									.swiper-slide-container
-										a(href="https://picsum.photos/800/600?random=2" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
-											img(src="https://picsum.photos/440/672?random=2")
+										a(href="/images/pages/catalogElement/photo2.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo2-thumb.jpeg")
+											img(src="/images/pages/catalogElement/photo2.jpeg")
 								.swiper-slide
 									.swiper-slide-container
-										a(href="https://picsum.photos/800/600?random=3" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
-											img(src="https://picsum.photos/440/672?random=3")
+										a(href="/images/pages/catalogElement/photo3.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo3-thumb.jpeg")
+											img(src="/images/pages/catalogElement/photo3.jpeg")
 								.swiper-slide
 									.swiper-slide-container
-										a(href="https://picsum.photos/800/600?random=4" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
-											img(src="https://picsum.photos/440/672?random=4")
+										a(href="/images/pages/catalogElement/photo4.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo4-thumb.jpeg")
+											img(src="/images/pages/catalogElement/photo4.jpeg")
 								.swiper-slide
 									.swiper-slide-container
-										a(href="https://picsum.photos/800/600?random=5" data-fancybox="gallery" data-thumb="https://lipsum.app/id/2/200x150")
-											img(src="https://picsum.photos/440/672?random=5")
+										a(href="/images/pages/catalogElement/photo5.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo5-thumb.jpeg")
+											img(src="/images/pages/catalogElement/photo5.jpeg")
+								.swiper-slide
+									.swiper-slide-container
+										a(href="/images/pages/catalogElement/photo5.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo5-thumb.jpeg")
+											img(src="/images/pages/catalogElement/photo5.jpeg")
+
 							.swiper-button-next
 							.swiper-button-prev
 
 					.col-md-2.order-lg-1.order-md-1.order-sm-2.order-xs-2
-						.swiper-container.gallery-thumbs
+						.swiper.gallery-thumbs
 							.swiper-wrapper
 								a(herf="#").swiper-slide
-									img(src="https://picsum.photos/96/96?random=1")
+									img(src="/images/pages/catalogElement/photo1-thumb.jpeg")
 								a(herf="#").swiper-slide
-									img(src="https://picsum.photos/96/96?random=2")
+									img(src="/images/pages/catalogElement/photo2-thumb.jpeg")
 								a(herf="#").swiper-slide
-									img(src="https://picsum.photos/96/96?random=3")
+									img(src="/images/pages/catalogElement/photo3-thumb.jpeg")
 								a(herf="#").swiper-slide
-									img(src="https://picsum.photos/96/96?random=4")
+									img(src="/images/pages/catalogElement/photo4-thumb.jpeg")
 								a(herf="#").swiper-slide
-									img(src="https://picsum.photos/96/96?random=5")
+									img(src="/images/pages/catalogElement/photo5-thumb.jpeg")
+								a(herf="#").swiper-slide
+									img(src="/images/pages/catalogElement/photo5-thumb.jpeg")
+
 			.col-12.col-md-6
 				.product-info
 					h4.collection Коллекция LUCY
@@ -108,7 +116,7 @@ main.catalog.catalog-element.mt-50
 				.limited
 					+svg('attention')
 					a
-						span 
+						span
 							| Ограничение на доставку данного товара
 				.incart-n-favourite-block
 					button.btn.btn-big.btn-primary.incart
@@ -122,7 +130,7 @@ main.catalog.catalog-element.mt-50
 							.accordion-control--icon
 								+svg("chevron_down")
 						.accordion-panel
-							p 
+							p
 								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos, architecto suscipit iure assumenda ipsam est et. Rerum unde aliquam perspiciatis consequatur, explicabo, quo molestiae ea accusamus nobis quia magnam
 					.accordion-item
 						button.accordion-control
@@ -130,7 +138,7 @@ main.catalog.catalog-element.mt-50
 							.accordion-control--icon
 								+svg("chevron_down")
 						.accordion-panel
-							p 
+							p
 								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos, architecto suscipit iure assumenda ipsam est et. Rerum unde aliquam perspiciatis consequatur, explicabo, quo molestiae ea accusamus nobis quia magnam
 					.accordion-item
 						button.accordion-control
@@ -138,7 +146,7 @@ main.catalog.catalog-element.mt-50
 							.accordion-control--icon
 								+svg("chevron_down")
 						.accordion-panel
-							p 
+							p
 								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos, architecto suscipit iure assumenda ipsam est et. Rerum unde aliquam perspiciatis consequatur, explicabo, quo molestiae ea accusamus nobis quia magnam
 
 	+block_detail-slider(

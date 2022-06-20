@@ -11,5 +11,4 @@ $(document).ready(function() {
 			'<svg><use xlink:href="/images/sprites.svg#chevron_down"></use></svg>'
 		)
 	}
-
 });

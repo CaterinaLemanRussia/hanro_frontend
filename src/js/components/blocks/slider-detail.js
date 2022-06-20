@@ -1,8 +1,9 @@
-import Swiper, {Navigation, Pagination, Controller} from 'swiper';
+import Swiper, {Navigation, Pagination, Controller, Thumbs} from 'swiper';
 
 Swiper.use([Navigation])
 Swiper.use([Pagination])
 Swiper.use([Controller])
+Swiper.use([Thumbs])
 
 window.Swiper = Swiper;
 
@@ -13,7 +14,7 @@ const blockSliderDetail = new Swiper(".js-slider-detail", {
 		nextEl: '.block_slider-products__slider-arrow--right',
 		prevEl: '.block_slider-products__slider-arrow--left',
 	},
-	simulateTouch:false,
+	// simulateTouch: false,
 	breakpoints: {
 		0: {
 			slidesPerView: 2,
@@ -27,59 +28,67 @@ const blockSliderDetail = new Swiper(".js-slider-detail", {
 	},
 });
 
-$(document).ready(function(){
-	var galleryTop = new window.Swiper('.gallery-top', {
-      spaceBetween: 10,
-      navigation: {
-		nextEl: '.block_slider-products__slider-arrow--right',
-		prevEl: '.block_slider-products__slider-arrow--left',
-	},
-	 		loop: false,
-    });
-   var galleryThumbs = new window.Swiper('.gallery-thumbs', {
-   	  
-      spaceBetween: 10,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      touchRatio: 0.2,
-      loop: true,
-      breakpoints: {
-		0: {
-			direction: "horizontal",
+$(document).ready(function () {
+	const galleryThumbs = new window.Swiper('.gallery-thumbs', {
+		slidesPerView: 5,
+		allowTouchMove: false,
+		loop: true,
+		loopedSlides: 5,
+		breakpoints: {
+			0: {
+				direction: "horizontal",
+			},
+			960: {
+				direction: "vertical",
+			},
+			1200: {
+				direction: "vertical",
+			},
 		},
-		960: {
-			direction: "vertical",
-		},
-		1200: {
-			direction: "vertical",
-		},
-	},
-      slideToClickedSlide: true,
-			loop: false,
 		navigation: {
 			nextEl: '.block_slider-products__slider-arrow--right',
 			prevEl: '.block_slider-products__slider-arrow--left',
 		},
-    });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
-    window.galleryTop = galleryTop
-    window.galleryThumbs = galleryThumbs
+		slideToClickedSlide: true,
+	});
+	const galleryTop = new window.Swiper('.gallery-top', {
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.block_slider-products__slider-arrow--right',
+			prevEl: '.block_slider-products__slider-arrow--left',
+		},
+		loop: true,
+		loopedSlides: 5,
+		thumbs: {
+			swiper: galleryThumbs
+		},
+		on: {
+			slideChange: function (slider) {
+				galleryThumbs.slideTo(slider.activeIndex)
+			},
+		},
+	});
 
-    $('.colors-block').on('click', '.color a', function(e){
-    	e.preventDefault()
-    	$('.colors-block .color').removeClass('active')
-    	$(this).parent().addClass('active')
-    })
+	// galleryTop.controller.control = galleryThumbs;
+	// galleryThumbs.controller.control = galleryTop;
 
-    $('.product-amount__minus').click(function(){
-    	changeQuantity('reduce')
-    })
+	window.galleryTop = galleryTop
+	window.galleryThumbs = galleryThumbs
 
-    $('.product-amount__plus').click(function(){
-    	changeQuantity('increase')
-    })
-    
+	$('.colors-block').on('click', '.color a', function (e) {
+		e.preventDefault()
+		$('.colors-block .color').removeClass('active')
+		$(this).parent().addClass('active')
+	})
+
+	$('.product-amount__minus').click(function () {
+		changeQuantity('reduce')
+	})
+
+	$('.product-amount__plus').click(function () {
+		changeQuantity('increase')
+	})
+
 })
 
 function changeQuantity(type) {
@@ -87,8 +96,8 @@ function changeQuantity(type) {
 		if ($('.product-amount__field').val() > 1) {
 			$('.product-amount__field').val($('.product-amount__field').val() - 1)
 		}
-	} 
+	}
 	if (type == 'increase') {
-		$('.product-amount__field').val( parseInt($('.product-amount__field').val()) + 1)
+		$('.product-amount__field').val(parseInt($('.product-amount__field').val()) + 1)
 	}
 }
