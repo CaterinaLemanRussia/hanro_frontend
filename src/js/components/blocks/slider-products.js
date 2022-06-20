@@ -3,7 +3,7 @@ import Swiper, {Navigation, Pagination} from 'swiper';
 Swiper.use([Navigation])
 Swiper.use([Pagination])
 
-const blockSliderProducts = new Swiper(".block_slider-products__slider", {
+const blockSliderProducts = new Swiper(".js-slider-common", {
 	spaceBetween: 24,
 	disableOnInteraction: false,
 	pagination: {
