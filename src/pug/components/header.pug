@@ -71,23 +71,24 @@ header.header
 								| Бюстгалтер <b>бра</b>лет
 					.col-md-9
 						.row.row-cols-lg-3.row-cols-2
-							+card({
-								brand: 'LUCY',
-								title: 'Бра с мягкой чашечной',
-								href: '#',
-								favorite: false,
-								price: {
-									actual: '24 500'
-								},
-								tag: 'new',
-								in_stock: true,
-								img: `${baseDir}images/pages/catalog/item1.jpeg`,
-								colors: [
-									'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
-									'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
-									'#97258B', '#97F6FC', '#16009A', '#000000'
-								]
-							})
+							.mb-50
+								+card({
+									brand: 'LUCY',
+									title: 'Бра с мягкой чашечной',
+									href: '#',
+									favorite: false,
+									price: {
+										actual: '24 500'
+									},
+									tag: 'new',
+									in_stock: true,
+									img: `${baseDir}images/pages/catalog/item1.jpeg`,
+									colors: [
+										'#B1ACC6', '#D4ADAD', '#AAD7AC', '#FFFFFF', '#37577C', '#FF3838', '#46742A', '#E9D193',
+										'#F8F9E0', '#4F2D2D', '#E3D4F1', '#FFE1E3', '#BFA0FF', '#CAE2D7', '#FFF9F9', '#6D6AFA',
+										'#97258B', '#97F6FC', '#16009A', '#000000'
+									]
+								})
 							.mb-50
 								+card({
 									brand: 'LUCY',

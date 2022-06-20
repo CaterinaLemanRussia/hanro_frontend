@@ -57,7 +57,7 @@
 		color: #696969;
 	}
 	.vendor-code {
-		margin-bottom: 8px;	
+		margin-bottom: 8px;
 	}
 	.colors-block {
 		margin-top: -3px;
@@ -103,7 +103,7 @@
 		text-transform: uppercase;
 		color: #000000;
 		span {
-			border-bottom: 1px solid #000; 
+			border-bottom: 1px solid #000;
 			line-height: 10px;
 			margin-top: 2px;
 		}
@@ -155,13 +155,13 @@
 				cursor: pointer;
 			}
 		}
-		input[type=number]::-webkit-inner-spin-button, 
-		input[type=number]::-webkit-outer-spin-button { 
-			-webkit-appearance: none; 
-			// margin: 0; 
+		input[type=number]::-webkit-inner-spin-button,
+		input[type=number]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			// margin: 0;
 			// width: 44px;
 			// height: 44px;
-			
+
 		}
 	}
 	.limited {
@@ -230,11 +230,13 @@
 	}
 	.gallery-thumbs {
 		width: 100%;
+		max-height: 672px;
 	}
 	.swiper-container.gallery-top {
 		overflow: hidden;
 		position: relative;
 		left: 16px;
+
 	}
 	.swiper-container.gallery-thumbs {
 		overflow: hidden;

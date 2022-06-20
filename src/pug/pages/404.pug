@@ -1,0 +1,40 @@
+main.notFound.mt-100
+	.container.text-center.mb-100
+		h1.mb-24
+			| Страница не найдена
+		p.text-row
+			|Вы можете вернуться в каталог или посмотреть подборки популярных товаров
+
+	+block_content-under(
+		'С заботой о завтрашнем дне',
+		'',
+		true,
+		{
+			type: 'image',
+			href: "#",
+			text: 'Мы сами вяжем и красим большую часть тканей',
+			img: `${baseDir}images/blocks/headingUnder_5_1.jpeg`,
+			link_title: "Узнайте больше"
+		},
+		{
+			type: 'image',
+			href: "#",
+			text: 'Мы используем только лучший хлопок высочайшего качества.',
+			img: `${baseDir}images/blocks/headingUnder_5_2.jpeg`,
+			link_title: "Узнайте больше"
+		},
+		{
+			type: 'image',
+			href: "#",
+			text: '80% тканей производится на территории Австрии.',
+			img: `${baseDir}images/blocks/headingUnder_5_3.jpeg`,
+			link_title: "Узнайте больше"
+		},
+		{
+			type: 'image',
+			href: "#",
+			text: 'Вся продукция сертифицирована по стандарту 100 BY OEKO-TEX®',
+			img: `${baseDir}images/blocks/headingUnder_5_4.jpeg`,
+			link_title: "Узнайте больше"
+		},
+	).mb-100
