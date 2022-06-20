@@ -393,4 +393,50 @@
 			top: 106px;
 		}
 	}
+
+	&__search {
+		display: flex;
+
+		&-wrapper {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			z-index: 20;
+			display: none;
+			background: #fff;
+		}
+
+		&-input {
+			flex: 1 1;
+		}
+
+		&-btn {
+			padding: 25px 46.5px 21px;
+			color: #fff;
+			background: $color-black;
+		}
+
+		&__result {
+			display: none;
+
+			&__side {
+				&-item {
+					display: block;
+					margin-bottom: 8px;
+					font-size: 16px;
+					line-height: 1;
+
+					b {
+						font-family: $font-second;
+						font-weight: 400;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
 }
