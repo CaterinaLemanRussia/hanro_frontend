@@ -1,0 +1,115 @@
+button.open-sheet(type="button", aria-controls="sheet" data-target="subscription-modal") Модалка подписки
+// The sheet component
+
+
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#subscription-modal
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			.block_callback&attributes(attributes)
+				.container
+					.row.align-items-md-center
+						.col-md-5
+							+lazyPicture({
+								src: `${baseDir}images/blocks/callback.jpeg`,
+								alt: 'Погрузиться в мир Hanro - изображение',
+							}).block_callback-img
+						.col-md-6.ms-md-auto
+							.block_callback-content
+								.block_callback-title.h1.mb-24
+									| Погрузиться в мир Hanro
+								.block_callback-text.mb-50
+									| Подпишитесь на рассылку и первыми получайте новости о Hanro, информацию о модных трендах, новых коллекциях и специальных предложениях.
+								form.form
+									.block_callback__form-row.mb-24
+										.block_callback__form-input
+											label.form__group.form__group__up
+												.form__group-label.form__group__up-label
+													| Ваш email
+												input.form__group-input.form__group__up-input(type="text" required)
+												.form__group-error
+													| Описание ошибки
+										.form-btn.block_callback__form-btn
+											button.btn.btn-secondary.btn-small
+												span
+													| Подписаться
+									.block_callback__form-agree
+										.block_callback__form-agree--item
+											label.checkbox
+												input(type="checkbox").checkbox-input
+												.checkbox-box
+													+svg('check')
+												.checkbox-text
+													| Согласен на
+													|
+													a(href="#")
+														| обработку персональных данных
+										.block_callback__form-agree--item
+											label.checkbox
+												input(type="checkbox").checkbox-input
+												.checkbox-box
+													+svg('check')
+												.checkbox-text
+													| Согласен на
+													|
+													a(href="#")
+														| получение рассылок
+// The sheet component
+.bottom-sheet.column.items-center.justify-end(aria-hidden="true")#modal2
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			h2 Hello, World 2222!
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
+button.open-sheet(type="button", aria-controls="sheet" data-target="modal3") Open modal 3
+// The sheet component
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal3
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			h2 Hello, World 33333!
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
+button.open-sheet(type="button", aria-controls="sheet" data-target="modal4") Open modal 4
+// The sheet component
+.bottom-sheet.column.items-center.justify-end.from-top.auto-height(aria-hidden="true")#modal4
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			h2 Hello, World 4444!
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!

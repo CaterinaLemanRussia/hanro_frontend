@@ -372,11 +372,26 @@ $.fancybox.defaults = {
 	}
 };
 
-// if ($('#popup-mail').length > 0) {
-// 	$.fancybox.open({
-// 		src: '#popup-mail',
-// 		scrolling: 'hidden',
-// 	})
+// if ($('#subscription-modal').length > 0) {
+// 	if ($(window).width() > 959) {
+// 		$.fancybox.open({
+// 			src: '#subscription-modal',
+// 			scrolling: 'hidden',
+// 		})
+// 	}
 // }
 
-
+const openModal = function(modalID) {
+	if($(modalID).length > 0) {
+		if ($(window).width() > 959) {
+			$.fancybox.open({
+				src: modalID,
+				scrolling: 'hidden',
+			})
+		} else {
+			//window.bottomSheet.open(modalID)
+		}
+	}
+}
+window.openModal = openModal
+openModal('#subscription-modal');

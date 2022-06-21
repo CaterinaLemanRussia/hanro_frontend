@@ -4,12 +4,12 @@
 	bottom: 156px;
 	z-index: 15;
 	border: none;
+	background: #fff;
 	border-radius: 100%;
 	padding: 12px;
 	width: 48px;
 	height: 48px;
 	box-shadow: 0 6px 12px -6px rgba(24, 39, 75, 0.12), 0 8px 24px -4px rgba(24, 39, 75, 0.08);
-	background: none;
 	opacity: 0;
 	transition: opacity $duration-normal;
 	pointer-events: none;

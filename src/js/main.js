@@ -20,6 +20,12 @@ import "./components/blocks/content-under";
 import "./components/blocks/slider-products";
 import "./components/blocks/slider-detail";
 
+import {bottomSheet} from "./components/bottomSheet";
+// import bottomSheet from "./components/bottomSheet";
+
+
+bottomSheet();
+
 ieFix();
 vhFix();
 actualYear();
