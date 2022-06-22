@@ -75,11 +75,14 @@ $(document).ready(function () {
 	window.galleryTop = galleryTop
 	window.galleryThumbs = galleryThumbs
 
-	$('.colors-block').on('click', '.color a', function (e) {
-		e.preventDefault()
-		$('.colors-block .color').removeClass('active')
-		$(this).parent().addClass('active')
-	})
+	if ( $('.colors-block').length > 0 ) {
+			$('.colors-block').on('click', '.color a', function (e) {
+			e.preventDefault()
+			$('.colors-block .color').removeClass('active')
+			$(this).parent().addClass('active')
+		})
+	}
+	
 
 	$('.product-amount__minus').click(function () {
 		changeQuantity('reduce')
@@ -101,3 +104,6 @@ function changeQuantity(type) {
 		$('.product-amount__field').val(parseInt($('.product-amount__field').val()) + 1)
 	}
 }
+
+
+

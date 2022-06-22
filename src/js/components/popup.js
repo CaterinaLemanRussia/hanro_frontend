@@ -372,11 +372,13 @@ $.fancybox.defaults = {
 	}
 };
 
-// if ($('#popup-mail').length > 0) {
-// 	$.fancybox.open({
-// 		src: '#popup-mail',
-// 		scrolling: 'hidden',
-// 	})
+// if ($('#subscription-modal').length > 0) {
+// 	if ($(window).width() > 959) {
+// 		$.fancybox.open({
+// 			src: '#subscription-modal',
+// 			scrolling: 'hidden',
+// 		})
+// 	}
 // }
 
 

@@ -5,6 +5,7 @@ import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
 import header from './components/header';
+import {bottomSheet} from "./components/bottomSheet";
 import './components/popup';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
@@ -19,6 +20,12 @@ import "./components/search";
 import "./components/blocks/content-under";
 import "./components/blocks/slider-products";
 import "./components/blocks/slider-detail";
+
+
+// import bottomSheet from "./components/bottomSheet";
+
+
+bottomSheet();
 
 ieFix();
 vhFix();
