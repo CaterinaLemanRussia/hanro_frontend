@@ -1,88 +1,98 @@
 .catalog-element {
 	h4.collection {
-		font-family: 'FuturaLightC';
-		font-size: 20px;
-		text-transform: uppercase;
-		font-weight: 400;
 		margin-top: 0;
-		letter-spacing: 1.5px;
-		line-height: 20px;
 		margin-bottom: 10px;
-	}
-	h1 {
-
-		font-family: 'FuturaBookC';
-		font-style: normal;
+		font-family: "FuturaLightC";
 		font-weight: 400;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		font-family: "FuturaBookC";
+		font-weight: 400;
+		font-style: normal;
 		font-size: 24px;
 		line-height: 26px;
-
-
 		letter-spacing: 1.5px;
 		text-transform: uppercase;
 	}
+
 	.prices {
 		display: flex;
 		margin-top: 15px;
+
 		.price {
-			font-family: 'FuturaLightC';
-			font-style: normal;
+			margin-right: 15px;
+			font-family: "FuturaLightC";
 			font-weight: 300;
+			font-style: normal;
 			font-size: 20px;
 			line-height: 22px;
 			letter-spacing: 1.5px;
 			text-transform: uppercase;
 			color: #000;
-			margin-right: 15px;
 		}
+
 		.old-price {
-			font-family: 'FuturaLightC';
-			font-style: normal;
+			font-family: "FuturaLightC";
 			font-weight: 300;
+			font-style: normal;
 			font-size: 20px;
 			line-height: 22px;
 			letter-spacing: 1.5px;
 			text-decoration-line: line-through;
 			text-transform: uppercase;
 			color: #696969;
+			text-decoration-thickness: from-font;
 		}
 	}
-	.vendor-code, .selected-color {
-		font-family: 'FuturaLightC';
-		font-style: normal;
+
+	.vendor-code,
+	.selected-color {
+		font-family: "FuturaLightC";
 		font-weight: 300;
+		font-style: normal;
 		font-size: 12px;
 		line-height: 12px;
 		letter-spacing: 0.1px;
 		color: #696969;
 	}
+
 	.vendor-code {
 		margin-bottom: 8px;
 	}
+
 	.colors-block {
 		margin-top: -3px;
 		margin-bottom: 27px;
 		max-width: 400px;
+
 		.color {
+			position: relative;
 			display: inline-block;
 			margin-right: 4.3px;
-			position: relative;
 			margin-bottom: -3px;
+
 			picture {
 				width: 40px;
+
 				img {
 					width: 40px;
 				}
 			}
+
 			a {
-				line-height: 0;
 				position: absolute;
-				top: 0;
 				left: 0;
 				right: 0;
+				top: 0;
 				bottom: 0;
-
+				line-height: 0;
 			}
+
 			&.active {
 				picture {
 					outline: 1px solid black;
@@ -91,121 +101,144 @@
 			}
 		}
 	}
+
 	.sizes-tutorial a {
-		font-family: 'FuturaLightC';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 13px;
-		line-height: 14px;
 		display: flex;
 		align-items: center;
+		font-family: "FuturaLightC";
+		font-weight: 400;
+		font-style: normal;
+		font-size: 13px;
+		line-height: 14px;
 		letter-spacing: 0.25px;
 		text-transform: uppercase;
-		color: #000000;
+		color: #000;
+
 		span {
+			margin-top: 2px;
 			border-bottom: 1px solid #000;
 			line-height: 10px;
-			margin-top: 2px;
 		}
 	}
+
 	.size-n-amount-block {
 		display: flex;
 		margin-top: 17px;
+
 		.select2 {
 			width: 76%;
 		}
+
 		.quantity-block {
+			display: flex;
+			margin-left: 9px;
+			width: 162px;
+
 			.no-select {
 				user-select: none;
-				-moz-user-select: none;
-				-webkit-user-select: none;
-				-ms-user-select: none;
+				user-select: none;
+				user-select: none;
+				user-select: none;
 			}
-			width: 162px;
-			margin-left: 9px;
-			display: flex;
+
 			.product-amount {
 				display: flex;
 				align-items: center;
-				width: 100%;
 				justify-content: space-evenly;
-				outline: 1px solid #000;
-				height: 42px;
 				margin-top: 1px;
+				outline: 1px solid #000;
+				width: 100%;
+				height: 42px;
 			}
+
 			.product-amount__minus {
 				padding: 20px 0 20px 20px;
 				font-size: 24px;
 			}
+
 			.product-amount__plus {
-				padding: 16px 20px 10px 0px;
+				padding: 16px 20px 10px 0;
 				font-size: 30px;
 			}
+
 			.product-amount__field {
+				border: none;
 				width: 44px;
 				height: 44px;
 				text-align: center;
-				border: none;
+
 				&:focus-visible {
 					outline: none;
 					border: none;
 				}
 			}
+
 			span {
 				cursor: pointer;
 			}
 		}
-		input[type=number]::-webkit-inner-spin-button,
-		input[type=number]::-webkit-outer-spin-button {
-			-webkit-appearance: none;
+
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			appearance: none;
+
 			// margin: 0;
 			// width: 44px;
 			// height: 44px;
-
 		}
 	}
+
 	.limited {
 		display: flex;
 		margin-top: 24px;
-		padding: 8px 16px 4px 16px;
-		background: #F5F5F5;
+		padding: 8px 16px 4px;
+		background: #f5f5f5;
+
 		a {
 			display: inline-block;
-			margin-left: 9px;
 			margin-top: -3px;
+			margin-left: 9px;
+
 			span {
-				border-bottom: 1px solid #FF3333;
+				border-bottom: 1px solid #f33;
 			}
 		}
+
 		span {
-			font-family: 'FuturaLightC';
-			font-style: normal;
+			font-family: "FuturaLightC";
 			font-weight: 400;
+			font-style: normal;
 			font-size: 16px;
 			line-height: 16px;
 			letter-spacing: 0.1px;
-			color: #FF3333;
+			color: #f33;
 		}
+
 		svg {
-			fill: #fff;
 			width: 16px;
 			height: 16px;
+			fill: #fff;
 		}
 	}
+
 	.incart-n-favourite-block {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-top: 25px;
 		margin-bottom: 22px;
+
 		.incart {
-			width: calc( 100% - 134px );
+			width: calc(100% - 134px);
 		}
+
 		.favorite {
 			width: 126px;
+
 			svg {
 				fill: #fff;
 			}
+
 			&.in {
 				svg {
 					fill: #000;
@@ -213,33 +246,39 @@
 			}
 		}
 	}
+
 	.block_slider-products {
 		.card {
 			.card-btn {
 				box-sizing: border-box;
 			}
 		}
+
 		.block_slider-products__slider-item {
 			.card-size {
 				margin-top: 14px;
 			}
 		}
+
 		.block_slider-products__slider-arrow {
 			margin-top: -118px;
 		}
 	}
+
 	.gallery-thumbs {
 		width: 100%;
 		max-height: 672px;
 	}
+
 	.swiper-container.gallery-top {
-		overflow: hidden;
 		position: relative;
 		left: 16px;
-
+		overflow: hidden;
 	}
+
 	.swiper-container.gallery-thumbs {
 		overflow: hidden;
+
 		.swiper-slide {
 			width: 96px !important;
 		}

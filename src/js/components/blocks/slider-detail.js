@@ -14,7 +14,7 @@ const blockSliderDetail = new Swiper(".js-slider-detail", {
 		nextEl: '.block_slider-products__slider-arrow--right',
 		prevEl: '.block_slider-products__slider-arrow--left',
 	},
-	// simulateTouch: false,
+	simulateTouch: false,
 	breakpoints: {
 		0: {
 			slidesPerView: 2,
