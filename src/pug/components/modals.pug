@@ -113,3 +113,36 @@ button.open-sheet(type="button", aria-controls="sheet" data-target="modal4") Ope
 			h2 Hello, World 4444!
 			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
 			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
+
+.bottom-sheet.column.items-center.justify-end.from-top.auto-height(aria-hidden="true")#modal-search
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			.header__search-wrapper.header__search-wrapper--sheet.pb-50.pt-100
+				.container
+					.header__search
+						label.form__group.form__group__up.flex-grow-1
+							.form__group-label.form__group__up-label
+								| Поиск
+							input.header__search-input.form__group-input
+						button.btn.btn-small.btn-secondary.align-self-end
+							span ок
+					.header__search__result.header__search__result--sheet.mt-100
+						nav.header__search__result__side
+							a.header__search__result__side-item
+								| Топ <b>Бра</b>
+							a.header__search__result__side-item
+								| Хлопковые <b>бра</b>
+							a.header__search__result__side-item
+								| <b>Бра</b> и трусы
+							a.header__search__result__side-item
+								| Бюстгалтер <b>бра</b>лет
+

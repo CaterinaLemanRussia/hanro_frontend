@@ -398,13 +398,15 @@
 		display: flex;
 
 		&-wrapper {
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 100%;
-			z-index: 20;
-			display: none;
-			background: #fff;
+			&--modal {
+				display: none;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%;
+				z-index: 20;
+				background: #fff;
+			}
 		}
 
 		&-input {
