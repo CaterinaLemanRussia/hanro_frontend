@@ -1,8 +1,33 @@
-$('.header__actions-item--search').click(function (){
-	$('.header__search-wrapper').fadeToggle(400)
+let $searchWrapper = $('.header__search-wrapper'),
+	$searchInput   = $('.header__search-input'),
+	$searchBtn     = $('.header__actions-item--search')
+
+function handlerSearchPopup(e) {
+	if ( e.keyCode === 27 ) {
+		closeSearchPopup()
+	}
+}
+
+function openSearchPopup () {
+	$searchWrapper.fadeIn(400)
+	$searchBtn.addClass('is-open')
+	$searchInput.focus()
+	$(document).bind('keyup', handlerSearchPopup)
+}
+function closeSearchPopup() {
+	$searchWrapper.fadeOut(400)
+	$searchBtn.removeClass('is-open')
+	$(document).unbind('keyup', handlerSearchPopup)
+}
+$searchBtn.click(function (){
+	if ($searchBtn.hasClass('is-open')) {
+		closeSearchPopup()
+	} else {
+		openSearchPopup()
+	}
 })
-$('.header__search-input').keyup(function (){
-	let countWord = $(this).val().length,
+$searchInput.keyup(function (){
+	let countWord = $searchInput.val().length,
 		$result = $('.header__search__result')
 
 	if ( countWord >= 3 && !$result.hasClass('is-open')) {
