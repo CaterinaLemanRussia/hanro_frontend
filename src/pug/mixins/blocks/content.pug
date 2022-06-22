@@ -2,7 +2,7 @@ mixin block_content(item)
 	.block_content&attributes(attributes)
 		.container
 			.row.justify-content-center
-				.col-lg-8.col-md-11
+				.col-lg-8.col-md-11.block_content-content
 					if item.image
 						if item.image.href
 							a.block_content-image(class=`${item.spacing}`)
