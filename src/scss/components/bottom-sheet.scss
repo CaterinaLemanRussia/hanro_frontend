@@ -32,6 +32,7 @@
 	}
 
 	.bottom-sheet {
+		display: block !important;
 	  position: fixed;
 	  top: 0;
 	  left: 0;
@@ -161,4 +162,13 @@
 	  }
 	}
 
+}
+
+@media screen and (min-width: 960px) {
+	.bottom-sheet {
+		display: none;
+	}
+	.bottom-sheet .contents {
+		height: auto !important;
+	}
 }

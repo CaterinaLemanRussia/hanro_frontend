@@ -381,17 +381,4 @@ $.fancybox.defaults = {
 // 	}
 // }
 
-const openModal = function(modalID) {
-	if($(modalID).length > 0) {
-		if ($(window).width() > 959) {
-			$.fancybox.open({
-				src: modalID,
-				scrolling: 'hidden',
-			})
-		} else {
-			//window.bottomSheet.open(modalID)
-		}
-	}
-}
-window.openModal = openModal
-openModal('#subscription-modal');
+

@@ -7,29 +7,52 @@ import helpers from '../helpers';
 
 		$(document).ready(function(){
 
+			window.openBottomModal = openBottomModal
+
 			$(".open-sheet").click(function(){
 
 				var target = '#'+$(this).data('target')
-				window.lastModalShown = target
-
-				if ($(target).hasClass('auto-height')) {
-
-					var height = $(target).find('.contents').height() + 80
-					console.log(height)
-					openBottomSheet(target, getVH(height))
-				} else {
-					openBottomSheet(target, 50)
-				}
-
+				openBottomModal(target)
 			})
 
 			$('.bottom-sheet .overlay').click(function(){
 				setIsSheetShown(false, '#'+$(this).parent().attr('id'))
 			})
 
+
+			const openModal = function(modalID) {
+				if($(modalID).length > 0) {
+					if ($(window).width() > 959) {
+						$.fancybox.open({
+							src: modalID,
+							scrolling: 'hidden',
+						})
+					} else {
+						window.openBottomModal(modalID)
+					}
+				}
+			}
+			window.openModal = openModal
+
+			// openModal('#subscription-modal');
+
 		})
 
 		let sheetHeight // in vh
+
+		const openBottomModal = function(target) {
+			window.lastModalShown = target
+
+			if ($(target).hasClass('auto-height')) {
+
+				var height = $(target).find('.contents').height() + 80
+				console.log(height)
+				openBottomSheet(target, getVH(height))
+			} else {
+				openBottomSheet(target, 50)
+			}
+
+		}
 
 		function openBottomSheet(modalID, vh) {
 			console.log('open bottom sheet', modalID)

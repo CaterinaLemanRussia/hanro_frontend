@@ -6,18 +6,18 @@ main.personal.mt-100.mb-100
 			.col-12.col-md-8.offset-md-1
 				.order-detail
 
-					a(href="/personal-orders.html").back 
+					a(href="/personal-orders.html").back
 						+svg('less')
 						| Все заказы
 					h1 Заказ № GM51641
 					.status.pending
 						| В обработке
 					.info
-						div 
+						div
 							| Вид доставки: Доставка
-						div 
+						div
 							| Адрес: г Москва, пр-кт Мира, д 100, под 6, домофон 165, эт 15, кв 165
-						div 
+						div
 							| Комментарии: ребенок спит, в звонок не звонить
 						div
 							| Дата и время доставки: ХХХ
@@ -27,7 +27,8 @@ main.personal.mt-100.mb-100
 							| Получатель: Анастасия Христорождественская, 8 978 876 66 87, ohmymail@mail.ru
 					.actions
 						a.btn-primary(href="#") Изменить
-						a.btn-secondary(href="#") Отменить
+						a.btn-secondary(href="#")
+							span Отменить
 					.grey-line
 					.summary
 						.summary-row
@@ -53,6 +54,8 @@ main.personal.mt-100.mb-100
 						h3 Состав заказа
 						.item
 							.image-block
+								button.card__favorite.is-active
+									+svg('favorite').card__favorite--icon
 								a(href="#")
 								img(src="https://picsum.photos/124/180?random=3")
 								.sticker.new
@@ -71,6 +74,8 @@ main.personal.mt-100.mb-100
 									| 48 100 РУБ.
 						.item
 							.image-block
+								button.card__favorite
+									+svg('favorite').card__favorite--icon
 								a(href="#")
 								img(src="https://picsum.photos/124/180?random=2")
 								.sticker.new
@@ -89,6 +94,8 @@ main.personal.mt-100.mb-100
 									| 48 100 РУБ.
 						.item
 							.image-block
+								button.card__favorite
+									+svg('favorite').card__favorite--icon
 								a(href="#")
 								img(src="https://picsum.photos/124/180?random=1")
 								.sticker.sale
