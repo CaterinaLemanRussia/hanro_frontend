@@ -1,4 +1,5 @@
 import helpers from '../helpers';
+import {hideAll} from 'tippy.js';
 
 
 const bottomSheet = function () {
@@ -9,10 +10,9 @@ const bottomSheet = function () {
 
 		window.openBottomModal = openBottomModal
 
-		$(".open-sheet").click(function () {
-
+		$(".js-open-modal").click(function () {
 			var target = '#' + $(this).data('target')
-			openBottomModal(target)
+			openModal(target)
 		})
 
 		$('.bottom-sheet .overlay').click(function () {
@@ -101,6 +101,8 @@ const bottomSheet = function () {
 	const onDragStart = (event) => {
 		console.log('drag started')
 		dragPosition = touchPosition(event).pageY
+
+		hideAll()
 
 		$(window.lastModalShown).find('.contents').addClass("not-selectable")
 		document.body.style.cursor = "grabbing"

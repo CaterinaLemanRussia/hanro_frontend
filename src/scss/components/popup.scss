@@ -1,14 +1,32 @@
 .popup {
-	display: none;
-	max-width: 936px;
+	&.medium-padding {
+		padding: 50px;
+	}
+
+	&.big-padding {
+		padding: 100px;
+	}
+
+	@include media-breakpoint-down(md) {
+		&.medium-padding,
+		&.big-padding {
+			padding: 0;
+		}
+	}
+}
+.fancybox-container {
+	z-index: 999;
+}
+.fancybox-content {
+	padding: 0 !important;
 }
 
 .fancybox-slide--html .fancybox-close-small {
+	right: 24px;
+	top: 24px;
 	padding: 0;
 	width: 24px;
 	height: 24px;
-	top: 24px;
-	right: 24px;
 }
 
 .fancybox-content {
@@ -28,19 +46,20 @@
 	background-color: rgba(0, 0, 0, 0.55);
 
 	&-content {
-		background: #FFF;
 		padding: 24px 0;
+		background: #fff;
 	}
 
 	&-more {
-		padding: 0;
 		display: inline;
-		background: none;
 		border: none;
-		color: $color-graphite;
+		padding: 0;
 		text-decoration: underline;
-		text-decoration-thickness: from-font;
+		color: $color-graphite;
+		background: none;
 		text-decoration-skip-ink: none;
+		text-decoration-thickness: from-font;
+
 		&--show {
 			@include media-breakpoint-only(xs) {
 				display: none;

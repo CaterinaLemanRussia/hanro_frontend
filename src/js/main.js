@@ -14,8 +14,11 @@ import oneTimePasswd from "./components/oneTimePasswd";
 import "./components/to-top";
 
 import "./components/select";
+import "./components/tooltip";
 
 import "./components/search";
+
+import "./components/copyToClipboard";
 
 import "./components/blocks/content-under";
 import "./components/blocks/slider-products";
