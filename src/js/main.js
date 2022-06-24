@@ -6,6 +6,7 @@ import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
 import header from './components/header';
 import {bottomSheet} from "./components/bottomSheet";
+import {tabs} from "./components/tabs";
 import './components/popup';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
@@ -29,6 +30,7 @@ import "./components/blocks/slider-detail";
 
 
 bottomSheet();
+tabs();
 
 ieFix();
 vhFix();

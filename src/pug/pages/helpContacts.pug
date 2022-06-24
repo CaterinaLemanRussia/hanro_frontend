@@ -1,0 +1,52 @@
+main.help.mt-100.mb-100
+	.container.contacts
+		.row
+			.col-12.col-md-4.col-lg-3
+				include ../components/helpAside
+			.col-12.col-md-8.col-lg-8.offset-lg-1
+				.contacts-info
+					h1 Контакты
+					p У вас есть какие-либо вопросы о вашем заказе или наших онлайн-предложениях? Не стесняйтесь и свяжитесь с нами напрямую.
+					p Наша команда рада услышать от вас и приложит все усилия, чтобы решить ваши проблемы как можно быстрее.
+					.client-service-info
+						h3 Клиентская служба
+						p
+							a(href="#") customer-service@hanro.ru
+						p
+							a(href="#") 8 800 689 65 65
+						p Клиентская служба принимает звонки с понедельника по пятницу, 10:00 - 18:00 по московскому времени.
+					.b2b-info
+						h3 B2B
+						p Вы клиент HANRO B2B или хотите им стать? Не стесняйтесь обращаться к нам по адресу:
+						p
+							a(href="#") BTB@hanro.ru
+					form.contact-form
+						h3 Связаться с нами
+						label.form__group.form__group__up
+							.form__group-label.form__group__up-label
+								| Ваше имя<sup>*</sup>
+							input.form__group-input.form__group__up-input(type="text" required)
+							.form__group-error
+								| Описание ошибки
+						label.form__group.form__group__up
+							.form__group-label.form__group__up-label
+								| Email<sup>*</sup>
+							input.form__group-input.form__group__up-input(type="email" required)
+							.form__group-error
+								| Описание ошибки
+						label.form__group.form__group__up
+							.form__group-label.form__group__up-label
+								| Сообщение
+							textarea.form__group-input.form__group__up-input
+							.form__group-error
+								| Описание ошибки
+						label.checkbox
+							input(type="checkbox" required).checkbox-input
+							.checkbox-box
+								+svg('check')
+							.checkbox-text
+								| Согласен на
+								|
+								a(href="#")
+									| обработку персональных данных
+						button.btn-primary(type="submit") Отправить

@@ -38,6 +38,8 @@ vars.setCookie = (name, value, days) => {
 	document.cookie = `${name}=${value || ''}${expires}; path=/`;
 };
 
+window.setCookie = vars.setCookie
+
 /**
 * Получить куки запись
 * @param {string} name Обязательное, название записи
@@ -60,6 +62,8 @@ vars.getCookie = (name) => {
 
 	return null;
 };
+
+window.getCookie = vars.getCookie
 
 /**
 * Удалить куки запись

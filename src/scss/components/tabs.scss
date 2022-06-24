@@ -1,0 +1,51 @@
+.tabs-wrapper {
+	.select-tabs {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		transition: none !important;
+		margin-bottom: 12px;
+
+		.border-wrapper {
+			display: flex;
+			border-bottom: 4px solid #E6E6E6;
+			position: relative;
+			bottom: 4px;
+			transition: none !important;
+		}
+		.tab-label {
+			font-family: 'FuturaBookC';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 20px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			color: #696969;
+			position: relative;
+			top: 4px;
+			transition: none !important;
+
+			&:last-of-type {
+				margin-left: 23px;
+			}
+			&.active {
+				color: #000;
+				border-bottom: 4px solid #000;
+				padding-bottom: 6px;
+				margin-top: 11px;
+			}
+		}
+
+	}
+	.tab-contents {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}

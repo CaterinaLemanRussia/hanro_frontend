@@ -1,0 +1,57 @@
+main.help.mt-100.mb-100
+	.container.boutiques
+		.row
+			.col-12.col-md-4.col-lg-3
+				include ../components/helpAside
+			.col-12.col-md-8.col-lg-8.offset-lg-1
+				h1 Бутики Hanro
+				.boutiques-info
+					#boutiquesMap
+					.info
+						.item
+							h2 Бутик Hanro
+							p.address Москва, Новинский бул., 8, 121099
+							p.phone
+								a(href="#") 8 (495) 410-55-80
+							p.working-time Часы работы: пн-вс 10:00 - 22:00
+							p.route
+								a(href="#") Маршрут
+script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=99f91afb-8db0-4a66-b863-0c9c380b92d5')
+script.
+	var myMap;
+
+	// Дождёмся загрузки API и готовности DOM.
+	ymaps.ready(init);
+
+	function init() {
+		// Создание экземпляра карты и его привязка к контейнеру с
+		// заданным id ("map").
+		myMap = new ymaps.Map('boutiquesMap', {
+			// При инициализации карты обязательно нужно указать
+			// её центр и коэффициент масштабирования.
+			center: [55.76, 37.64], // Москва
+			zoom: 10
+		}, {
+			searchControlProvider: 'yandex#search'
+		});
+
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+			hintContent: 'Фирменный бутик HANRO',
+			balloonContent: '<div class="mapTooltip"><h3>Фирменный бутик HANRO</h3><p>Новинский бул., 8, Москва, ТЦ “Лотте плаза”</p><p>Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00</p></div>'
+		}, {
+			// Опции.
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#image',
+			// Своё изображение иконки метки.
+			iconImageHref: '/images/map-marker.svg',
+			// Размеры метки.
+			iconImageSize: [26, 26],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			// iconImageOffset: [-50, 100]
+		})
+
+		myMap.geoObjects
+			.add(myPlacemark)
+
+	}
