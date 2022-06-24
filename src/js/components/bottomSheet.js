@@ -32,6 +32,30 @@ const bottomSheet = function () {
 				}
 			}
 		}
+
+		const setModalHeight = function(height, modalID) {
+			console.log(modalID)
+
+			if (modalID == undefined) {
+				modalID = window.lastModalShown
+			}
+
+			setSheetHeight(getVH(height), window.lastModalShown)
+		}
+
+		const modalAutoHeight = function(modalID = 'auto') {
+			if (modalID == 'auto') {
+				modalID = window.lastModalShown
+			}
+
+			var newHeight = $(modalID).find('.body > div').outerHeight() + 80
+			console.log(newHeight)
+			setSheetHeight(getVH(newHeight), modalID)
+
+		}
+
+		window.setModalHeight = setModalHeight
+		window.modalAutoHeight = modalAutoHeight
 		window.openModal = openModal
 
 		// openModal('#subscription-modal');
@@ -45,7 +69,7 @@ const bottomSheet = function () {
 
 		if ($(target).hasClass('auto-height')) {
 
-			var height = $(target).find('.contents').height() + 80
+			var height = $(target).find('.body > div').height() + 80
 			console.log(height)
 			openBottomSheet(target, getVH(height))
 		} else {
@@ -61,6 +85,11 @@ const bottomSheet = function () {
 	}
 
 	function setSheetHeight(value, modalID) {
+
+		if (value === 100) {
+			value = 99
+		}
+
 		sheetHeight = Math.max(0, Math.min(100, value))
 		$(modalID).find('.contents').css('height', `${sheetHeight}vh`)
 
