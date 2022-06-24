@@ -48,7 +48,7 @@ const bottomSheet = function () {
 				modalID = window.lastModalShown
 			}
 
-			var newHeight = $(modalID).find('.body > div').outerHeight() + 80
+			var newHeight = $(modalID).find('.body > *').outerHeight() + 80
 			console.log(newHeight)
 			setSheetHeight(getVH(newHeight), modalID)
 
@@ -69,8 +69,7 @@ const bottomSheet = function () {
 
 		if ($(target).hasClass('auto-height')) {
 
-			var height = $(target).find('.body > div').height() + 80
-			console.log(height)
+			var height = $(target).find('.body > *').outerHeight() + 80
 			openBottomSheet(target, getVH(height))
 		} else {
 			openBottomSheet(target, 50)
@@ -79,7 +78,6 @@ const bottomSheet = function () {
 	}
 
 	function openBottomSheet(modalID, vh) {
-		console.log('open bottom sheet', modalID)
 		setSheetHeight(vh, modalID)
 		setIsSheetShown(true, modalID)
 	}
