@@ -37,7 +37,7 @@ header.header
 					img(src="images/logo.svg" alt="")
 			.col
 				.header__actions
-					button.header__actions-item
+					button.header__actions-item.js-search-open-modal
 						.header__actions-item--icon.header__actions-item--search
 							+svg("search")
 					a(href="/personal-data.html").header__actions-item.d-none.d-md-block
@@ -51,13 +51,13 @@ header.header
 							+svg("cart")
 						.header__actions-item--badge
 							| 4
-	.header__search-wrapper.pb-100.pt-50
+	.header__search-wrapper.header__search-wrapper--modal.pb-100.pt-50
 		.container
 			.header__search
 				input.header__search-input.form__group-input
 				button.btn.btn-big.header__search-btn
 					| ПОИСК
-			.header__search__result.mt-50
+			.header__search__result.header__search__result--modal.mt-50
 				.row
 					.col-md-3
 						nav.header__search__result__side
