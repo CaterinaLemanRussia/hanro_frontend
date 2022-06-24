@@ -1,3 +1,4 @@
+import helpers from '../../helpers';
 import Swiper, {Navigation, Pagination, Controller, Thumbs} from 'swiper';
 
 Swiper.use([Navigation])
@@ -29,51 +30,115 @@ const blockSliderDetail = new Swiper(".js-slider-detail", {
 });
 
 $(document).ready(function () {
-	const galleryThumbs = new window.Swiper('.gallery-thumbs', {
-		slidesPerView: 5,
-		allowTouchMove: false,
-		loop: true,
-		loopedSlides: 5,
-		breakpoints: {
-			0: {
-				direction: "horizontal",
-			},
-			960: {
-				direction: "vertical",
-			},
-			1200: {
-				direction: "vertical",
+	let galleryTop, galleryThumbs
+
+	galleryThumbs = new window.Swiper('.catalog-element__gallery-thumbs', {
+		loop: false,
+		init: false,
+		on: {
+			reachEnd: function() {
+				this.snapGrid = [...this.slidesGrid];
 			},
 		},
-		navigation: {
-			nextEl: '.block_slider-products__slider-arrow--right',
-			prevEl: '.block_slider-products__slider-arrow--left',
+		breakpoints: {
+			0: {
+				slidesPerView: "auto",
+				direction: "horizontal",
+				spaceBetween: 8,
+			},
+			960: {
+				slidesPerView: "auto",
+				spaceBetween: 16,
+			},
+			1200: {
+				slidesPerView: 5,
+				direction: "vertical",
+			},
 		},
 		slideToClickedSlide: true,
 	});
-	const galleryTop = new window.Swiper('.gallery-top', {
-		spaceBetween: 10,
+
+	galleryTop = new window.Swiper('.catalog-element__gallery', {
 		navigation: {
-			nextEl: '.block_slider-products__slider-arrow--right',
-			prevEl: '.block_slider-products__slider-arrow--left',
+			nextEl: '.catalog-element__gallery-next',
+			prevEl: '.catalog-element__gallery-prev',
 		},
-		loop: true,
-		loopedSlides: 5,
-		thumbs: {
-			swiper: galleryThumbs
-		},
+		loop: false,
 		on: {
-			slideChange: function (slider) {
-				galleryThumbs.slideTo(slider.activeIndex)
+			init: function () {
+				galleryThumbs.init()
 			},
 		},
 	});
 
-	// galleryTop.controller.control = galleryThumbs;
-	// galleryThumbs.controller.control = galleryTop;
+	galleryThumbs.on('slideChange', function (slider) {
+		galleryTop.slideTo(slider.activeIndex);
+	})
+	galleryTop.on('slideChange', function (slider) {
+		galleryThumbs.slideTo(slider.activeIndex);
+	})
+
+
+	const galleryThumbsPopup = new window.Swiper('.catalog-element__gallery-popup--thumbs', {
+		loop: false,
+		init: false,
+		on: {
+			reachEnd: function() {
+				this.snapGrid = [...this.slidesGrid];
+			},
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: "auto",
+				direction: "horizontal",
+				spaceBetween: 8,
+			},
+			960: {
+				slidesPerView: "auto",
+				spaceBetween: 16,
+			},
+			1200: {
+				slidesPerView: 5,
+				direction: "vertical",
+			},
+		},
+		slideToClickedSlide: true,
+	});
+	const galleryTopPopup = new window.Swiper('.catalog-element__gallery-popup', {
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.catalog-element__gallery-popup--next',
+			prevEl: '.catalog-element__gallery-popup--prev',
+		},
+		loop: false,
+		on: {
+			init: function () {
+				galleryThumbsPopup.init()
+			},
+		},
+	});
+
+	galleryThumbsPopup.on('slideChange', function (slider) {
+		galleryTopPopup.slideTo(slider.activeIndex);
+	})
+	galleryTopPopup.on('slideChange', function (slider) {
+		galleryThumbsPopup.slideTo(slider.activeIndex);
+	})
 
 	window.galleryTop = galleryTop
 	window.galleryThumbs = galleryThumbs
+
+	$('.catalog-element__gallery').find('.swiper-slide').click(function () {
+		if (helpers.isMobile()) return false;
+		galleryTopPopup.slideTo(galleryTop.activeIndex)
+		$('.catalog-element__gallery-popup--window').fadeIn(400);
+	})
+
+	$('.catalog-element__gallery-popup--close').click(function () {
+		if (helpers.isMobile()) return false;
+		galleryTop.slideTo(galleryTopPopup.activeIndex)
+		$('.catalog-element__gallery-popup--window').fadeOut(400);
+	})
 
 	if ( $('.colors-block').length > 0 ) {
 			$('.colors-block').on('click', '.color a', function (e) {
@@ -82,7 +147,7 @@ $(document).ready(function () {
 			$(this).parent().addClass('active')
 		})
 	}
-	
+
 
 	$('.product-amount__minus').click(function () {
 		changeQuantity('reduce')
@@ -93,6 +158,8 @@ $(document).ready(function () {
 	})
 
 })
+
+
 
 function changeQuantity(type) {
 	if (type == 'reduce') {

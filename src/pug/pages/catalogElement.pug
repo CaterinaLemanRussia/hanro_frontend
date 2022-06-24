@@ -13,57 +13,94 @@ main.catalog.catalog-element.mt-50
 		},
 	).mb-50
 
+	.catalog-element__gallery-popup--window
+		.container
+			.catalog-element__gallery-popup--container
+				.catalog-element__gallery-popup--wrapper
+					.swiper.catalog-element__gallery-popup
+						.swiper-wrapper
+							.swiper-slide.catalog-element__gallery-popup--image
+								img(src="/images/pages/catalogElement/photo1.jpeg")
+							.swiper-slide.catalog-element__gallery-popup--image
+								img(src="/images/pages/catalogElement/photo2.jpeg")
+							.swiper-slide.catalog-element__gallery-popup--image
+								img(src="/images/pages/catalogElement/photo3.jpeg")
+							.swiper-slide.catalog-element__gallery-popup--image
+								img(src="/images/pages/catalogElement/photo4.jpeg")
+							.swiper-slide.catalog-element__gallery-popup--image
+								img(src="/images/pages/catalogElement/photo5.jpeg")
+							.swiper-slide.catalog-element__gallery-popup--image
+								img(src="/images/pages/catalogElement/photo5.jpeg")
+				.catalog-element__gallery-popup--thumbs--wrapper
+					.swiper.catalog-element__gallery-popup--thumbs
+						.swiper-wrapper
+							.swiper-slide
+								div
+									img(src="/images/pages/catalogElement/photo1-thumb.jpeg")
+							.swiper-slide
+								div
+									img(src="/images/pages/catalogElement/photo2-thumb.jpeg")
+							.swiper-slide
+								div
+									img(src="/images/pages/catalogElement/photo3-thumb.jpeg")
+							.swiper-slide
+								div
+									img(src="/images/pages/catalogElement/photo4-thumb.jpeg")
+							.swiper-slide
+								div
+									img(src="/images/pages/catalogElement/photo5-thumb.jpeg")
+							.swiper-slide
+								div
+									img(src="/images/pages/catalogElement/photo5-thumb.jpeg")
+					button.slider__arrow-long.catalog-element__gallery-popup--arrow.catalog-element__gallery-popup--prev
+						+svg('arrow_up').d-none.d-lg-block
+						+svg('arrow_left').d-lg-none
+					button.slider__arrow-long.catalog-element__gallery-popup--arrow.catalog-element__gallery-popup--next
+						+svg('arrow_down').d-none.d-lg-block
+						+svg('arrow_right').d-lg-none
+				button.catalog-element__gallery-popup--close
+					+svg('close')
+
 	.container
 		.row
 			.col-12.col-md-6
-				.row
-					.col-md-10.order-lg-2.order-md-2.order-sm-1.order-xs-1
-						.swiper.gallery-top
+				.catalog-element__gallery-container
+					.catalog-element__gallery-wrapper
+						.swiper.catalog-element__gallery
 							.swiper-wrapper
 								.swiper-slide
-									.swiper-slide-container
-										a(href="/images/pages/catalogElement/photo1.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo1-thumb.jpeg")
-											img(src="/images/pages/catalogElement/photo1.jpeg")
+									img(src="/images/pages/catalogElement/photo1.jpeg")
 								.swiper-slide
-									.swiper-slide-container
-										a(href="/images/pages/catalogElement/photo2.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo2-thumb.jpeg")
-											img(src="/images/pages/catalogElement/photo2.jpeg")
+									img(src="/images/pages/catalogElement/photo2.jpeg")
 								.swiper-slide
-									.swiper-slide-container
-										a(href="/images/pages/catalogElement/photo3.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo3-thumb.jpeg")
-											img(src="/images/pages/catalogElement/photo3.jpeg")
+									img(src="/images/pages/catalogElement/photo3.jpeg")
 								.swiper-slide
-									.swiper-slide-container
-										a(href="/images/pages/catalogElement/photo4.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo4-thumb.jpeg")
-											img(src="/images/pages/catalogElement/photo4.jpeg")
+									img(src="/images/pages/catalogElement/photo4.jpeg")
 								.swiper-slide
-									.swiper-slide-container
-										a(href="/images/pages/catalogElement/photo5.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo5-thumb.jpeg")
-											img(src="/images/pages/catalogElement/photo5.jpeg")
+									img(src="/images/pages/catalogElement/photo5.jpeg")
 								.swiper-slide
-									.swiper-slide-container
-										a(href="/images/pages/catalogElement/photo5.jpeg" data-fancybox="images" data-thumb="/images/pages/catalogElement/photo5-thumb.jpeg")
-											img(src="/images/pages/catalogElement/photo5.jpeg")
-
-							.swiper-button-next
-							.swiper-button-prev
-
-					.col-md-2.order-lg-1.order-md-1.order-sm-2.order-xs-2
-						.swiper.gallery-thumbs
+									img(src="/images/pages/catalogElement/photo5.jpeg")
+					.catalog-element__gallery-thumbs--wrapper
+						.swiper.catalog-element__gallery-thumbs
 							.swiper-wrapper
-								a(herf="#").swiper-slide
+								.swiper-slide
 									img(src="/images/pages/catalogElement/photo1-thumb.jpeg")
-								a(herf="#").swiper-slide
+								.swiper-slide
 									img(src="/images/pages/catalogElement/photo2-thumb.jpeg")
-								a(herf="#").swiper-slide
+								.swiper-slide
 									img(src="/images/pages/catalogElement/photo3-thumb.jpeg")
-								a(herf="#").swiper-slide
+								.swiper-slide
 									img(src="/images/pages/catalogElement/photo4-thumb.jpeg")
-								a(herf="#").swiper-slide
+								.swiper-slide
 									img(src="/images/pages/catalogElement/photo5-thumb.jpeg")
-								a(herf="#").swiper-slide
+								.swiper-slide
 									img(src="/images/pages/catalogElement/photo5-thumb.jpeg")
-
+						button.slider__arrow-long.slider__arrow-top.catalog-element__gallery-arrow.catalog-element__gallery-prev
+							+svg('arrow_up').d-none.d-lg-block
+							+svg('arrow_left').d-lg-none
+						button.slider__arrow-long.slider__arrow-bottom.catalog-element__gallery-arrow.catalog-element__gallery-next
+							+svg('arrow_down').d-none.d-lg-block
+							+svg('arrow_right').d-lg-none
 			.col-12.col-md-6
 				.product-info
 					h4.collection Коллекция LUCY
