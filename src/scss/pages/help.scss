@@ -1,0 +1,370 @@
+.help {
+	.aside.help-aside {
+		margin-top: 16px;
+		margin-left: 2px;
+		 ul li {
+			 &.active {
+				 margin-top: -10px;
+				 a {
+					 color: #000;
+				 }
+			 }
+			 a {
+				 font-size: 16px;
+				 text-transform: uppercase;
+				 margin-left: 3px;
+				 color: #696969;
+				 letter-spacing: 0.5px;
+			 }
+		 }
+	}
+}
+
+.help {
+	.container.payment {
+		margin-bottom: -18px;
+	}
+	.payment-info {
+		h1 {
+			margin-bottom: 23px;
+		}
+		p {
+			margin-bottom: 8px;
+			line-height: 22px;
+		}
+	}
+}
+
+.help {
+	.container.return {
+		margin-bottom: -7px;
+	}
+	.return-info {
+		h1 {
+			margin-bottom: 23px;
+		}
+		p {
+			margin-bottom: 8px;
+			line-height: 22px;
+		}
+	}
+}
+
+.help {
+	.contacts {
+		.contacts-info {
+			h1 {
+				margin-bottom: 23px;
+			}
+			& > p {
+				line-height: 22px;
+				margin-bottom: 8px;
+			}
+			.client-service-info, .b2b-info {
+				h3 {
+					font-family: FuturaLightC;
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 22px;
+					margin-top: 50px;
+					margin-bottom: 21px;
+					color: #000000;
+				}
+				p {
+					margin-bottom: 10px;
+					line-height: 24px;
+					a {
+						display: inline-block;
+						border-bottom: 1px solid #000;
+						line-height: 13px;
+					}
+				}
+			}
+
+		}
+	}
+	.contact-form {
+		margin-top: 46px;
+		padding: 50px;
+		background: rgba(174, 194, 206, 0.2);
+		h3 {
+			font-family: 'FuturaLightC';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 22px;
+			color: #000000;
+			margin-bottom: 24px;
+		}
+		.form__group {
+			margin-bottom: 26px;
+		}
+		textarea {
+			min-height: 74px;
+			margin-bottom: -9px;
+		}
+		.btn-primary {
+			margin-top: 24px;
+		}
+	}
+}
+
+.help {
+	.boutiques {
+		h1 {
+			margin-bottom: 24px;
+		}
+		.boutiques-info {
+			display: flex;
+
+			#boutiquesMap {
+				margin-right: 31px;
+				width: 450px;
+				height: 450px;
+			}
+
+			.info {
+				.item {
+					margin-bottom: 50px;
+				}
+				h2 {
+					font-family: 'FuturaBookC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 20px;
+					color: #000000;
+					margin-bottom: 4px;
+				}
+				p {
+					font-family: 'FuturaLightC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 24.7px;
+					letter-spacing: 0.1px;
+					color: #000000;
+					a {
+						display: inline-block;
+						border-bottom: 1px solid #000;
+						line-height: 13px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.help {
+	.delivery {
+		margin-bottom: -24px;
+		h1 {
+			margin-bottom: 20px;
+		}
+		h2 {
+			margin-top: 46px;
+			margin-bottom: 22px;
+		}
+		p {
+			line-height: 29.3px;
+		}
+		.addresses {
+			h4 {
+				font-family: 'FuturaBookC';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 20px;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				margin-top: 15px;
+				margin-bottom: 6px;
+			}
+			.salon-list {
+				.item {
+					border-bottom: 2px solid #E6E6E6;
+					margin-top: 20px;
+					padding-bottom: 22px;
+					margin-bottom: 24px;
+
+					&:last-of-type {
+						margin-bottom: 0;
+						border: none;
+					}
+					h3 {
+						font-family: 'FuturaBookC';
+						font-style: normal;
+						font-weight: 400;
+						font-size: 15px;
+						line-height: 20px;
+						letter-spacing: 1.5px;
+						text-transform: uppercase;
+						color: #000000;
+						margin-bottom: 8px;
+					}
+					p {
+						font-family: 'FuturaLightC';
+						font-style: normal;
+						font-weight: 300;
+						font-size: 12px;
+						line-height: 15px;
+						display: flex;
+						align-items: center;
+						letter-spacing: 0.1px;
+						color: #333333;
+					}
+				}
+			}
+		}
+		#mapSalon {
+			width: 100%;
+			height: 450px;
+		}
+	}
+}
+
+.mapTooltip {
+	padding: 2px 4px;
+	h3 {
+		font-family: 'FuturaBookC';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 20px;
+		color: #000;
+		margin-bottom: 8px;
+	}
+	p {
+		font-family: 'FuturaLightC';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 12px;
+		letter-spacing: 0.1px;
+		color: #333333;
+		margin-bottom: 4px;
+	}
+
+}
+
+// планшеты
+@include media-breakpoint-only(md) {
+	.help {
+		.contacts .contacts-info .client-service-info h3, .help .contacts .contacts-info .b2b-info h3 {
+			margin-top: 60px;
+		}
+		.contacts .contacts-info .b2b-info h3 {
+			margin-top: 56px;
+		}
+		.contact-form {
+			margin-top: 56px;
+		}
+	}
+	.help .delivery p {
+		line-height: 28.7px;
+	}
+	.help .delivery h2 {
+		margin-top: 56px;
+	}
+	.help .delivery .addresses h4 {
+		margin-top: 7px;
+	}
+	.help .boutiques .boutiques-info {
+		flex-direction: column;
+	}
+	.help .boutiques .boutiques-info #boutiquesMap {
+		width: 100%;
+		margin-right: 0;
+		height: 308px;
+		margin-bottom: 25px;
+	}
+	.help .boutiques .boutiques-info .info h2 {
+		margin-bottom: 3px;
+	}
+}
+
+// xs и sm (мобилка)
+@include media-breakpoint-down(md) {
+	.help .contacts .contacts-info h1 {
+		margin-bottom: 15px;
+	}
+	.help .contacts .contacts-info .client-service-info p, .help .contacts .contacts-info .b2b-info p {
+		line-height: 19px;
+	}
+	.help .contacts .contacts-info .client-service-info h3 {
+		margin-bottom: 13px;
+	}
+	.help .contacts .contacts-info .b2b-info h3 {
+		margin-bottom: 21px;
+	}
+	.help .contact-form {
+		padding: 12px;
+	}
+	.help .contact-form h3 {
+		font-size: 15px;
+		margin-top: 9px;
+		margin-bottom: 14px;
+	}
+	.help .contact-form .form__group {
+		margin-bottom: 19px;
+	}
+	.help .contact-form .btn-primary {
+		margin-top: 15px;
+	}
+	.container.contacts {
+		margin-bottom: 55px;
+	}
+	.help .container.payment {
+		margin-bottom: 37px;
+	}
+	.help .delivery h1 {
+		margin-bottom: 25px;
+	}
+	.help .delivery p {
+		margin-bottom: 12px;
+		line-height: 19.8px;
+	}
+	.help .delivery h2 {
+		margin-top: 61px;
+		margin-bottom: 25px;
+	}
+	.help .delivery .addresses h4 {
+		margin-top: 20px;
+	}
+	.help .delivery #mapSalon {
+		width: 100%;
+		height: 320px;
+		margin-bottom: 25px;
+	}
+	.help .delivery {
+		margin-bottom: 18px;
+	}
+	.help .delivery .addresses .salon-list .item p {
+		margin-bottom: 0;
+	}
+	.help .delivery .addresses .salon-list .item {
+		margin-top: 13px;
+	}
+	.help .delivery .addresses .salon-list .item {
+		padding-bottom: 13px;
+		margin-bottom: 17px;
+	}
+	.help .delivery .addresses .salon-list {
+		margin-bottom: 10px;
+	}
+	.help .container.return {
+		margin-bottom: 36px;
+	}
+	.help .boutiques .boutiques-info #boutiquesMap {
+		width: 100%;
+		margin-right: 0;
+		height: 320px;
+		margin-bottom: 25px;
+	}
+	.help .boutiques .boutiques-info {
+		flex-direction: column;
+	}
+	.help .boutiques .boutiques-info .info .item {
+		margin-bottom: 25px;
+	}
+}

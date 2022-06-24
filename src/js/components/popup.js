@@ -380,10 +380,17 @@ $.fancybox.defaults = {
 // 		})
 // 	}
 // }
-
+$(document).ready(function(){
+	console.log(window.getCookie("cookie_accepted"))
+	if (window.getCookie("cookie_accepted") !== 'YES') {
+		$('.cookie').css('display', 'flex');
+	}
+})
 
 $('.cookie-accept').click(function () {
+
 	$('.cookie').fadeOut(400)
+	window.setCookie("cookie_accepted","YES",3600); //set "user_email" cookie, expires in 30 days
 })
 $('.cookie-more').click(function () {
 	$(this).addClass('d-none')
