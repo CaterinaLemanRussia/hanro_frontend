@@ -789,3 +789,170 @@ section.auth, section.code, section.captcha {
 		}
 	}
 }
+
+.bottom-sheet {
+	.auth, .code, .address {
+		.container {
+			padding: 48px 30px;
+			form {
+				margin-top: 60px;
+				max-width: 445px;
+				width: 100%;
+				margin-bottom: 10px;
+				.form__group {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+	section.auth form, section.code form, section.captcha form {
+		margin-bottom: 0;
+	}
+	.code {
+		.container {
+			width: 640px;
+			max-width: 100%;
+			h4 {
+				margin-top: 28px;
+				letter-spacing: 1.6px;
+			}
+		}
+	}
+	section.address {
+		.container {
+			padding: 49px 48px;
+			form {
+				margin: auto;
+				margin-top: 50px;
+				.inline-labels {
+					display: flex;
+					justify-content: space-between;
+					& > label {
+						width: 20%;
+					}
+					margin-bottom: 20px;
+				}
+				.courier-comments {
+					margin-bottom: 50px;
+				}
+
+			}
+		}
+		h1 {
+			text-align: center;
+		}
+
+		.form-group-info {
+			margin-top: 8px;
+			font-family: 'FuturaLightC';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 12px;
+			letter-spacing: 0.1px;
+			color: #333333;
+
+		}
+		.magic-checkbox-label {
+			line-height: 20px;
+			display: inline-block;
+			margin-bottom: 30px;
+			font-family: 'FuturaLightC';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			letter-spacing: 0.1px;
+			color: #000000;
+		}
+	}
+}
+
+// xs и sm (мобилка)
+@include media-breakpoint-down(md) {
+	.bottom-sheet {
+		.auth, .code, .address {
+			.container {
+				.row {
+					margin-right: 0;
+					margin-left: 0;
+				}
+				padding: 0;
+				.form {
+					margin-top: 14px;
+					max-width: 100%;
+				}
+			}
+		}
+		section.auth form, section.code form, section.captcha form {
+			margin-bottom: 0;
+		}
+		section.code {
+			.container {
+				width: 100%;
+			}
+			.row {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+	}
+
+}
+
+
+input[type="checkbox"].ios8-switch {
+	position: absolute;
+	margin: 8px 0 0 16px;
+}
+input[type="checkbox"].ios8-switch + label {
+	position: relative;
+	padding: 5px 0 0 50px;
+	line-height: 2.0em;
+}
+input[type="checkbox"].ios8-switch + label:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	width: 38px; /* x*5 */
+	height: 24px; /* x*3 */
+	border-radius: 16px; /* x*2 */
+	background: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	background: #E6E6E6;
+}
+input[type="checkbox"].ios8-switch + label:after {
+	content: "";
+	border: 2px solid #000;
+	position: absolute;
+	display: block;
+	left: 2px;
+	top: 2px;
+	width: 20px; /* x*3 */
+	height: 20px; /* x*3 */
+	border-radius: 16px; /* x*2 */
+	background: #fff;
+	border: 2px solid #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	background: #E6E6E6;
+}
+input[type="checkbox"].ios8-switch + label:hover:after {
+	border-color: #000;
+}
+input[type="checkbox"].ios8-switch:checked + label:after {
+	margin-left: 14px;
+}
+input[type="checkbox"].ios8-switch:checked + label:before {
+	background: #333;
+}
+input[type="checkbox"].ios8-switch:checked + label:after {
+	background: #333;
+}
+input[type="checkbox"].ios8-switch:checked + label:hover:after {
+	background: #E6E6E6;
+}
+
+
