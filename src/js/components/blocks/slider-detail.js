@@ -1,10 +1,7 @@
 import helpers from '../../helpers';
-import Swiper, {Navigation, Pagination, Controller, Thumbs} from 'swiper';
+import Swiper, {Navigation, Pagination, Controller, Thumbs, Zoom} from 'swiper';
 
-Swiper.use([Navigation])
-Swiper.use([Pagination])
-Swiper.use([Controller])
-Swiper.use([Thumbs])
+Swiper.use([Navigation, Pagination, Controller, Thumbs, Zoom])
 
 window.Swiper = Swiper;
 
@@ -36,7 +33,7 @@ $(document).ready(function () {
 		loop: false,
 		init: false,
 		on: {
-			reachEnd: function() {
+			reachEnd: function () {
 				this.snapGrid = [...this.slidesGrid];
 			},
 		},
@@ -83,7 +80,7 @@ $(document).ready(function () {
 		loop: false,
 		init: false,
 		on: {
-			reachEnd: function() {
+			reachEnd: function () {
 				this.snapGrid = [...this.slidesGrid];
 			},
 		},
@@ -111,6 +108,7 @@ $(document).ready(function () {
 			prevEl: '.catalog-element__gallery-popup--prev',
 		},
 		loop: false,
+		zoom: true,
 		on: {
 			init: function () {
 				galleryThumbsPopup.init()
@@ -128,20 +126,34 @@ $(document).ready(function () {
 	window.galleryTop = galleryTop
 	window.galleryThumbs = galleryThumbs
 
+	$('.catalog-element__gallery-popup-zoom--in').click(function () {
+		galleryTopPopup.zoom.in()
+	})
+
+	$('.catalog-element__gallery-popup-zoom--out').click(function () {
+		galleryTopPopup.zoom.out()
+	})
+
+	let $popupGallery = $('.catalog-element__gallery-popup--window')
+
 	$('.catalog-element__gallery').find('.swiper-slide').click(function () {
 		if (helpers.isMobile()) return false;
 		galleryTopPopup.slideTo(galleryTop.activeIndex)
-		$('.catalog-element__gallery-popup--window').fadeIn(400);
+		helpers.lockScroll(true, $popupGallery, 'element-popup')
+		$popupGallery.fadeIn(400);
+
 	})
 
 	$('.catalog-element__gallery-popup--close').click(function () {
 		if (helpers.isMobile()) return false;
+		galleryTopPopup.zoom.out()
 		galleryTop.slideTo(galleryTopPopup.activeIndex)
-		$('.catalog-element__gallery-popup--window').fadeOut(400);
+		helpers.lockScroll(false, $popupGallery, 'element-popup')
+		$popupGallery.fadeOut(400);
 	})
 
-	if ( $('.colors-block').length > 0 ) {
-			$('.colors-block').on('click', '.color a', function (e) {
+	if ($('.colors-block').length > 0) {
+		$('.colors-block').on('click', '.color a', function (e) {
 			e.preventDefault()
 			$('.colors-block .color').removeClass('active')
 			$(this).parent().addClass('active')
@@ -158,7 +170,6 @@ $(document).ready(function () {
 	})
 
 })
-
 
 
 function changeQuantity(type) {

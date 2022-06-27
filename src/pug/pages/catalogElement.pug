@@ -20,17 +20,29 @@ main.catalog.catalog-element.mt-50
 					.swiper.catalog-element__gallery-popup
 						.swiper-wrapper
 							.swiper-slide.catalog-element__gallery-popup--image
-								img(src="/images/pages/catalogElement/photo1.jpeg")
+								.swiper-zoom-container
+									img(src="/images/pages/catalogElement/photo1.jpeg")
 							.swiper-slide.catalog-element__gallery-popup--image
-								img(src="/images/pages/catalogElement/photo2.jpeg")
+								.swiper-zoom-container
+									img(src="/images/pages/catalogElement/photo2.jpeg")
 							.swiper-slide.catalog-element__gallery-popup--image
-								img(src="/images/pages/catalogElement/photo3.jpeg")
+								.swiper-zoom-container
+									img(src="/images/pages/catalogElement/photo3.jpeg")
 							.swiper-slide.catalog-element__gallery-popup--image
-								img(src="/images/pages/catalogElement/photo4.jpeg")
+								.swiper-zoom-container
+									img(src="/images/pages/catalogElement/photo4.jpeg")
 							.swiper-slide.catalog-element__gallery-popup--image
-								img(src="/images/pages/catalogElement/photo5.jpeg")
+								.swiper-zoom-container
+									img(src="/images/pages/catalogElement/photo5.jpeg")
 							.swiper-slide.catalog-element__gallery-popup--image
-								img(src="/images/pages/catalogElement/photo5.jpeg")
+								.swiper-zoom-container
+									img(src="/images/pages/catalogElement/photo5.jpeg")
+
+						.catalog-element__gallery-popup-zoom
+							button.catalog-element__gallery-popup-zoom--in
+								+svg('plus')
+							button.catalog-element__gallery-popup-zoom--out
+								+svg('minus')
 				.catalog-element__gallery-popup--thumbs--wrapper
 					.swiper.catalog-element__gallery-popup--thumbs
 						.swiper-wrapper
@@ -60,6 +72,9 @@ main.catalog.catalog-element.mt-50
 						+svg('arrow_right').d-lg-none
 				button.catalog-element__gallery-popup--close
 					+svg('close')
+
+
+
 
 	.container
 		.row
