@@ -22,7 +22,11 @@ button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target
 								+lazyPicture({
 									src: `${baseDir}images/blocks/callback.jpeg`,
 									alt: 'Погрузиться в мир Hanro - изображение',
-								}).block_callback-img
+								}).block_callback-img.hidden-mobile
+								+lazyPicture({
+									src: `${baseDir}images/subscription-mobile.png`,
+									alt: 'Погрузиться в мир Hanro - изображение',
+								}).block_callback-img.hidden-desktop
 							.col-md-6.ms-md-auto
 								.block_callback-content
 									.block_callback-title.h1.mb-24
@@ -94,6 +98,52 @@ button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target
 										.form__group-error
 											| Описание ошибки
 								button.btn-primary(type="submit") Получить код
+// модалка удаление аккаунта
+button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target="modal-delete-acc") удаление аккаунта
+// The sheet component
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-delete-acc
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			section.auth
+				.container
+					.row
+						.col-12
+							h1 Удаление аккаунта
+						.col-12
+							p Вы уверены, что хотите удалить аккаунт и историю ваших покупок?
+							form.form.mt-100
+								button.btn-primary(type="submit") Удалить безвозвратно
+// модалка удаленного аккаунта
+button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target="modal-deleted-acc") удаленный аккаунт
+// The sheet component
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-deleted-acc
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			section.auth
+				.container
+					.row
+						.col-12
+							h1 Аккаунт удален
+						.col-12
+							p Но вы всегда можете зарегистрироваться снова
 // модалка вводка кода
 button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target="modal-sms-code") Модалка вводка кода
 // The sheet component
@@ -167,29 +217,27 @@ button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target
 										| Название улицы, номер дома, корпус, строение
 									.form__group-error
 										| Описание ошибки
-								input(type='checkbox').ios8-switch#checkbox-3
-								label(for='checkbox-3').magic-checkbox-label Частный дом
-								.inline-labels
+								input(type='checkbox').ios8-switch#privateHouse
+								label(for='privateHouse').magic-checkbox-label Частный дом
+								.inline-labels.is-errored
 									label.form__group-label.form__group__up-label
 										| Кв./офис*
-										input.form__group-input.form__group__up-input.short(required type="text" value="" maxlength="1")
+										input.form__group-input.form__group__up-input.short(required type="text" value="" maxlength="4")
 										//.form__group-error
 										//	| Введен неверный код
 									label.form__group-label.form__group__up-label
 										| Подъезд
-										input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1")
+										input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="2")
 										//.form__group-error
 										//	| Введен неверный код
 									label.form__group-label.form__group__up-label
 										| Этаж
-										input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1")
+										input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="2")
 										//.form__group-error
 										//	| Введен неверный код
 									label.form__group-label.form__group__up-label
 										| Домофон
-										input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1")
-										//.form__group-error
-										//	| Введен неверный код
+										input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="10")
 								label.form__group.form__group__up.courier-comments
 									.form__group-label.form__group__up-label
 										| Коментарии курьеру
@@ -200,24 +248,6 @@ button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target
 									button.btn.btn-primary
 										span
 											| Сохранить
-
-button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target="modal4") Open modal 4
-// The sheet component
-.bottom-sheet.column.items-center.justify-end.from-top.auto-height(aria-hidden="true")#modal4
-	// Dark background for the sheet
-	.overlay
-	// The sheet itself
-	.contents.column
-		// Sheet controls
-		header.controls
-			// The thing to drag if you want to resize the sheet
-			.draggable-area
-				.draggable-thumb
-		// Body of the sheet
-		main.body.fill.column
-			h2 Hello, World 4444!
-			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
-			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit explicabo vero quas eligendi, eos cupiditate sint aliquam a omnis commodi quos in libero veniam. Quidem, non a quibusdam consequuntur mollitia officia numquam sit quos dolorum quaerat reprehenderit laboriosam perspiciatis consequatur odit error dolore recusandae iste id quam magnam ut! Sint nulla minus excepturi libero officiis, deleniti, delectus obcaecati saepe natus rerum nesciunt!
 
 .bottom-sheet.column.items-center.justify-end.from-top.auto-height(aria-hidden="true")#modal-search
 	// Dark background for the sheet
@@ -250,6 +280,7 @@ button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target
 								| <b>Бра</b> и трусы
 							a.header__search__result__side-item
 								| Бюстгалтер <b>бра</b>лет
+button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target="modal-share-favorite") Модалка Поделиться избранным
 .bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-share-favorite
 	// Dark background for the sheet
 	.overlay
@@ -272,3 +303,17 @@ button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target
 						| Кликните, чтобы скопировать ссылку
 					input.header__search-input.form__group-input.js-copy-to-clipboard(readonly value="https://hanro.ru/personal/wishlist/435876" data-tippy-content="Ссылка скопирована")
 
+.cookie
+	.cookie-content
+		.container
+			.row.align-items-md-center
+				.col-md.text-small
+					| Мы используем файлы cookie, которые помогают анализировать поведение пользователей и предлагать наиболее интересные товары, основываясь на
+					button.cookie-more.d-sm-none
+						| ещё
+					span.cookie-more--show
+						| пользовательских предпочтениях. Благодаря cookie работа с сайтом становится более удобной и эффективной, улучшается работоспособность, навигация и пользовательский опыт. Обращаем внимание, что при блокировке файлов cookie некоторые функции могут работать недостаточно корректно. Ознакомьтесь с нашей политикой обработки файлов cookie.
+				.col.d-md-none.mb-24
+				.col-md-auto
+					button.btn.btn-black.btn-big.cookie-accept.btn-xs-full
+						| Согласиться

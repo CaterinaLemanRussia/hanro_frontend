@@ -652,6 +652,33 @@ section.auth, section.code, section.captcha {
 		}
 	}
 }
+#modal-delete-acc {
+	p {
+		text-align: center;
+		max-width: 330px;
+		margin: 0 auto;
+		margin-top: 60px;
+		box-sizing: border-box;
+	}
+	.btn-primary {
+		width: 220px;
+		margin: auto;
+	}
+}
+
+.bottom-sheet section.address .container form .btn-primary {
+	background: #000;
+	color: #fff;
+}
+
+#modal-deleted-acc {
+	p {
+		margin: auto;
+		text-align: center;
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+}
 
 // xs и sm (мобилка)
 @include media-breakpoint-down(md) {
@@ -746,6 +773,13 @@ section.auth, section.code, section.captcha {
 				width: 20px;
 				height: 15px;
 			}
+		}
+	}
+
+	#modal-delete-acc {
+		p {
+			margin-top: 24px;
+			margin-bottom: 24px;
 		}
 	}
 }
@@ -897,6 +931,34 @@ section.auth, section.code, section.captcha {
 		}
 	}
 
+	.bottom-sheet section.address .container {
+		padding: 0;
+	}
+	.bottom-sheet section.address .container form .inline-labels > label {
+		width: 22%;
+	}
+	.bottom-sheet section.address .container form .courier-comments {
+		margin-bottom: 30px;
+	}
+	.bottom-sheet section.address .container form .btn-primary {
+		background: #000;
+		color: #fff;
+	}
+	.bottom-sheet .contents {
+		width: 100%;
+	}
+	.bottom-sheet .block_callback-content {
+		padding-bottom: 40px;
+	}
+	.bottom-sheet .block_callback__form-btn {
+		margin-left: 0;
+	}
+	input.ios8-switch {
+		opacity: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
 }
 
 
@@ -956,3 +1018,14 @@ input[type="checkbox"].ios8-switch:checked + label:hover:after {
 }
 
 
+@include media-breakpoint-down(md) {
+	.hidden-mobile {
+		display: none;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.hidden-desktop {
+		display: none;
+	}
+}
