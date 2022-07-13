@@ -164,14 +164,19 @@ main.catalog.catalog-element.mt-50
 							input(class="product-amount__field", id="", type="number", value="1")
 							span(class="product-amount__plus no-select", id="")
 								| +
-				.limited
-					+svg('attention')
-					a
-						span
-							| Ограничение на доставку данного товара
+				-//.limited
+				-//	+svg('attention')
+				-//	a
+				-//		span
+				-//			| Ограничение на доставку данного товара
 				.incart-n-favourite-block
 					button.btn.btn-big.btn-primary.incart
 						|в корзину
+					button.btn.btn-big.btn-primary.favorite
+						+svg('heart')
+				.incart-n-favourite-block
+					button.btn.btn-big.btn-secondary.cant-buy
+						|узнать о поступлении
 					button.btn.btn-big.btn-primary.favorite
 						+svg('heart')
 				.accordion
