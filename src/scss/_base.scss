@@ -399,6 +399,13 @@ h3,
 		background-color: $color-black-hover;
 		color: #FFF;
 	}
+
+	&-input:disabled + &-box {
+		border-color: $color-hover-silver;
+	}
+	&-input:disabled + &-box + * {
+		color: $color-hover-silver;
+	}
 }
 
 .slider {
