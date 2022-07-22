@@ -9,7 +9,7 @@
 				if (!$(this).hasClass('active')) {
 					$(this).parent().find('.tab-label').removeClass('active')
 					$(this).addClass('active')
-					$(this).parent().parent().parent().find('.tab-contents').removeClass('active')
+					$(this).parent().parent().parent().children('.tab-contents').removeClass('active')
 					$(target).addClass('active')
 				}
 			})
