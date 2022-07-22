@@ -1,0 +1,273 @@
+main.order.mt-100.mb-100
+	.container.order-page 
+		.row
+			.col-12
+				a(href="#").back
+					+svg('chevron_left')
+					span Назад
+				h1 Оформление заказа
+			.col-12.col-md-8.col-lg-8
+				form
+					h3 1. ПОЛУЧАТЕЛЬ
+					//- .form-group.order-personal-data
+					//- 	label.form__group.form__group__up
+					//- 		.form__group-label.form__group__up-label
+					//- 			| Имя<sup>*</sup>
+					//- 		input.form__group-input.form__group__up-input(type="text" required)
+					//- 		.form__group-error
+					//- 			| Описание ошибки
+					//- 	label.form__group.form__group__up
+					//- 		.form__group-label.form__group__up-label
+					//- 			| Фамилия<sup>*</sup>
+					//- 		input.form__group-input.form__group__up-input(type="text" required)
+					//- 		.form__group-error
+					//- 			| Описание ошибки
+					//- 	label.form__group.form__group__up
+					//- 		.form__group-label.form__group__up-label
+					//- 			| Email
+					//- 		input.form__group-input.form__group__up-input(type="text" required)
+					//- 		.form__group-description
+					//- 			| На указанный email вы получите электронный чек
+					//- 		.form__group-error
+					//- 			| Описание ошибки
+					.order-data-completed
+						.order-data-completed-info
+							p
+								| Анастасия Христорождественская
+							p
+								| ohmymail@mail.ru
+						button.btn.btn-primary.btn-edit
+							| Изменить
+					
+					.grey-line.order-personal-data-after
+					.form-group.get-way
+						h3 2. Способ получения
+						label.form__group.form__group__up.select-city
+							.form__group-label.form__group__up-label
+								| Ваш город
+							select.select
+								option(disabled selected)
+									| Выберите город
+								option
+									| Москва
+								option
+									| Санкт-Петербург
+						//- button.btn.btn-primary.btn-next
+						//- 	| Далее
+
+					.tabs-wrapper.delivery-way
+								.select-tabs.tabs-primary
+									.border-wrapper
+										a.tab-label(href="#" data-target="vip") VIP-шопер
+										a.tab-label(href="#" data-target="pickup").active Самовывоз
+										a.tab-label(href="#" data-target="delivery") Доставка
+								.tab-contents.list#vip
+									.addresses
+										.item
+											.radio-group
+												input(type="radio" id="test1" name="address")
+												label(for="test1")
+											label(for="test1").text
+												| 234123, Москва, Профсоюзная, 38, Комментарии: под.6, домофон 165Вызов, эт.15, кв.165.
+											a.edit
+												+svg('edit')
+												span Изменить
+											a.delete
+												+svg('delete_active')
+												span Удалить
+										.item
+											.radio-group
+												input(type="radio" id="test3" name="address")
+												label(for="test3")
+											label(for="test3").text
+												| 234123, Москва, Профсоюзная, 38, Комментарии: под.6, домофон 165Вызов, эт.15, кв.165.
+											a.edit
+												+svg('edit')
+												span Изменить
+											a.delete
+												+svg('delete_active')
+												span Удалить
+										.item.removed
+											.text
+												| Адрес удален
+											a.undo
+												| Отменить
+										.item
+											.radio-group
+												input(type="radio" id="test2" name="address")
+												label(for="test2")
+											label(for="test2").text
+												| 125009, г. Москва, ул. Большая Никитская ул., 15 ст 1
+											a.edit
+												+svg('edit')
+												span Изменить
+											a.delete
+												+svg('delete_active')
+												span Удалить
+										button.btn.btn-secondary.new-address
+											span 
+												| + Новый адрес
+								.tab-contents.map#pickup.active
+									.delivery-info
+										.addresses
+											.delivery-period-info
+												p
+													| Дата доставки: дд.мм.гггг
+												p
+													| Срок хранения заказа: 3 дня
+											.tabs-wrapper.map-list
+												.select-tabs
+													.border-wrapper
+														a.tab-label(href="#" data-target="salon-map").active Карта
+														a.tab-label(href="#" data-target="salon-list") Список
+												.tab-contents.map#salon-map.active
+													#mapSalon
+												.tab-contents.list#salon-list
+													.salon-list
+														.item
+															.info
+																h3 Фирменный бутик HANRO
+																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
+																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+															.choose
+																button.btn.btn-primary Выбрать
+														.item
+															.info
+																h3 Фирменный бутик HANRO
+																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
+																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+															.choose
+																button.btn.btn-primary Выбрать
+														.item
+															.info
+																h3 Фирменный бутик HANRO
+																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
+																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+															.choose
+																button.btn.btn-primary Выбрать
+														.item
+															.info
+																h3 Фирменный бутик HANRO
+																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
+																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+															.choose
+																button.btn.btn-primary Выбрать
+								.tab-contents.list#delivery
+									.add-address
+										label.form__group.form__group__up
+											.form__group-label.form__group__up-label
+												| Адрес<sup>*</sup>
+											input.form__group-input.form__group__up-input(type="text")
+											.form-group-info
+												| Название улицы, номер дома, корпус, строение
+											.form__group-error
+												| Описание ошибки
+										.magic-checkbox-wrap
+											input(type='checkbox').ios8-switch#privateHouse
+											label(for='privateHouse').magic-checkbox-label Частный дом
+										.inline-labels.is-errored
+											label.form__group-label.form__group__up-label
+												| Кв./офис*
+												input.form__group-input.form__group__up-input.short(required type="text" value="" maxlength="4")
+												//.form__group-error
+												//	| Введен неверный код
+											label.form__group-label.form__group__up-label
+												| Подъезд
+												input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="2")
+												//.form__group-error
+												//	| Введен неверный код
+											label.form__group-label.form__group__up-label
+												| Этаж
+												input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="2")
+												//.form__group-error
+												//	| Введен неверный код
+											label.form__group-label.form__group__up-label
+												| Домофон
+												input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="10")
+										label.form__group.form__group__up.courier-comments
+											.form__group-label.form__group__up-label
+												| Коментарии курьеру
+											input.form__group-input.form__group__up-input(type="text")
+											.form__group-error
+												| Описание ошибки
+					button.btn.btn-primary.btn-next
+							| Далее
+					
+			.col-12.col-md-4.col-lg-4.rel
+				.order-aside
+					.order-info 
+						span
+							| Товаров на сумму
+						span
+							| 172 580 руб.
+					.order-info
+						span
+							| Скидка
+						span
+							| -580 руб.
+					.order-info
+						span
+							| Бонусы
+						span
+							| -3 470 руб.
+					.order-info
+						span
+							| Доставка
+						span
+							| не выбрано
+					.grey-line
+					.order-total
+						span
+							| Итого
+						span
+							| 158 580 руб.
+				.clear
+
+script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=99f91afb-8db0-4a66-b863-0c9c380b92d5')
+script.
+	var myMap;
+
+	// Дождёмся загрузки API и готовности DOM.
+	ymaps.ready(init);
+
+	function init() {
+		// Создание экземпляра карты и его привязка к контейнеру с
+		// заданным id ("map").
+		myMap = new ymaps.Map('mapSalon', {
+			// При инициализации карты обязательно нужно указать
+			// её центр и коэффициент масштабирования.
+			center: [55.76, 37.64], // Москва
+			zoom: 9
+		}, {
+			searchControlProvider: 'yandex#search'
+		});
+
+		var markers = [
+			[55.684758, 37.738521],
+			[55.985, 37.935],
+		]
+
+		markers.forEach((marker, index) => {
+			myPlacemark = new ymaps.Placemark(marker, {
+				hintContent: 'Фирменный бутик HANRO',
+				balloonContent: '<div class="mapTooltip"><h3>Фирменный бутик HANRO</h3><p>Новинский бул., 8, Москва, ТЦ “Лотте плаза”</p><p>Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00</p></div>'
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: '/images/map-marker.svg',
+				// Размеры метки.
+				iconImageSize: [26, 26],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				// iconImageOffset: [-50, 60]
+			})
+
+			myMap.geoObjects
+				.add(myPlacemark)
+		})
+
+
+
+	}
