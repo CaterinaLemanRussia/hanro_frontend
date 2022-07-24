@@ -6,30 +6,30 @@ main.order.mt-100.mb-100
 					+svg('chevron_left')
 					span Назад
 				h1 Оформление заказа
-			.col-12.col-md-8.col-lg-8
+			.col-12.col-md-12.col-lg-8
 				form
 					h3 1. ПОЛУЧАТЕЛЬ
-					//- .form-group.order-personal-data
-					//- 	label.form__group.form__group__up
-					//- 		.form__group-label.form__group__up-label
-					//- 			| Имя<sup>*</sup>
-					//- 		input.form__group-input.form__group__up-input(type="text" required)
-					//- 		.form__group-error
-					//- 			| Описание ошибки
-					//- 	label.form__group.form__group__up
-					//- 		.form__group-label.form__group__up-label
-					//- 			| Фамилия<sup>*</sup>
-					//- 		input.form__group-input.form__group__up-input(type="text" required)
-					//- 		.form__group-error
-					//- 			| Описание ошибки
-					//- 	label.form__group.form__group__up
-					//- 		.form__group-label.form__group__up-label
-					//- 			| Email
-					//- 		input.form__group-input.form__group__up-input(type="text" required)
-					//- 		.form__group-description
-					//- 			| На указанный email вы получите электронный чек
-					//- 		.form__group-error
-					//- 			| Описание ошибки
+					.form-group.order-personal-data
+						label.form__group.form__group__up
+							.form__group-label.form__group__up-label
+								| Имя<sup>*</sup>
+							input.form__group-input.form__group__up-input(type="text" required)
+							.form__group-error
+								| Описание ошибки
+						label.form__group.form__group__up
+							.form__group-label.form__group__up-label
+								| Фамилия<sup>*</sup>
+							input.form__group-input.form__group__up-input(type="text" required)
+							.form__group-error
+								| Описание ошибки
+						label.form__group.form__group__up
+							.form__group-label.form__group__up-label
+								| Email
+							input.form__group-input.form__group__up-input(type="text" required)
+							.form__group-description
+								| На указанный email вы получите электронный чек
+							.form__group-error
+								| Описание ошибки
 					.order-data-completed
 						.order-data-completed-info
 							p
@@ -42,6 +42,8 @@ main.order.mt-100.mb-100
 					.grey-line.order-personal-data-after
 					.form-group.get-way
 						h3 2. Способ получения
+
+
 						label.form__group.form__group__up.select-city
 							.form__group-label.form__group__up-label
 								| Ваш город
@@ -150,8 +152,21 @@ main.order.mt-100.mb-100
 																h3 Фирменный бутик HANRO
 																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
 																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+																
 															.choose
 																button.btn.btn-primary Выбрать
+												.salon-list-selected
+													.item
+														.info
+															h3 Фирменный бутик HANRO
+															p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
+															p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+															p Дата доставки: дд.мм.гггг
+															p Срок хранения заказа: 3 дня
+														.choose
+															button.btn.btn-secondary.btn-change
+																span Изменить
+
 								.tab-contents.list#delivery
 									.add-address
 										label.form__group.form__group__up
@@ -190,10 +205,106 @@ main.order.mt-100.mb-100
 											input.form__group-input.form__group__up-input(type="text")
 											.form__group-error
 												| Описание ошибки
+										.data_deliv
+											label.form__group.form__group__up.courier-comments
+												.form__group-label.form__group__up-label
+													| Дата доставки
+												input.form__group-input.form__group__up-input(type="date")
+											label.form__group.form__group__up.courier-comments
+												.form__group-label.form__group__up-label
+													| Время доставки
+												input.form__group-input.form__group__up-input(type="time")
 					button.btn.btn-primary.btn-next
 							| Далее
+					.salon-list-selected
+						.item
+							.info
+								h3 Доставка / самовывоз
+								p Адрес: ХХХ
+								p Дата доставки: ХХХ
+								p Время доставки: ХХХ
+								p Срок хранения заказа: 3 дня
+								p Доп. строка
+								p Доп. строка
+							.choose
+								button.btn.btn-secondary.btn-change
+									span Изменить
+
+					.grey-line.order-personal-data-after
+					.form-group.get-payment
+						h3 3. Оплата
+						.get-payment_wrap
+							.item
+								.radio-but
+									input(type="radio" id="test5" name="payment")
+									label(for="test5")
+								label(for="test5").text
+									| При получении
+							.item
+								.radio-but
+									input(type="radio" id="test6" name="payment")
+									label(for="test6")
+								label(for="test6").text
+									| Картой на сайте
+					.grey-line.order-personal-data-after
+					.promo-block
+						.promo-block_inp
+							label.form__group.form__group__up.courier-comments
+								.form__group-label.form__group__up-label
+									| Коментарии курьеру
+								.fl_box
+									div
+										input.form__group-input.form__group__up-input(type="text")
+										.form__group-error
+											| Описание ошибки
+									button.btn.btn-secondary.btn-change
+										span ok
+						.promo-block_bonus
+							.promo-block_bonus_img
+								img(src="images/Image-base.jpg" alt="")
+							.promo-block_bonus_desc
+								.all_bonus
+									| Бонусы: 45 876 руб.
+								.withdraw
+									input.form__group-input.form__group__up-input(type="text")
+									button.btn.btn-secondary.btn-change
+										span списать
+
+					.grey-line.order-personal-data-after
+					.agreement_block
+						form.form.for-loyal
+							
+						form.form.for-pers
+							label.checkbox
+								input(type="checkbox" required).checkbox-input
+								.checkbox-box
+									+svg('check')
+								.checkbox-text
+										| Согласен на обработку 
+										a(href="#") персональных данных  
+										| и на обработку моих 
+										a(href="#") персональных данных
+						form.form.for-loyal
+							label.checkbox
+									input(type="checkbox" required).checkbox-input
+									.checkbox-box
+										+svg('check')
+									.checkbox-text
+											| Согласен стать участником 
+											a(href="#") программы лояльности
+						form.form.for-mailing
+							label.checkbox
+									input(type="checkbox" required).checkbox-input
+									.checkbox-box
+										+svg('check')
+									.checkbox-text
+											| Согласен на получение 
+											a(href="#") рассылок
+					button.btn.btn-primary.btn-sub-bod(type="submit")
+							| Оформить заказ
 					
-			.col-12.col-md-4.col-lg-4.rel
+					
+			.col-12.col-md-12.col-lg-4.rel
 				.order-aside
 					.order-info 
 						span
@@ -221,6 +332,8 @@ main.order.mt-100.mb-100
 							| Итого
 						span
 							| 158 580 руб.
+					button.btn.btn-primary.btn-sub-asid(type="submit")
+							| Оформить заказ
 				.clear
 
 script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=99f91afb-8db0-4a66-b863-0c9c380b92d5')
