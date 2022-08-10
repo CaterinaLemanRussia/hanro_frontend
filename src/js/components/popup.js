@@ -196,7 +196,7 @@ $.fancybox.defaults = {
 		// if "smallBtn" option is not set to false
 		smallBtn:
 			'<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
-			'<svg><use xlink:href="./images/sprites.svg#close"></use></svg>' +
+			`<svg><use xlink:href="${window.templatePath}/images/sprites.svg#close"></use></svg>` +
 			"</button>"
 	},
 
