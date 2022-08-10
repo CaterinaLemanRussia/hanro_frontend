@@ -38,7 +38,7 @@
 	transition: transform $duration-normal;
 }
 
-.select2-container--default .select2-results__option--disabled {
+.select2-container--default .select2-results__option:first-child.select2-results__option--disabled {
 	display: none;
 }
 
