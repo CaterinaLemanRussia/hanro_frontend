@@ -154,7 +154,7 @@ window.addEventListener("load",function(event) {
 
 	if ($('.colors-block').length > 0) {
 		$('.colors-block').on('click', '.color a', function (e) {
-			e.preventDefault()
+			// e.preventDefault()
 			$('.colors-block .color').removeClass('active')
 			$(this).parent().addClass('active')
 		})
