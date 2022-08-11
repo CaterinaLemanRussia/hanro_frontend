@@ -46,21 +46,21 @@ function addCheckboxError($input) {
 
 const validation = (form) => {
 	let $inputRequired = form.find('.js-form-required'),
-		success = false
+		success = true
 	$inputRequired.each( (index, input) =>  {
 		let $input = $(input)
 		switch ( $input.attr('type')) {
 			case "text":
 				if (!$input.val()) {
 					addTextError($input, $input.parent())
-					success = true
+					success = false
 				}
 				break
 
 			case "checkbox":
 				if (!$input.prop('checked')) {
 					addCheckboxError($input)
-					success = true
+					success = false
 				}
 				break
 		}
