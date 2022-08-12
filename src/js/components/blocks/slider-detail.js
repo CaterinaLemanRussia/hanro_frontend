@@ -26,7 +26,7 @@ const blockSliderDetail = new Swiper(".js-slider-detail", {
 	},
 });
 
-$(document).ready(function () {
+window.addEventListener("load",function(event) {
 	let galleryTop, galleryThumbs
 
 	galleryThumbs = new window.Swiper('.catalog-element__gallery-thumbs', {
@@ -154,34 +154,11 @@ $(document).ready(function () {
 
 	if ($('.colors-block').length > 0) {
 		$('.colors-block').on('click', '.color a', function (e) {
-			e.preventDefault()
+			// e.preventDefault()
 			$('.colors-block .color').removeClass('active')
 			$(this).parent().addClass('active')
 		})
 	}
-
-
-	$('.product-amount__minus').click(function () {
-		changeQuantity('reduce')
-	})
-
-	$('.product-amount__plus').click(function () {
-		changeQuantity('increase')
-	})
-
 })
-
-
-function changeQuantity(type) {
-	if (type == 'reduce') {
-		if ($('.product-amount__field').val() > 1) {
-			$('.product-amount__field').val($('.product-amount__field').val() - 1)
-		}
-	}
-	if (type == 'increase') {
-		$('.product-amount__field').val(parseInt($('.product-amount__field').val()) + 1)
-	}
-}
-
 
 

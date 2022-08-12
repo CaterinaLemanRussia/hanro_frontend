@@ -25,6 +25,8 @@ import "./components/blocks/content-under";
 import "./components/blocks/slider-products";
 import "./components/blocks/slider-detail";
 
+import "./components/form";
+
 
 // import bottomSheet from "./components/bottomSheet";
 
