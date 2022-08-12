@@ -13,15 +13,15 @@ mixin block_callback(item)
 							| !{item.title}
 						.block_callback-text.mb-50
 							| !{item.text}
-						form.form
+						form.form.js-form
 							.block_callback__form-row.mb-24
 								.block_callback__form-input
 									label.form__group.form__group__up
 										.form__group-label.form__group__up-label
 											| Ваш email
-										input.form__group-input.form__group__up-input(type="text" required)
+										input.form__group-input.form__group__up-input.js-form-required(type="text")
 										.form__group-error
-											| Описание ошибки
+											| обязательное поле
 								.form-btn.block_callback__form-btn
 									button.btn.btn-secondary.btn-small
 										span
@@ -29,8 +29,8 @@ mixin block_callback(item)
 							.block_callback__form-agree
 								.block_callback__form-agree--item
 									label.checkbox
-										input(type="checkbox" required).checkbox-input
-										.checkbox-box
+										input(type="checkbox").checkbox-input.js-form-required
+										.checkbox-box(data-tippy-content="обязательное поле")
 											+svg('check')
 										.checkbox-text
 											| Согласен на
@@ -39,8 +39,8 @@ mixin block_callback(item)
 												| обработку персональных данных
 								.block_callback__form-agree--item
 									label.checkbox
-										input(type="checkbox").checkbox-input
-										.checkbox-box
+										input(type="checkbox").checkbox-input.js-form-required
+										.checkbox-box(data-tippy-content="обязательное поле")
 											+svg('check')
 										.checkbox-text
 											| Согласен на

@@ -1,4 +1,12 @@
 main.home.mt-100
+	+block_callback(
+		{
+			img: `${baseDir}images/blocks/callback.jpeg`,
+			title: 'Погрузиться в мир Hanro',
+			text: 'Подпишитесь на рассылку и первыми получайте новости о Hanro, информацию о модных трендах, новых коллекциях и специальных предложениях.',
+		}
+	).mb-100.pt-100.pb-100(style="background: rgba(174, 194, 206, 0.2)")
+
 	+block_button-inside(
 		{
 			button: {
@@ -165,14 +173,6 @@ main.home.mt-100
 			]
 		},
 	).mb-100
-
-	+block_callback(
-		{
-			img: `${baseDir}images/blocks/callback.jpeg`,
-			title: 'Погрузиться в мир Hanro',
-			text: 'Подпишитесь на рассылку и первыми получайте новости о Hanro, информацию о модных трендах, новых коллекциях и специальных предложениях.',
-		}
-	).mb-100.pt-100.pb-100(style="background: rgba(174, 194, 206, 0.2)")
 
 	+block_content-under(
 		'Текст заголовка',
