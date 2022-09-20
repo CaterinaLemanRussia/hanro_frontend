@@ -1,4 +1,5 @@
 import '@fancyapps/fancybox';
+import vars from '../helpers';
 
 $.fancybox.defaults = {
 	// Close existing modals
@@ -196,9 +197,11 @@ $.fancybox.defaults = {
 		// if "smallBtn" option is not set to false
 		smallBtn:
 			'<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
-			`<svg><use xlink:href="${window.templatePath}/images/sprites.svg#close"></use></svg>` +
+			`<svg><use xlink:href="${vars.path}images/sprites.svg#close"></use></svg>` +
 			"</button>"
 	},
+
+	
 
 	// Container is injected into this element
 	parentEl: "body",
