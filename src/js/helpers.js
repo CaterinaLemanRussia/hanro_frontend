@@ -2,6 +2,8 @@ import * as bodyScrollLock from 'body-scroll-lock';
 
 let vars = {};
 
+vars.path = "/"
+
 vars.$document = $(document);
 vars.$window = $(window);
 vars.$body = $(document.body);

@@ -493,21 +493,3 @@ h3,
 		height: 165px;
 	}
 }
-
-/* stylelint-disable */
-/*
-* Немедленно переместите любую анимацию в конечную точку, если пользователь установил свое устройство в положение "prefers reduced motion".
-* Это может привести к плохим(непреднамеренным) последствиям. Удалите по мере необходимости и напишите свой собственный код для prefers-reduced-motion.
-*/
-@media (prefers-reduced-motion: reduce) {
-	*,
-	*:before,
-	*:after {
-		animation-duration: 0.001s !important;
-		animation-delay: 0s !important;
-		transition-duration: 0.001s !important;
-		transition-delay: 0s !important;
-	}
-}
-/* stylelint-enable */
-

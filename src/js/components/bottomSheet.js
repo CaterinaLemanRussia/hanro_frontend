@@ -9,6 +9,8 @@ const bottomSheet = function () {
 	$(document).ready(function () {
 
 		window.openBottomModal = openBottomModal
+		window.closeBottomModal = closeBottomModal
+		window.closeModal = closeModal
 
 		$(".js-open-modal").click(function () {
 			var target = '#' + $(this).data('target')
@@ -32,6 +34,16 @@ const bottomSheet = function () {
 				}
 			}
 		}
+
+		const closeModal = function() {
+			if ($(window).width() > 959) {
+				$.fancybox.close()
+			} else {
+				window.closeBottomModal()
+			}
+		}
+
+		window.closeModal = closeModal
 
 		const setModalHeight = function(height, modalID) {
 			console.log(modalID)
@@ -77,16 +89,36 @@ const bottomSheet = function () {
 
 	}
 
+	const closeBottomModal = function (target) {
+		window.lastModalShown = target
+
+		closeBottomSheet(target)
+
+	}
+
 	function openBottomSheet(modalID, vh) {
 		setSheetHeight(vh, modalID)
 		setIsSheetShown(true, modalID)
 	}
 
+	function closeBottomSheet(modalID) {
+		setSheetHeight(0, modalID)
+		setIsSheetShown(false, modalID)
+	}
+	
 	function setSheetHeight(value, modalID) {
 
-		if (value === 100) {
-			value = 99
-		}
+		// if (value === 100) {
+		// 	value = 99
+		// }
+
+		// if ($('html').hasClass('is-os-ios') && value > 90) {
+		// 	value = 90
+		// }
+
+		if (value > 90) {
+			value = 90
+		}		
 
 		sheetHeight = Math.max(0, Math.min(100, value))
 		$(modalID).find('.contents').css('height', `${sheetHeight}vh`)
@@ -157,12 +189,13 @@ const bottomSheet = function () {
 		document.body.style.cursor = ""
 		$(window.lastModalShown).find(".draggable-area").css('cursor', document.body.style.cursor)
 
-		if (sheetHeight < 25) {
+		if (sheetHeight < 30) {
 			setIsSheetShown(false, window.lastModalShown)
 		} else if (sheetHeight > 75) {
 			setSheetHeight(99, window.lastModalShown)
 		} else {
-			setSheetHeight(50, window.lastModalShown)
+			// setSheetHeight(50, window.lastModalShown)
+			modalAutoHeight( window.lastModalShown)
 		}
 	}
 
